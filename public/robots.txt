@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thedermstudio.com.au/sitemap.xml
