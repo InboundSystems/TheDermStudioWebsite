@@ -13,7 +13,7 @@ export function MobileStickyBar() {
     >
       {/* Call */}
       <a
-        href="tel:TODO"
+        href="tel:+61414185007"
         className="flex-1 flex flex-col items-center justify-center gap-0.5 text-white transition-opacity active:opacity-70"
         style={{ borderRight: '1px solid var(--color-charcoal)' }}
         aria-label="Call The Derm Studio"
@@ -39,7 +39,7 @@ export function MobileStickyBar() {
 
       {/* Email */}
       <a
-        href="mailto:TODO"
+        href="mailto:thedermstudio.contact@gmail.com"
         className="flex-1 flex flex-col items-center justify-center gap-0.5 text-white transition-opacity active:opacity-70"
         aria-label="Email The Derm Studio"
       >

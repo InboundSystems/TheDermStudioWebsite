@@ -57,7 +57,21 @@ export default async function ServicePage({ params }: Props) {
           >
             {service.heroSubtitle}
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-5 flex flex-wrap gap-3">
+            <span
+              className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold"
+              style={{ fontFamily: "'DM Sans', sans-serif", backgroundColor: 'rgba(255,255,255,0.15)', color: '#FFFFFF' }}
+            >
+              {service.price}
+            </span>
+            <span
+              className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold"
+              style={{ fontFamily: "'DM Sans', sans-serif", backgroundColor: 'rgba(255,255,255,0.15)', color: '#FFFFFF' }}
+            >
+              {service.duration}
+            </span>
+          </div>
+          <div className="mt-6 flex flex-wrap gap-4">
             <Link
               href="/book"
               className="inline-block text-sm font-semibold px-7 py-3.5 rounded-full text-white transition-colors bg-rose hover:bg-rose-dark"
@@ -97,6 +111,20 @@ export default async function ServicePage({ params }: Props) {
                 className="rounded-3xl p-8 sticky top-28"
                 style={{ backgroundColor: 'var(--color-cream)' }}
               >
+                <div className="mb-4">
+                  <span
+                    className="text-2xl font-bold"
+                    style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
+                  >
+                    {service.price}
+                  </span>
+                  <span
+                    className="ml-2 text-sm"
+                    style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
+                  >
+                    · {service.duration}
+                  </span>
+                </div>
                 <h3
                   className="text-xl font-bold mb-3"
                   style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}

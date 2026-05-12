@@ -4,13 +4,12 @@ import Link from 'next/link'
 import { Globe, MapPin, Phone, Mail, Clock } from 'lucide-react'
 
 const treatmentLinks = [
-  { name: 'Facials', href: '/services/facials-redcliffe' },
-  { name: 'Chemical Peels', href: '/services/chemical-peel-redcliffe' },
-  { name: 'LED Light Therapy', href: '/services/led-light-therapy-redcliffe' },
-  { name: 'Skin Needling', href: '/services/skin-needling-redcliffe' },
-  { name: 'Dermal Therapy', href: '/services/dermal-therapy-redcliffe' },
-  { name: 'HydraFacial', href: '/services/hydrafacial-redcliffe' },
-  { name: 'Microdermabrasion', href: '/services/microdermabrasion-redcliffe' },
+  { name: 'Corrective Facial', href: '/services/corrective-facial-redcliffe' },
+  { name: 'Hybrid Facial', href: '/services/hybrid-facial-redcliffe' },
+  { name: 'Dermaplaning Facial', href: '/services/dermaplaning-facial-redcliffe' },
+  { name: 'Corrective Peels', href: '/services#corrective-peels' },
+  { name: 'Skin Needling', href: '/services/skin-needling-nctf-redcliffe' },
+  { name: 'Korean Lash Lift & Tint', href: '/services/korean-lash-lift-tint-redcliffe' },
   { name: 'Lira Clinical Skincare', href: '/lira-clinical' },
 ]
 
@@ -148,24 +147,22 @@ export function Footer() {
               <div className="flex gap-3 items-center">
                 <Phone className="w-4 h-4 shrink-0" style={{ color: 'var(--color-rose)' }} />
                 <a
-                  href="tel:TODO"
+                  href="tel:+61414185007"
                   className="text-sm transition-colors"
                   style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-blush)' }}
                 >
-                  {/* TODO: Confirm phone with client */}
-                  Contact us to book
+                  +61 414 185 007
                 </a>
               </div>
 
               <div className="flex gap-3 items-center">
                 <Mail className="w-4 h-4 shrink-0" style={{ color: 'var(--color-rose)' }} />
                 <a
-                  href="mailto:TODO"
+                  href="mailto:thedermstudio.contact@gmail.com"
                   className="text-sm transition-colors"
                   style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-blush)' }}
                 >
-                  {/* TODO: Confirm email with client */}
-                  Get in touch
+                  thedermstudio.contact@gmail.com
                 </a>
               </div>
 
@@ -209,7 +206,7 @@ export function Footer() {
             className="text-xs leading-relaxed"
             style={{ fontFamily: "'DM Sans', sans-serif", color: 'rgba(232,181,176,0.5)' }}
           >
-            The Derm Studio | Shop 10, Bluewater Square, 20 Anzac Avenue, Redcliffe QLD 4020 | {/* TODO: Add phone */}
+            The Derm Studio | Shop 10, Bluewater Square, 20 Anzac Avenue, Redcliffe QLD 4020 | +61 414 185 007
           </p>
           <p
             className="text-xs leading-relaxed"

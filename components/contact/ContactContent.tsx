@@ -359,12 +359,11 @@ export function ContactContent() {
                       Call or Text
                     </p>
                     <a
-                      href="tel:TODO"
+                      href="tel:+61414185007"
                       className="text-2xl font-bold block transition-opacity hover:opacity-70"
                       style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-rose)' }}
                     >
-                      {/* TODO: Confirm phone with client */}
-                      Contact us to book
+                      +61 414 185 007
                     </a>
                     <p className="text-xs mt-1" style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)', opacity: 0.55 }}>
                       Tap to call on mobile
@@ -389,12 +388,11 @@ export function ContactContent() {
                 <div className="flex gap-4 items-center">
                   <Mail className="w-5 h-5 shrink-0" style={{ color: 'var(--color-rose)' }} />
                   <a
-                    href="mailto:TODO"
+                    href="mailto:thedermstudio.contact@gmail.com"
                     className="text-sm transition-opacity hover:opacity-70"
                     style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
                   >
-                    {/* TODO: Confirm email with client */}
-                    Get in touch via email
+                    thedermstudio.contact@gmail.com
                   </a>
                 </div>
 

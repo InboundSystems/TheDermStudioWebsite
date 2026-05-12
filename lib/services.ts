@@ -18,6 +18,9 @@ export interface Service {
   slug: string
   name: string
   tagline: string
+  price: string
+  duration: string
+  category: string
   metaTitle: string
   metaDescription: string
   heroTitle: string
@@ -30,310 +33,513 @@ export interface Service {
   iconName: string
 }
 
+export interface MenuServiceItem {
+  name: string
+  price: string
+  duration: string
+  tagline: string
+  slug?: string
+  externalHref?: string
+}
+
+export interface MenuCategory {
+  id: string
+  category: string
+  note?: string
+  items: MenuServiceItem[]
+}
+
 export const services: Service[] = [
-  /* ──────────────────────────────────── */
+  /* ── CORRECTIVE FACIAL ─────────────────────────── */
   {
-    slug: 'facials-redcliffe',
-    name: 'Facials',
-    tagline: 'Customised treatments tailored to your unique skin.',
-    metaTitle: 'Facials Redcliffe | Customised Skin Treatments — The Derm Studio',
+    slug: 'corrective-facial-redcliffe',
+    name: 'Corrective Facial',
+    tagline: 'The ideal starting point for your skincare journey.',
+    price: '$220',
+    duration: '45 mins',
+    category: 'Facials',
+    metaTitle: 'Corrective Facial Redcliffe | Expert Skin Treatment — The Derm Studio',
     metaDescription:
-      'Book a customised facial at The Derm Studio, Redcliffe. Our qualified dermal therapists tailor every treatment to your skin concerns — hydration, anti-ageing, brightening and more at Bluewater Square.',
-    heroTitle: 'Facials Redcliffe | Customised Skin Treatments',
+      'Book a Corrective Facial at The Derm Studio, Redcliffe. A results-focused clinical facial with LED light therapy and neck massage — the perfect starting point for your skin journey at Bluewater Square.',
+    heroTitle: 'Corrective Facial Redcliffe | Expert Skin Treatment',
     heroSubtitle:
-      'Every facial at The Derm Studio is designed around your skin — not a menu.',
+      'Meticulously curated by expert skin therapists — brightening, resurfacing, and delivering a surge of hydration. Includes LED light therapy.',
     intro: [
-      'A customised facial at The Derm Studio goes far beyond relaxation. Our qualified dermal therapists design each facial treatment around your individual skin concerns — whether that\'s dehydration, congestion, uneven tone, fine lines, or sensitivity. Every treatment begins with a thorough skin assessment so your therapist can select the most appropriate products, techniques, and targeted actives for your skin on that day.',
-      'Located at Bluewater Square in Redcliffe, The Derm Studio offers a range of facial treatments designed to deliver real, visible results. We use Lira Clinical professional skincare products — available exclusively through our Redcliffe clinic — to ensure every facial is formulated with clinically active ingredients rather than surface-level hydration products.',
-      'Our facials are suitable for all skin types and can be adapted for specific concerns including acne-prone, sensitised, and mature skin. Regular facial treatments form the foundation of any effective skin health program, maintaining the results achieved through more intensive procedures while continuously improving the overall quality and resilience of your skin.',
-      'Whether you\'re new to skin treatments or a seasoned skincare enthusiast, our team will create a treatment experience that leaves your skin visibly healthier — and your understanding of your skin significantly greater.',
+      'The Corrective Facial at The Derm Studio is meticulously curated by our expert skin therapists to deliver a perfect balance of results and relaxation. Designed as the ideal starting point for your skincare journey, this treatment is built around a progressive approach to skin revision — gently resurfacing, brightening, and addressing imperfections while delivering an exceptional clinical experience.',
+      'At the core of every Corrective Facial is a precisely selected combination of professional Lira Clinical products chosen for your skin\'s unique needs on the day. The treatment gently resurfaces the outermost layers of the skin — brightening the complexion, refining texture, and addressing common concerns such as congestion, dullness, uneven tone, and mild dehydration. A powerful surge of targeted hydration then replenishes the skin barrier, leaving you with a noticeably glowing, radiant complexion.',
+      'The Corrective Facial includes an indulgent tension-releasing neck and shoulder massage, performed while your treatment mask works on the skin. The session concludes with medical-grade LED light therapy, which stimulates collagen production, soothes any reactivity, and enhances the overall outcome of the treatment.',
+      'Whether you are new to professional skin treatments or returning after a break, the Corrective Facial is the perfect foundation treatment. It provides a thorough assessment of your skin, introduces your skin to clinical-grade actives, and delivers a result you can see and feel — all in a 45-minute appointment. As Redcliffe\'s sole Lira Clinical stockist, The Derm Studio is uniquely placed to prescribe home-care products to extend your results between visits.',
     ],
     benefits: [
-      { title: 'Deeply Cleansed Skin', desc: 'Thorough removal of surface debris, excess oil, and congestion that builds up between treatments.' },
-      { title: 'Improved Hydration', desc: 'Professional-grade hydrating actives restore the skin barrier and deliver lasting moisture beneath the surface.' },
-      { title: 'Targeted Treatment', desc: 'Each facial addresses your specific concerns — from pigmentation and acne to fine lines and sensitivity.' },
-      { title: 'Expert Skin Advice', desc: 'Leave every appointment with personalised product recommendations and a clearer understanding of your skin.' },
-      { title: 'Immediate Glow', desc: 'Clients consistently notice improved clarity, brightness, and texture immediately after treatment.' },
-      { title: 'Long-Term Skin Health', desc: 'Regular facials build cumulative results, progressively improving skin quality over time.' },
+      { title: 'Progressive Skin Resurfacing', desc: 'Gently removes the dull, dead surface layer to reveal brighter, fresher skin with improved clarity and texture.' },
+      { title: 'Targeted Hydration', desc: 'Professional Lira Clinical actives deliver a deep surge of hydration that replenishes the skin barrier and restores lasting moisture.' },
+      { title: 'LED Light Therapy Included', desc: 'Every Corrective Facial concludes with medical-grade LED — stimulating collagen, reducing inflammation, and boosting results.' },
+      { title: 'Neck & Shoulder Massage', desc: 'An indulgent tension-releasing massage while your mask works — genuine relaxation as part of your clinical treatment.' },
+      { title: 'Visible Glow', desc: 'Most clients notice an immediate improvement in brightness, clarity, and skin radiance from the very first session.' },
+      { title: 'Suitable for All Skin Types', desc: 'Adapted to your unique skin needs at every appointment — no two Corrective Facials are identical.' },
     ],
     process: [
-      { step: '01', title: 'Consultation & Skin Analysis', desc: 'Your therapist assesses your skin, discusses your concerns, and selects the most appropriate products and techniques.' },
-      { step: '02', title: 'Cleanse & Prepare', desc: 'A thorough double-cleanse removes makeup, SPF, and surface impurities to prepare the skin for treatment.' },
-      { step: '03', title: 'Exfoliation', desc: 'Targeted exfoliation removes dead skin cells, refines texture, and enhances absorption of subsequent actives.' },
-      { step: '04', title: 'Targeted Serums & Actives', desc: 'Professional-grade serums and targeted treatment products are applied based on your individual skin needs.' },
-      { step: '05', title: 'Mask & Treatment', desc: 'A treatment mask addresses specific concerns — calming inflammation, controlling sebum, or providing intensive hydration.' },
-      { step: '06', title: 'Moisturise & SPF', desc: 'The treatment concludes with a professional moisturiser and broad-spectrum SPF to protect and seal in results.' },
+      { step: '01', title: 'Skin Consultation & Analysis', desc: 'Your therapist discusses your current skin concerns and goals, and performs a thorough visual skin assessment to guide product and technique selection.' },
+      { step: '02', title: 'Double Cleanse', desc: 'A thorough double-cleanse removes makeup, SPF, and surface impurities, preparing the skin to fully benefit from the treatment ahead.' },
+      { step: '03', title: 'Gentle Resurfacing', desc: 'A progressive resurfacing step removes dead skin cells, refines texture, and prepares the skin to absorb active ingredients more effectively.' },
+      { step: '04', title: 'Targeted Serums & Actives', desc: 'Lira Clinical professional serums are applied and worked into the skin, addressing your specific concerns with clinically active ingredients.' },
+      { step: '05', title: 'Treatment Mask + Neck & Shoulder Massage', desc: 'A treatment mask is selected for your skin type and applied while your therapist delivers a tension-releasing neck and shoulder massage.' },
+      { step: '06', title: 'LED Light Therapy', desc: 'Medical-grade LED light therapy is delivered over the treated skin to stimulate collagen, reduce inflammation, and seal in results.' },
+      { step: '07', title: 'Moisturise & SPF', desc: 'The treatment concludes with a professional moisturiser and broad-spectrum SPF to protect and preserve your results.' },
     ],
     faqs: [
-      { q: 'How often should I get a facial?', a: 'Monthly facial treatments are ideal for maintaining healthy skin and supporting the results of more intensive procedures. Your therapist will recommend a schedule based on your skin\'s needs.' },
-      { q: 'How long does a facial take?', a: 'Most facial treatments are 60–90 minutes, depending on the protocol your therapist selects for your skin.' },
-      { q: 'Are facials suitable for sensitive skin?', a: 'Yes. Our therapists are experienced in adapting treatments for sensitised skin. We will always select products and techniques appropriate for your skin\'s current condition.' },
-      { q: 'What products do you use during facials?', a: 'We use Lira Clinical professional skincare throughout all facial treatments. Lira Clinical is available exclusively through our clinic — you cannot purchase it online.' },
-      { q: 'Can I wear makeup after a facial?', a: 'We recommend allowing your skin to breathe for the rest of the day. Your therapist will advise you on the appropriate aftercare for the specific treatment received.' },
+      { q: 'Is the Corrective Facial suitable for sensitive or reactive skin?', a: 'Yes. Our therapists are experienced in adapting the Corrective Facial for sensitised and reactive skin types. Products are selected appropriate for your skin\'s condition on the day.' },
+      { q: 'How often should I have a Corrective Facial?', a: 'Monthly Corrective Facials are ideal for maintaining healthy, radiant skin and building progressively on clinical results. Your therapist will recommend a frequency based on your skin goals.' },
+      { q: 'Is the Corrective Facial a good first treatment?', a: 'Yes — it is specifically designed as the ideal starting point for your skincare journey. It allows your therapist to assess your skin, introduce professional actives gently, and establish a clear treatment pathway.' },
+      { q: 'What products are used?', a: 'We use Lira Clinical professional skincare throughout every Corrective Facial. Lira Clinical is available exclusively through The Derm Studio — it cannot be purchased online.' },
+      { q: 'Do I need a prior consultation?', a: 'No. A skin analysis is conducted at the beginning of every appointment, so no separate consultation is required before your first visit.' },
     ],
-    relatedSlugs: ['chemical-peel-redcliffe', 'hydrafacial-redcliffe', 'microdermabrasion-redcliffe'],
+    relatedSlugs: ['hybrid-facial-redcliffe', 'level-1-corrective-peel-redcliffe', 'dermaplaning-facial-redcliffe'],
     iconName: 'Sparkles',
   },
 
-  /* ──────────────────────────────────── */
+  /* ── HYBRID FACIAL ─────────────────────────────── */
   {
-    slug: 'chemical-peel-redcliffe',
-    name: 'Chemical Peels',
-    tagline: 'Professional resurfacing for pigmentation, scarring and texture.',
-    metaTitle: 'Chemical Peels Redcliffe | Professional Skin Resurfacing — The Derm Studio',
+    slug: 'hybrid-facial-redcliffe',
+    name: 'Hybrid Facial',
+    tagline: 'The next-level upgrade — peel infusion meets clinical facial.',
+    price: '$220',
+    duration: '45 mins',
+    category: 'Facials',
+    metaTitle: 'Hybrid Facial Redcliffe | Peel Infusion Facial — The Derm Studio',
     metaDescription:
-      'Book a professional chemical peel at The Derm Studio, Redcliffe. Treat pigmentation, acne scarring and uneven texture with expert skin resurfacing at Bluewater Square.',
-    heroTitle: 'Chemical Peels Redcliffe | Professional Skin Resurfacing',
+      'Book a Hybrid Facial at The Derm Studio, Redcliffe. A corrective facial blended with a gentle peel infusion for deeper results with zero downtime. Includes LED light therapy at Bluewater Square.',
+    heroTitle: 'Hybrid Facial Redcliffe | Peel Infusion Facial',
     heroSubtitle:
-      'Clinically proven resurfacing treatments for pigmentation, acne scarring, and uneven skin texture.',
+      'The next-level upgrade your skin has been craving — corrective facial meets gentle peel infusion. Zero downtime. Includes LED light therapy.',
     intro: [
-      'Chemical peels are among the most effective clinical treatments for addressing pigmentation, acne scarring, uneven skin texture, dullness, and the early signs of ageing. At The Derm Studio in Redcliffe, our qualified dermal therapists use professional-grade chemical peel formulations to safely resurface the skin and stimulate the natural renewal process.',
-      'A chemical peel works by applying a controlled solution to the skin that accelerates the shedding of the outermost layers, revealing fresher, clearer skin beneath. The type and depth of peel — superficial, medium, or deeper — is carefully selected based on your skin concern, skin type, and individual goals. Our therapists conduct a thorough assessment before recommending any peel protocol to ensure safety and appropriateness.',
-      'Regular chemical peel treatments can dramatically improve the appearance of sun damage, post-acne marks, melasma, and general dullness. They also stimulate collagen production in the deeper layers of the skin, contributing to a firmer, more youthful complexion with each course of treatment.',
-      'At The Derm Studio, all chemical peel treatments are performed using Lira Clinical professional peeling agents and post-procedure skincare — the same range available exclusively through our Redcliffe clinic. Combining clinical peel treatments with a Lira Clinical home-care prescription delivers significantly better long-term outcomes than in-clinic treatment alone.',
+      'The Hybrid Facial at The Derm Studio is the next-level upgrade your skin has been craving. Blending the indulgence of our Corrective Facial with the added power of a gentle peel infusion, this treatment delivers deeper rejuvenation than a standard facial — without any downtime. It is the natural next step for clients who have already experienced the Corrective Facial and are ready to take their skin results further.',
+      'The defining element of the Hybrid Facial is the infusion of a specialised peel solution into the skin. Unlike a standalone corrective peel, this solution is worked gently into the treatment to enhance brightness, refine texture, and support long-term skin health without any preparation requirements or recovery time. The peel element elevates the resurfacing action of the treatment, working deeper into the skin to accelerate cell turnover and improve the overall clarity and evenness of the complexion.',
+      'The Hybrid Facial includes LED light therapy, which amplifies the outcome of the peel infusion by stimulating collagen production and reducing post-treatment reactivity. The result is a treatment that performs at a clinical level while remaining accessible, comfortable, and completely safe for all skin types — suitable year-round, including warmer months when stronger peel treatments are typically avoided.',
+      'As the perfect bridge between a Corrective Facial and a Level 1 Corrective Peel, the Hybrid Facial prepares the skin for progressive intensification of treatment — building a stronger, more resilient skin barrier and conditioning the complexion for deeper correction over time. Your therapist will guide you on when it\'s the right time to progress to the next level of treatment.',
     ],
     benefits: [
-      { title: 'Improved Skin Tone & Texture', desc: 'Significant improvement in overall skin smoothness, evenness, and clarity following a course of treatments.' },
-      { title: 'Pigmentation Reduction', desc: 'Effective treatment of sun damage, melasma, post-inflammatory hyperpigmentation, and uneven skin tone.' },
-      { title: 'Acne Scar Fading', desc: 'Progressive improvement in the appearance of post-acne marks, flat scars, and residual discolouration.' },
-      { title: 'Collagen Stimulation', desc: 'Chemical peels trigger a controlled healing response that stimulates new collagen production for firmer skin.' },
-      { title: 'Brighter Complexion', desc: 'Removal of the dull, dead surface layer reveals the brighter, fresher skin beneath.' },
-      { title: 'Enhanced Skincare Absorption', desc: 'Post-peel skin absorbs active ingredients significantly more effectively, amplifying home-care results.' },
+      { title: 'Gentle Peel Infusion', desc: 'A specialised peel solution is worked into the skin for deeper resurfacing than a standard facial — without downtime or preparation.' },
+      { title: 'No Downtime', desc: 'Return to your day immediately. The Hybrid Facial is designed for effective results with no visible recovery period.' },
+      { title: 'LED Light Therapy Included', desc: 'Medical-grade LED light stimulates collagen, soothes reactivity, and amplifies the effects of the peel infusion.' },
+      { title: 'Enhanced Brightness & Clarity', desc: 'The peel element accelerates cell turnover, visibly improving the brightness, evenness, and overall quality of the skin.' },
+      { title: 'Safe Year-Round', desc: 'Unlike deeper peel treatments, the Hybrid Facial is safe for all skin types and can be performed in any season.' },
+      { title: 'Ideal Bridge Treatment', desc: 'The perfect progression after Corrective Facials and before moving into Level 1 Corrective Peels.' },
     ],
     process: [
-      { step: '01', title: 'Skin Consultation', desc: 'Thorough assessment of skin type, condition, contraindications, and treatment goals to select the appropriate peel.' },
-      { step: '02', title: 'Pre-Treatment Preparation', desc: 'Skin is cleansed and degreased to ensure even peel penetration and consistent results.' },
-      { step: '03', title: 'Peel Application', desc: 'The professional peel solution is carefully applied and monitored by your therapist throughout the treatment.' },
-      { step: '04', title: 'Neutralisation & Removal', desc: 'The peel is neutralised and removed at the precisely timed endpoint for your skin type and peel depth.' },
-      { step: '05', title: 'Post-Peel Treatment', desc: 'Soothing, reparative products are applied to support the skin barrier and begin the recovery process.' },
-      { step: '06', title: 'Home-Care Prescription', desc: 'You leave with a Lira Clinical home-care prescription to support healing and maximise your results.' },
+      { step: '01', title: 'Skin Assessment', desc: 'Your therapist assesses your skin and confirms the Hybrid Facial is the appropriate treatment level for your current condition and goals.' },
+      { step: '02', title: 'Cleanse & Prepare', desc: 'A thorough cleanse removes surface impurities and prepares the skin for maximum active penetration.' },
+      { step: '03', title: 'Peel Infusion', desc: 'A specialised Lira Clinical peel solution is applied and worked gently into the skin to enhance resurfacing, brightness, and cell renewal.' },
+      { step: '04', title: 'Targeted Serums', desc: 'Professional Lira Clinical serums are applied to address your specific skin concerns and reinforce the effects of the peel infusion.' },
+      { step: '05', title: 'Treatment Mask', desc: 'A corrective mask appropriate for your skin type is applied to consolidate results and deliver additional actives.' },
+      { step: '06', title: 'LED Light Therapy', desc: 'Medical-grade LED therapy is delivered to stimulate collagen, calm any reactivity, and enhance the overall outcome.' },
+      { step: '07', title: 'Moisturise & SPF', desc: 'Finished with a professional moisturiser and broad-spectrum SPF to seal in results and protect the skin.' },
     ],
     faqs: [
-      { q: 'Will I visibly peel after treatment?', a: 'This depends on the type and depth of peel. Superficial peels may cause very mild flaking. Medium-depth peels typically result in 3–7 days of more visible shedding. Your therapist will set clear expectations before treatment.' },
-      { q: 'Is there downtime?', a: 'Superficial peels: minimal downtime — mild redness for a few hours. Medium peels: allow 3–7 days for skin to shed. Your therapist will advise based on the peel protocol selected.' },
-      { q: 'How many peels will I need?', a: 'A course of 3–6 peels spaced 2–4 weeks apart is typical for optimal results. Your therapist will recommend a treatment plan based on your skin goals.' },
-      { q: 'Can I have a peel in summer?', a: 'Yes, with careful sun protection and your therapist\'s guidance. Strict daily SPF use is essential following any chemical peel treatment.' },
-      { q: 'Is a chemical peel uncomfortable?', a: 'Most superficial peels cause mild tingling during application. More active peels may produce temporary stinging or warmth. Discomfort is brief and well-tolerated by most clients.' },
+      { q: 'What is the difference between a Corrective Facial and a Hybrid Facial?', a: 'The Hybrid Facial includes a peel infusion — a specialised solution worked into the skin to deliver deeper resurfacing and brighter results than the Corrective Facial, without any downtime. It is the natural progression once your skin is ready.' },
+      { q: 'Do I need to prepare my skin beforehand?', a: 'No special preparation is required. The Hybrid Facial is designed to deliver excellent results without prep requirements, making it an accessible step-up from the Corrective Facial.' },
+      { q: 'Will I peel or have downtime after?', a: 'No. The peel solution used in the Hybrid Facial is infused gently during the treatment and does not cause visible flaking or downtime.' },
+      { q: 'How often should I have a Hybrid Facial?', a: 'Monthly treatments are ideal. Your therapist will also guide you on whether it\'s time to progress to a Level 1 Corrective Peel based on how your skin is responding.' },
+      { q: 'Is it suitable for sensitive skin?', a: 'Yes. The Hybrid Facial is designed to be safe for all skin types, including sensitised skin. Your therapist selects the appropriate peel solution for your individual skin needs.' },
     ],
-    relatedSlugs: ['facials-redcliffe', 'skin-needling-redcliffe', 'led-light-therapy-redcliffe'],
-    iconName: 'FlaskConical',
-  },
-
-  /* ──────────────────────────────────── */
-  {
-    slug: 'led-light-therapy-redcliffe',
-    name: 'LED Light Therapy',
-    tagline: 'Non-invasive light treatment for anti-ageing, acne and healing.',
-    metaTitle: 'LED Light Therapy Redcliffe | Anti-Ageing & Acne Treatment — The Derm Studio',
-    metaDescription:
-      'Professional LED light therapy in Redcliffe at The Derm Studio. Red and blue LED treatments for anti-ageing, skin rejuvenation and acne reduction at Bluewater Square.',
-    heroTitle: 'LED Light Therapy Redcliffe | Anti-Ageing & Acne Treatment',
-    heroSubtitle:
-      'Painless, zero-downtime light treatment for collagen, acne, and skin rejuvenation.',
-    intro: [
-      'LED (Light Emitting Diode) light therapy is a non-invasive treatment that uses specific wavelengths of light to stimulate targeted cellular responses within the skin. At The Derm Studio in Redcliffe, we offer professional-grade LED light therapy as a standalone treatment and as a powerful enhancement to other procedures including chemical peels, skin needling, and facials.',
-      'The two primary wavelengths used in clinical skin treatment are red LED and blue LED, each with distinct therapeutic benefits. Red LED light (around 630nm) penetrates deeper into the skin to stimulate fibroblast activity, boost collagen and elastin production, reduce inflammation, and accelerate wound healing. This makes red LED particularly effective for anti-ageing, post-procedure recovery, and general skin rejuvenation. Blue LED light (around 415nm) targets the P. acnes bacteria responsible for inflammatory breakouts, significantly reducing active acne without damaging surrounding tissue.',
-      'LED light therapy is completely painless, requires no downtime, and is safe for all skin types and tones, making it one of the most accessible and versatile clinical treatments available. It is equally effective as a regular skin maintenance treatment, a recovery tool after more intensive procedures, or a targeted treatment for active skin concerns.',
-      'Our LED sessions use medical-grade equipment delivering optimal therapeutic intensity — far more powerful than at-home LED devices — ensuring you receive maximum clinical benefit from every session.',
-    ],
-    benefits: [
-      { title: 'Collagen Stimulation', desc: 'Red LED activates fibroblasts to produce more collagen and elastin, improving firmness and reducing fine lines over time.' },
-      { title: 'Acne Reduction', desc: 'Blue LED destroys acne-causing bacteria and reduces active inflammation without irritating surrounding skin.' },
-      { title: 'Accelerated Healing', desc: 'LED light is widely used to speed post-procedure recovery after chemical peels, skin needling, and other treatments.' },
-      { title: 'Improved Skin Radiance', desc: 'Regular LED sessions improve skin tone, reduce redness, and give the complexion a healthier, more luminous quality.' },
-      { title: 'Zero Downtime', desc: 'Completely painless with no recovery period — clients return to their day immediately after treatment.' },
-      { title: 'Safe for All Skin Types', desc: 'LED light therapy is safe for all skin types and tones, with no risk of post-inflammatory hyperpigmentation.' },
-    ],
-    process: [
-      { step: '01', title: 'Skin Assessment', desc: 'Your therapist assesses your skin and confirms the appropriate LED wavelength (red, blue, or combination) for your treatment goals.' },
-      { step: '02', title: 'Skin Preparation', desc: 'The skin is cleansed to remove any products that might affect light penetration during the session.' },
-      { step: '03', title: 'LED Treatment', desc: 'The LED panel is positioned close to the skin and the treatment is delivered over approximately 20–30 minutes.' },
-      { step: '04', title: 'Serum Application', desc: 'Post-treatment serums are applied to take advantage of the enhanced cellular activity stimulated by the LED.' },
-      { step: '05', title: 'SPF & Aftercare', desc: 'The session concludes with SPF application and aftercare advice to maintain and extend your results.' },
-    ],
-    faqs: [
-      { q: 'How many LED sessions do I need?', a: 'A course of 6–10 sessions is recommended for optimal results, particularly for anti-ageing or acne concerns. Maintenance sessions monthly or bi-monthly thereafter.' },
-      { q: 'How long is each LED session?', a: 'Approximately 30–45 minutes in total, including preparation and treatment.' },
-      { q: 'Can LED be combined with other treatments?', a: 'Yes — LED is commonly combined with facials, chemical peels, and skin needling to enhance results and accelerate recovery.' },
-      { q: 'Is LED safe for all skin types?', a: 'Yes. LED light therapy is one of the safest clinical treatments available, with no risk of burns or post-inflammatory pigmentation when performed correctly.' },
-      { q: 'How soon will I see results?', a: 'Some clients notice improvement in skin radiance after 3–4 sessions. Collagen stimulation results develop progressively over the course of treatment and beyond.' },
-    ],
-    relatedSlugs: ['facials-redcliffe', 'chemical-peel-redcliffe', 'skin-needling-redcliffe'],
-    iconName: 'Sun',
-  },
-
-  /* ──────────────────────────────────── */
-  {
-    slug: 'skin-needling-redcliffe',
-    name: 'Skin Needling',
-    tagline: 'Collagen induction therapy for scars, lines and texture.',
-    metaTitle: 'Skin Needling Redcliffe | Collagen Induction Therapy — The Derm Studio',
-    metaDescription:
-      'Professional skin needling (collagen induction therapy) in Redcliffe. Treat fine lines, acne scarring and uneven texture at The Derm Studio, Bluewater Square.',
-    heroTitle: 'Skin Needling Redcliffe | Collagen Induction Therapy',
-    heroSubtitle:
-      'Minimally invasive treatment that harnesses your skin\'s own regenerative power.',
-    intro: [
-      'Skin needling — also known as collagen induction therapy (CIT) or microneedling — is a minimally invasive treatment that uses a precisely controlled device to create thousands of micro-channels in the skin\'s surface. These controlled micro-injuries trigger the skin\'s natural healing response, stimulating the production of new collagen and elastin: the structural proteins responsible for skin firmness, smoothness, and resilience.',
-      'At The Derm Studio in Redcliffe, our qualified dermal therapists perform skin needling using professional-grade devices that deliver consistent, precise needle depth across the treatment area. This level of control is critical for achieving safe, effective results — particularly when treating deeper concerns such as atrophic acne scarring, stretch marks, and significant textural irregularities that require precise penetration depths.',
-      'Skin needling is one of the most effective non-surgical treatments available for improving acne scarring, fine lines, enlarged pores, and general skin texture. Because it stimulates the skin\'s own regenerative processes rather than relying on external agents, the results are natural and progressive — developing over several weeks and continuing to improve with each treatment session in a course.',
-      'At The Derm Studio, we apply topical anaesthetic cream prior to treatment for client comfort, and use Lira Clinical professional serums during and after the procedure to maximise the penetration of active ingredients and support the healing process.',
-    ],
-    benefits: [
-      { title: 'Acne Scar Improvement', desc: 'One of the most effective treatments for atrophic (depressed) acne scarring, progressively improving the appearance over a course of sessions.' },
-      { title: 'Fine Line Reduction', desc: 'Collagen and elastin stimulation measurably reduces the depth and visibility of fine lines and wrinkles.' },
-      { title: 'Pore Refinement', desc: 'The collagen remodelling process tightens the tissue around enlarged pores, visibly refining their appearance.' },
-      { title: 'Enhanced Skin Texture', desc: 'Overall skin smoothness and quality improve progressively across a treatment course.' },
-      { title: 'Natural Results', desc: 'Because skin needling stimulates the skin\'s own regenerative processes, results look and feel completely natural.' },
-      { title: 'Superior Serum Absorption', desc: 'Micro-channels created during treatment allow professional serums to penetrate far deeper than topical application alone.' },
-    ],
-    process: [
-      { step: '01', title: 'Consultation & Assessment', desc: 'Your therapist assesses your skin concerns, reviews contraindications, and determines the appropriate needle depth for your treatment.' },
-      { step: '02', title: 'Anaesthetic Application', desc: 'Topical anaesthetic cream is applied and left for 30 minutes to ensure you are comfortable throughout the procedure.' },
-      { step: '03', title: 'Skin Needling Treatment', desc: 'The device is passed systematically over the treatment area, creating precise micro-channels in the skin.' },
-      { step: '04', title: 'Serum Infusion', desc: 'Lira Clinical professional serums are applied immediately post-treatment to penetrate the skin through the open micro-channels.' },
-      { step: '05', title: 'Recovery Support', desc: 'Soothing, barrier-supporting products are applied to calm the skin and begin the healing process.' },
-      { step: '06', title: 'Aftercare Instructions', desc: 'Detailed aftercare guidance and a home-care prescription to support healing and maximise results.' },
-    ],
-    faqs: [
-      { q: 'Is skin needling painful?', a: 'Topical anaesthetic cream is applied 30 minutes before treatment. Most clients report minimal discomfort — a mild scratching or vibration sensation at most.' },
-      { q: 'What is the downtime?', a: 'Skin typically appears red for 24–48 hours post-treatment, similar to mild sunburn. Makeup and active skincare products should be avoided for the first 24 hours.' },
-      { q: 'How many sessions are needed?', a: 'A course of 3–6 treatments spaced 4–6 weeks apart is typical for optimal results, particularly for acne scarring.' },
-      { q: 'When will I see results?', a: 'Initial improvement is visible 2–4 weeks after each session. Full collagen remodelling continues for 3–6 months, with cumulative improvements across a course of treatment.' },
-      { q: 'Is skin needling suitable for active acne?', a: 'No — skin needling is contraindicated over active breakouts. We will wait for active acne to resolve before treating scarring.' },
-    ],
-    relatedSlugs: ['dermal-therapy-redcliffe', 'chemical-peel-redcliffe', 'led-light-therapy-redcliffe'],
-    iconName: 'Pipette',
-  },
-
-  /* ──────────────────────────────────── */
-  {
-    slug: 'dermal-therapy-redcliffe',
-    name: 'Dermal Therapy',
-    tagline: 'Evidence-based clinical treatments by qualified dermal therapists.',
-    metaTitle: 'Dermal Therapy Redcliffe | Evidence-Based Skin Treatments — The Derm Studio',
-    metaDescription:
-      'Expert dermal therapy at The Derm Studio, Redcliffe. Advanced, evidence-based skin treatments delivered by qualified dermal therapists at Bluewater Square.',
-    heroTitle: 'Dermal Therapy Redcliffe | Evidence-Based Skin Treatments',
-    heroSubtitle:
-      'Clinical skin treatment grounded in science — not trends.',
-    intro: [
-      'Dermal therapy encompasses a broad range of evidence-based clinical treatments delivered by practitioners who hold formal qualifications in dermal science. Unlike general beauty treatments, dermal therapy applies scientific principles to skin health — using clinically validated techniques and professional-grade products to achieve measurable, lasting improvements in skin condition and function.',
-      'At The Derm Studio in Redcliffe, our dermal therapists hold recognised qualifications in dermal therapy and undergo ongoing professional development to remain current with the latest clinical evidence in skin treatment. This means that every recommendation we make — whether a treatment modality, a product, or a home-care protocol — is grounded in clinical science rather than marketing or trend.',
-      'Dermal therapy at The Derm Studio covers a wide range of treatments for diverse skin concerns: hyperpigmentation, active acne and post-acne sequelae, accelerated ageing, chronic dehydration, sensitised skin conditions, and more. Our approach always begins with a comprehensive skin assessment and consultation, followed by the development of a personalised treatment protocol that combines in-clinic procedures with a prescribed home-care regimen using Lira Clinical professional products.',
-      'The goal of dermal therapy is not just the immediate result of a single treatment — it\'s progressive, lasting improvement in the health, resilience, and appearance of your skin. As Redcliffe\'s sole Lira Clinical stockist, we are uniquely positioned to bridge the gap between in-clinic treatment and professional home care, ensuring that the work we do in the clinic is supported and extended every day.',
-    ],
-    benefits: [
-      { title: 'Clinical Skin Assessment', desc: 'A thorough, evidence-based assessment of your skin type, condition, and concerns before any treatment is recommended.' },
-      { title: 'Personalised Treatment Protocols', desc: 'Every client receives a customised treatment plan based on their individual skin goals, not a generic menu.' },
-      { title: 'Professional Product Integration', desc: 'Treatments are paired with Lira Clinical home-care prescriptions for superior and lasting outcomes.' },
-      { title: 'Evidence-Based Practice', desc: 'Every technique and product recommendation is backed by clinical research — nothing is based on trend or anecdote.' },
-      { title: 'Qualified Therapists', desc: 'All treatments are delivered by dermal therapists with formal qualifications and ongoing professional development.' },
-      { title: 'Progressive, Measurable Results', desc: 'Treatment protocols are designed to deliver ongoing, cumulative improvement in skin health over time.' },
-    ],
-    process: [
-      { step: '01', title: 'Comprehensive Consultation', desc: 'Your dermal therapist conducts a thorough skin assessment, reviews your history, and establishes your treatment goals.' },
-      { step: '02', title: 'Personalised Treatment Plan', desc: 'A customised protocol is developed combining appropriate in-clinic treatments with a home-care prescription.' },
-      { step: '03', title: 'In-Clinic Treatment', desc: 'Treatments are delivered by your qualified therapist using professional-grade equipment and Lira Clinical products.' },
-      { step: '04', title: 'Home-Care Prescription', desc: 'You receive a Lira Clinical home-care regimen tailored to support and extend your in-clinic treatment results.' },
-      { step: '05', title: 'Progress Reviews', desc: 'Regular review appointments allow your therapist to assess your skin\'s response and adjust the protocol as needed.' },
-      { step: '06', title: 'Ongoing Maintenance', desc: 'A long-term maintenance plan is developed to preserve and build upon the results achieved during your treatment course.' },
-    ],
-    faqs: [
-      { q: 'What\'s the difference between a beauty facial and dermal therapy?', a: 'Dermal therapy applies clinical, evidence-based protocols to treat specific skin conditions and achieve measurable results. It\'s a health-focused approach to skin treatment, not a relaxation service.' },
-      { q: 'How long before I see results?', a: 'This depends on the concern being treated. Some improvements are visible immediately; others develop progressively over weeks to months as collagen remodels and cell turnover increases.' },
-      { q: 'Do I need to use specific products at home?', a: 'Yes. We prescribe Lira Clinical home-care products that complement and extend your in-clinic treatments. This combination significantly improves outcomes compared to in-clinic treatment alone.' },
-      { q: 'How often should I have dermal therapy?', a: 'This depends entirely on your skin goals and concerns. Your therapist will recommend a treatment frequency as part of your personalised plan.' },
-      { q: 'Is dermal therapy covered by health insurance?', a: 'Some health fund extras policies cover dermal therapy treatments. We recommend checking with your health fund prior to your appointment.' },
-    ],
-    relatedSlugs: ['facials-redcliffe', 'chemical-peel-redcliffe', 'skin-needling-redcliffe'],
-    iconName: 'ShieldCheck',
-  },
-
-  /* ──────────────────────────────────── */
-  {
-    slug: 'hydrafacial-redcliffe',
-    name: 'HydraFacial',
-    tagline: 'Cleanse, exfoliate and hydrate in one powerful treatment.',
-    metaTitle: 'HydraFacial Redcliffe | Cleanse, Exfoliate & Hydrate — The Derm Studio',
-    metaDescription:
-      'Book a HydraFacial at The Derm Studio, Redcliffe. The 3-step cleanse, exfoliate and hydrate treatment for instantly glowing skin at Bluewater Square.',
-    heroTitle: 'HydraFacial Redcliffe | Cleanse, Exfoliate & Hydrate',
-    heroSubtitle:
-      'Instantly glowing skin with zero downtime. The world\'s most popular clinical skin treatment.',
-    intro: [
-      'HydraFacial is one of the world\'s most widely recognised professional skin treatments, celebrated for delivering immediately visible, impressive results without any downtime. At The Derm Studio in Redcliffe, our HydraFacial treatments use a patented three-step process to deeply cleanse, exfoliate, and infuse the skin with targeted nourishing serums — all in a single 30–45-minute session.',
-      'What makes HydraFacial unique is the simultaneous combination of effective resurfacing, deep pore extraction, and intensive hydration. Traditional approaches to these goals — exfoliation, extraction, and hydration — typically require separate treatments. HydraFacial achieves all three in one pass using a specially designed vortex handpiece that exfoliates, suctions, and infuses simultaneously.',
-      'In the first step, the skin is cleansed and exfoliated as the vortex device removes dead skin cells and surface debris without the irritation of traditional physical scrubs. In the second step, a gentle acid solution loosens the bonds between congested material in the pores, which is then extracted cleanly. In the third step, a cocktail of professional serums — including hyaluronic acid, antioxidants, and peptides — is infused directly into the freshly cleared skin.',
-      'HydraFacial is suitable for all skin types and can be enhanced with targeted boosters for specific concerns including hyperpigmentation, sensitivity, and anti-ageing. Most clients notice a significant improvement in skin clarity, brightness, and texture immediately after the first treatment.',
-    ],
-    benefits: [
-      { title: 'Immediate Visible Results', desc: 'Most clients notice significantly clearer, brighter, and smoother skin immediately after treatment — no waiting.' },
-      { title: 'Deep Pore Extraction', desc: 'The vortex suction technology extracts blackheads and congestion more effectively than manual extraction alone.' },
-      { title: 'Intensive Hydration', desc: 'Professional hyaluronic acid and peptide serums are infused directly into cleared skin for deep, lasting hydration.' },
-      { title: 'Zero Downtime', desc: 'Return to work, apply makeup, and continue your day immediately — no redness or recovery period.' },
-      { title: 'Suitable for All Skin Types', desc: 'HydraFacial is gentle enough for sensitive skin and effective enough for oily, congested, and ageing skin.' },
-      { title: 'Customisable Boosters', desc: 'Targeted serums can be added for specific concerns including brightening, anti-ageing, and sensitive skin.' },
-    ],
-    process: [
-      { step: '01', title: 'Cleanse & Exfoliate', desc: 'The vortex handpiece removes dead skin cells and surface debris while simultaneously beginning to open the pores.' },
-      { step: '02', title: 'Peel & Extract', desc: 'A gentle acid solution loosens congestion and blackheads, which are then extracted cleanly without squeezing.' },
-      { step: '03', title: 'Serum Infusion', desc: 'Hyaluronic acid, antioxidants, and targeted serums are infused directly into the cleansed, receptive skin.' },
-      { step: '04', title: 'LED Enhancement (Optional)', desc: 'LED light therapy can be added to boost results and address specific concerns such as acne or anti-ageing.' },
-      { step: '05', title: 'SPF & Aftercare', desc: 'The treatment concludes with SPF application and personalised aftercare advice.' },
-    ],
-    faqs: [
-      { q: 'How long does a HydraFacial take?', a: 'The core HydraFacial treatment takes approximately 30 minutes. With optional add-ons such as LED light therapy, allow 45–60 minutes.' },
-      { q: 'Is there any downtime?', a: 'No downtime at all. Most clients apply makeup and return to normal activities immediately after treatment.' },
-      { q: 'How often should I have a HydraFacial?', a: 'Monthly treatments are ideal for maintaining optimal skin health. More frequent sessions may be recommended for specific concerns in the short term.' },
-      { q: 'Is HydraFacial suitable for sensitive skin?', a: 'Yes — HydraFacial is designed to be gentle and non-irritating. The treatment can be adapted for sensitised skin using appropriate serum selections.' },
-      { q: 'When will I see results?', a: 'Immediately. The skin looks and feels visibly clearer, smoother, and more hydrated from the moment treatment is complete.' },
-    ],
-    relatedSlugs: ['facials-redcliffe', 'microdermabrasion-redcliffe', 'led-light-therapy-redcliffe'],
+    relatedSlugs: ['corrective-facial-redcliffe', 'level-1-corrective-peel-redcliffe', 'level-2-corrective-peel-redcliffe'],
     iconName: 'Droplets',
   },
 
-  /* ──────────────────────────────────── */
+  /* ── DERMAPLANING FACIAL ───────────────────────── */
   {
-    slug: 'microdermabrasion-redcliffe',
-    name: 'Microdermabrasion',
-    tagline: 'Gentle resurfacing to smooth, refine and brighten your skin.',
-    metaTitle: 'Microdermabrasion Redcliffe | Skin Resurfacing Treatment — The Derm Studio',
+    slug: 'dermaplaning-facial-redcliffe',
+    name: 'Luminous Silk Dermaplaning Facial',
+    tagline: 'Ultra-luxurious dermaplaning for flawlessly smooth, glowing skin.',
+    price: '$199',
+    duration: '1 hr',
+    category: 'Facials',
+    metaTitle: 'Dermaplaning Facial Redcliffe | Luminous Silk Treatment — The Derm Studio',
     metaDescription:
-      'Professional microdermabrasion at The Derm Studio, Redcliffe. Smooth texture, refine pores and brighten your complexion at Bluewater Square, Redcliffe QLD.',
-    heroTitle: 'Microdermabrasion Redcliffe | Skin Resurfacing Treatment',
+      'Book a Luminous Silk Dermaplaning Facial at The Derm Studio, Redcliffe. Expert dermaplaning with hydrating mask and LED light therapy for flawlessly smooth, radiant skin at Bluewater Square.',
+    heroTitle: 'Dermaplaning Facial Redcliffe | Luminous Silk Treatment',
     heroSubtitle:
-      'Gentle mechanical resurfacing for smoother skin, refined pores and a brighter complexion.',
+      'Reveal your smoothest, most radiant skin — luxurious dermaplaning with a hydrating mask and LED light therapy.',
     intro: [
-      'Microdermabrasion is a non-invasive skin resurfacing treatment that uses a controlled mechanical exfoliation technique to remove dead skin cells from the outermost layer of the skin. At The Derm Studio in Redcliffe, we offer professional microdermabrasion as an effective treatment for improving skin texture, refining enlarged pores, reducing the appearance of superficial scarring, and restoring a brighter, more even complexion.',
-      'The treatment works by applying a fine abrasion head to the skin surface while simultaneously using suction to remove exfoliated cells and stimulate circulation. This dual action not only removes the dull, dead surface layer but also creates a mild stimulus that encourages new cell growth and increases collagen production over time. The result is progressively smoother, brighter skin with a more refined appearance.',
-      'Microdermabrasion is particularly well-suited to clients with mild acne scarring, sun damage, uneven skin tone, congestion, and dull, lacklustre skin. It is also an excellent preparatory treatment before other procedures — the removal of the dead surface layer significantly enhances the penetration and efficacy of serums and active ingredients applied during or after the session.',
-      'Regular microdermabrasion, incorporated as part of an ongoing skin maintenance program, delivers cumulative improvements in skin smoothness, brightness, and overall quality with each treatment. It is one of the most accessible clinical resurfacing treatments, with minimal downtime and a comfortable treatment experience.',
+      'The Luminous Silk Dermaplaning Facial at The Derm Studio reveals your smoothest, most radiant skin with a luxurious treatment experience unlike anything else in our menu. Dermaplaning is a precise physical exfoliation technique that gently removes the outermost layer of dead skin cells and fine vellus hair — commonly known as peach fuzz — using a sterile surgical blade. The result is an instantly smoother, softer complexion with dramatically enhanced product absorption.',
+      'Beyond the immediate improvement in skin texture and clarity, dermaplaning significantly enhances the efficacy of every product applied after it. With the barrier of dead cells and vellus hair removed, active ingredients penetrate far more deeply and effectively — meaning your professional skincare achieves better results both in the clinic and at home.',
+      'Following the dermaplaning step, a deeply hydrating mask is applied to replenish moisture and restore the skin\'s natural radiance. This step takes advantage of the skin\'s exceptional receptiveness immediately post-treatment to deliver maximum hydration at depth. The treatment concludes with medical-grade LED light therapy, which soothes the skin, reduces any temporary post-procedure redness, and promotes an even-toned, luminous finish.',
+      'Dermaplaning is suitable for most skin types and is particularly popular among clients with dull, dry, or uneven skin who want immediate, visible results. It is also an excellent preparatory treatment before events, as the skin appears uniquely smooth, bright, and photo-ready immediately after the session.',
     ],
     benefits: [
-      { title: 'Smoother Skin Texture', desc: 'Immediate improvement in overall skin smoothness — rough, uneven areas are visibly refined after just one session.' },
-      { title: 'Refined Pore Appearance', desc: 'The mechanical exfoliation and suction action reduces congestion in pores, making them appear smaller and less prominent.' },
-      { title: 'Brighter Complexion', desc: 'Removing the dull, dead surface layer reveals the fresher, more luminous skin beneath for an instant glow.' },
-      { title: 'Superficial Scar Improvement', desc: 'Mild acne marks, sun damage, and superficial scarring are progressively improved with a course of treatments.' },
-      { title: 'Enhanced Serum Absorption', desc: 'Post-treatment skin absorbs serums and active ingredients far more effectively than untreated skin.' },
-      { title: 'Minimal Downtime', desc: 'Skin may appear slightly pink for a few hours — most clients return to their day immediately after treatment.' },
+      { title: 'Instantly Smoother Skin', desc: 'Dermaplaning removes the layer of dead cells and vellus hair that contribute to dullness and rough texture — the improvement is immediate and noticeable.' },
+      { title: 'Flawlessly Even Complexion', desc: 'Without the vellus hair layer, the skin appears more even and refined, and makeup sits more smoothly.' },
+      { title: 'Dramatically Enhanced Absorption', desc: 'Active ingredients penetrate significantly deeper when applied to freshly dermaplaned skin, amplifying both in-clinic and home-care results.' },
+      { title: 'Deep Hydration Mask', desc: 'A professional hydrating mask is applied post-dermaplaning to maximise moisture replenishment in the newly receptive skin.' },
+      { title: 'LED Light Therapy Included', desc: 'Medical-grade LED therapy soothes post-treatment skin, reduces redness, and promotes an even-toned, luminous finish.' },
+      { title: 'Photo-Ready Results', desc: 'The skin appears uniquely bright, smooth, and radiant immediately after treatment — ideal preparation for events.' },
     ],
     process: [
-      { step: '01', title: 'Consultation & Assessment', desc: 'Your therapist assesses your skin and confirms that microdermabrasion is the appropriate treatment for your concerns.' },
-      { step: '02', title: 'Pre-Treatment Cleanse', desc: 'The skin is thoroughly cleansed to remove makeup, SPF, and surface impurities before treatment begins.' },
-      { step: '03', title: 'Microdermabrasion Resurfacing', desc: 'The abrasion head is systematically passed over the treatment area, with simultaneous suction removing exfoliated cells.' },
-      { step: '04', title: 'Serum & Actives Application', desc: 'Professional serums and active ingredients are applied to the freshly resurfaced skin for enhanced penetration.' },
-      { step: '05', title: 'Moisturise & SPF', desc: 'A professional moisturiser and broad-spectrum SPF are applied to complete the treatment and protect the skin.' },
+      { step: '01', title: 'Consultation & Skin Check', desc: 'Your therapist confirms dermaplaning is appropriate for your skin type and current condition before commencing treatment.' },
+      { step: '02', title: 'Cleanse & Prepare', desc: 'A thorough cleanse removes all surface impurities to ensure an optimal canvas for dermaplaning.' },
+      { step: '03', title: 'Dermaplaning', desc: 'Using a sterile surgical blade, your therapist precisely exfoliates the skin surface — removing dead cells and fine vellus hair for a flawlessly smooth finish.' },
+      { step: '04', title: 'Targeted Serums', desc: 'Professional Lira Clinical serums are applied immediately to take advantage of the skin\'s enhanced receptiveness post-dermaplaning.' },
+      { step: '05', title: 'Hydrating Mask', desc: 'A deeply hydrating mask is applied to replenish moisture, calm the skin, and maximise the luminosity of the result.' },
+      { step: '06', title: 'LED Light Therapy', desc: 'Medical-grade LED therapy soothes the skin, reduces post-procedure redness, and promotes an even, radiant finish.' },
+      { step: '07', title: 'Moisturise & SPF', desc: 'Completed with a professional moisturiser and broad-spectrum SPF to protect and preserve the results.' },
     ],
     faqs: [
-      { q: 'Is microdermabrasion uncomfortable?', a: 'No — the treatment produces a mild scratching and suction sensation that most clients find comfortable and tolerable.' },
-      { q: 'How long does treatment take?', a: 'Approximately 30–45 minutes, depending on the treatment area.' },
-      { q: 'Is there any downtime?', a: 'Minimal. Skin may appear slightly pink for a few hours post-treatment. Most clients apply makeup and continue their day immediately.' },
-      { q: 'How often should I have microdermabrasion?', a: 'Monthly treatments are ideal as part of ongoing skin maintenance. A series of more frequent sessions (every 2–3 weeks) may be recommended initially for specific concerns.' },
-      { q: 'Can I combine microdermabrasion with other treatments?', a: 'Yes — microdermabrasion pairs well with chemical peels, LED light therapy, and facials for enhanced results.' },
+      { q: 'Will my hair grow back thicker after dermaplaning?', a: 'No. This is a common misconception. Vellus hair is structurally different from terminal hair and cannot grow back thicker or coarser after dermaplaning.' },
+      { q: 'Is dermaplaning uncomfortable?', a: 'No. The treatment is completely painless. Most clients find the sensation gentle and relaxing.' },
+      { q: 'Is dermaplaning suitable for acne-prone skin?', a: 'Dermaplaning is not recommended over active breakouts. If you have occasional congestion or mild post-acne marks without active lesions, your therapist will assess your suitability at the appointment.' },
+      { q: 'How long do results last?', a: 'Skin typically remains smooth for 3–4 weeks as the natural cell renewal cycle progresses. Monthly treatments maintain optimal results.' },
+      { q: 'Can I wear makeup after?', a: 'Yes — makeup typically applies more smoothly and evenly than usual immediately after dermaplaning. Your therapist will advise on appropriate aftercare.' },
     ],
-    relatedSlugs: ['facials-redcliffe', 'chemical-peel-redcliffe', 'hydrafacial-redcliffe'],
+    relatedSlugs: ['corrective-facial-redcliffe', 'hybrid-facial-redcliffe', 'korean-lash-lift-tint-redcliffe'],
     iconName: 'Scan',
+  },
+
+  /* ── LEVEL 1 CORRECTIVE PEEL ───────────────────── */
+  {
+    slug: 'level-1-corrective-peel-redcliffe',
+    name: 'Level 1 Corrective Peel',
+    tagline: 'Lira Clinical brightening peel — no preparation required.',
+    price: '$199',
+    duration: '45 mins',
+    category: 'Corrective Peels',
+    metaTitle: 'Level 1 Corrective Peel Redcliffe | Lira Clinical Peel — The Derm Studio',
+    metaDescription:
+      'Book a Level 1 Lira Clinical Corrective Peel at The Derm Studio, Redcliffe. No preparation required. Brightening, hydrating, and corrective peel therapy with neck massage at Bluewater Square.',
+    heroTitle: 'Level 1 Corrective Peel Redcliffe | Lira Clinical Peel Therapy',
+    heroSubtitle:
+      'Professional brightening and corrective peel therapy with no preparation required. Suitable for all skin types.',
+    intro: [
+      'The Level 1 Corrective Peel at The Derm Studio is an entry-level professional skin peel therapy using Lira Clinical\'s professional resurfacing formulations. Designed to brighten, hydrate, and correct a variety of skin concerns, this treatment is the natural next step after progressing through our facial treatments — and the gateway to the results that professional peels are renowned for delivering.',
+      'Lira Clinical peels combine botanical ingredients with powerful resurfacing agents to safely improve skin texture and appearance with minimal to no downtime. The Level 1 formulations are crafted to be effective for a wide range of skin concerns — including dullness, mild pigmentation, early-onset fine lines, congestion, and uneven skin tone — while remaining accessible and comfortable for clients at the beginning of their peel journey.',
+      'Each Level 1 Corrective Peel is tailored by your skin therapist to match your unique goals. The peel type, application time, and supporting products are all selected based on your individual skin type, current condition, and treatment objectives. The treatment also includes a tension-releasing neck and shoulder massage while your mask is on, ensuring you leave feeling both improved and genuinely relaxed.',
+      'The Level 1 Corrective Peel requires no pre-treatment preparation with home-care products, making it an accessible first step into professional peel therapy. It is suitable for all skin types and all skin colours, and can be performed year-round. Multiple sessions spaced appropriately will deliver progressively improved brightness, clarity, and skin quality.',
+    ],
+    benefits: [
+      { title: 'Corrects Multiple Skin Concerns', desc: 'Lira Clinical Level 1 peels address dullness, mild pigmentation, congestion, fine lines, and uneven skin tone in a single treatment.' },
+      { title: 'No Preparation Required', desc: 'Unlike deeper peels, the Level 1 Corrective Peel can be booked directly without prior home-care preparation.' },
+      { title: 'Minimal to No Downtime', desc: 'Most clients experience no visible peeling — at most, mild flaking may occur in the days following treatment.' },
+      { title: 'Neck & Shoulder Massage Included', desc: 'An indulgent massage is performed while your treatment mask is working — genuine relaxation as part of your clinical treatment.' },
+      { title: 'Suitable for All Skin Types & Colours', desc: 'Lira Clinical peel formulations are safe and effective across all skin types and tones.' },
+      { title: 'Progressive, Cumulative Results', desc: 'Each treatment session builds on the last, delivering ongoing improvements in brightness, texture, and overall skin quality.' },
+    ],
+    process: [
+      { step: '01', title: 'Skin Consultation', desc: 'Your therapist assesses your skin, confirms Level 1 as the appropriate peel depth, and selects the most suitable Lira Clinical formulation for your goals.' },
+      { step: '02', title: 'Cleanse & Degrease', desc: 'The skin is thoroughly cleansed and degreased to ensure consistent, even peel penetration.' },
+      { step: '03', title: 'Peel Application', desc: 'The Lira Clinical peel solution is carefully applied and monitored by your therapist throughout the treatment.' },
+      { step: '04', title: 'Neutralisation & Removal', desc: 'The peel is neutralised and removed at the precise endpoint for your skin type and the selected formulation.' },
+      { step: '05', title: 'Mask + Neck & Shoulder Massage', desc: 'A soothing post-peel mask is applied while your therapist delivers a tension-releasing neck and shoulder massage.' },
+      { step: '06', title: 'Post-Peel Care & SPF', desc: 'Reparative products and broad-spectrum SPF are applied to support the skin barrier and protect the freshly treated skin.' },
+    ],
+    faqs: [
+      { q: 'Do I need to prepare my skin before a Level 1 peel?', a: 'No. The Level 1 Corrective Peel requires no preparation with home-care products — it can be booked directly without any prior conditioning.' },
+      { q: 'Will I visibly peel?', a: 'Most clients experience minimal to no visible peeling after a Level 1 treatment. You may notice some light flaking in the 2–3 days following treatment.' },
+      { q: 'How many sessions will I need?', a: 'A course of 4–6 treatments spaced 2–4 weeks apart is typically recommended for optimal results. Your therapist will guide you on timing and progression.' },
+      { q: 'Can I wear makeup after my peel?', a: 'We recommend allowing the skin to breathe for the remainder of the day. Your therapist will advise on appropriate aftercare for the specific formulation used.' },
+      { q: 'When should I progress to a Level 2 peel?', a: 'Your therapist will monitor your skin\'s response across your Level 1 course and advise when your skin is ready and appropriate for progression to Level 2.' },
+    ],
+    relatedSlugs: ['hybrid-facial-redcliffe', 'level-2-corrective-peel-redcliffe', 'corrective-facial-redcliffe'],
+    iconName: 'FlaskConical',
+  },
+
+  /* ── LEVEL 2 CORRECTIVE PEEL ───────────────────── */
+  {
+    slug: 'level-2-corrective-peel-redcliffe',
+    name: 'Level 2 Corrective Peel',
+    tagline: 'Advanced peel for pigmentation, scarring and fine lines. Prep required.',
+    price: '$220',
+    duration: '45 mins',
+    category: 'Corrective Peels',
+    metaTitle: 'Level 2 Corrective Peel Redcliffe | Advanced Skin Peel — The Derm Studio',
+    metaDescription:
+      'Book a Level 2 Lira Clinical Corrective Peel at The Derm Studio, Redcliffe. Advanced peel therapy targeting hyperpigmentation, acne scarring, and fine lines at Bluewater Square.',
+    heroTitle: 'Level 2 Corrective Peel Redcliffe | Advanced Peel Therapy',
+    heroSubtitle:
+      'Advanced Lira Clinical peel procedures targeting hyperpigmentation, fine lines, and acne scarring. Preparation required.',
+    intro: [
+      'The Level 2 Corrective Peel at The Derm Studio represents a significant step forward in skin revision. These advanced professional procedures are designed to work deeper within the skin — promoting progressive and meaningful improvement in skin health and appearance. They are recommended for clients who have completed a course of Level 1 peels and whose skin is conditioned and ready to receive deeper correction.',
+      'Level 2 Corrective Peels target a broader and more challenging range of skin concerns: hyperpigmentation, post-inflammatory pigmentation, fine lines and early wrinkles, acne scarring, and uneven texture that has not responded adequately to superficial treatments. The deeper action of Level 2 formulations stimulates cellular turnover at a greater depth and drives more substantial collagen production — delivering results that continue to develop in the weeks following each treatment.',
+      'Unlike Level 1 treatments, Level 2 Corrective Peels require pre-treatment preparation with Lira Clinical home-care products. This preparation period is essential for achieving safe, consistent results — particularly for clients with pigmentation concerns — as it conditions the skin, ensures the skin barrier is functioning optimally, and helps prevent post-inflammatory pigmentation. Your therapist will prescribe the appropriate home-care protocol at your consultation.',
+      'Some clients may experience mild downtime following a Level 2 treatment — typically mild flaking or more visible peeling over 3–7 days. Your therapist will provide detailed aftercare instructions and a Lira Clinical home-care prescription to support your skin through the recovery process and maximise your results.',
+    ],
+    benefits: [
+      { title: 'Deeper Skin Correction', desc: 'Works deeper than Level 1 formulations to address more significant pigmentation, scarring, fine lines, and texture concerns.' },
+      { title: 'Stimulates Cellular Renewal', desc: 'Drives cellular turnover at greater depth, revealing newer, healthier skin over the days and weeks following treatment.' },
+      { title: 'Collagen Production', desc: 'Level 2 peels stimulate meaningful collagen production, contributing to firmer, smoother skin with each course of treatment.' },
+      { title: 'Targets Hyperpigmentation', desc: 'Effective treatment for post-inflammatory pigmentation, sun damage, uneven skin tone, and mild melasma.' },
+      { title: 'Progressive Results', desc: 'Results continue to develop over 2–4 weeks following each treatment as the skin renewal process unfolds.' },
+      { title: 'Supported by Lira Clinical', desc: 'Every Level 2 peel is backed by a prescribed Lira Clinical home-care protocol for optimal and lasting outcomes.' },
+    ],
+    process: [
+      { step: '01', title: 'Consultation & Preparation Prescription', desc: 'Your therapist assesses your skin, confirms Level 2 suitability, and prescribes your Lira Clinical home-care preparation protocol.' },
+      { step: '02', title: 'Pre-Treatment Preparation', desc: 'You complete the prescribed home-care preparation period (typically 2–4 weeks) before your peel appointment.' },
+      { step: '03', title: 'Pre-Peel Cleanse & Degrease', desc: 'At your appointment, the skin is thoroughly cleansed and degreased for consistent peel penetration.' },
+      { step: '04', title: 'Level 2 Peel Application', desc: 'The Lira Clinical Level 2 peel solution is applied precisely and monitored by your therapist throughout the treatment.' },
+      { step: '05', title: 'Neutralisation & Removal', desc: 'The peel is neutralised and removed at the correct endpoint for your skin and the selected formulation.' },
+      { step: '06', title: 'Post-Peel Recovery Support', desc: 'Soothing, reparative products and SPF are applied, and your therapist prescribes your Lira Clinical post-peel home-care protocol.' },
+    ],
+    faqs: [
+      { q: 'Why do I need to prepare my skin before a Level 2 peel?', a: 'Preparation conditions the skin barrier, maximises the safety and consistency of the peel result, and significantly reduces the risk of post-inflammatory pigmentation — particularly important for clients treating existing pigmentation.' },
+      { q: 'How long is the preparation period?', a: 'Typically 2–4 weeks of consistent use of prescribed Lira Clinical home-care products. Your therapist will confirm the exact protocol.' },
+      { q: 'What is the downtime?', a: 'Level 2 peels typically result in 3–7 days of mild flaking or more visible peeling. Your therapist will set clear expectations based on the specific formulation selected.' },
+      { q: 'How many Level 2 peels will I need?', a: 'A course of 3–6 treatments spaced 3–4 weeks apart is typical. The exact number depends on your skin concerns and treatment goals.' },
+      { q: 'Can I have a Level 2 peel in summer?', a: 'We exercise caution with Level 2 peels during warmer months, particularly for pigmentation clients. Strict daily SPF use is essential. Your therapist will advise based on your circumstances.' },
+    ],
+    relatedSlugs: ['level-1-corrective-peel-redcliffe', 'level-3-corrective-peel-redcliffe', 'skin-needling-nctf-redcliffe'],
+    iconName: 'FlaskConical',
+  },
+
+  /* ── LEVEL 3 CORRECTIVE PEEL ───────────────────── */
+  {
+    slug: 'level-3-corrective-peel-redcliffe',
+    name: 'Level 3 Corrective Peel',
+    tagline: 'Intensive Lira Clinical correction for complex skin concerns. Prep required.',
+    price: '$250',
+    duration: '45 mins',
+    category: 'Corrective Peels',
+    metaTitle: 'Level 3 Corrective Peel Redcliffe | Intensive Skin Peel — The Derm Studio',
+    metaDescription:
+      'Book a Level 3 Lira Clinical Corrective Peel at The Derm Studio, Redcliffe. Our most intensive peel therapy for melasma, acne, significant pigmentation, and age-related skin concerns.',
+    heroTitle: 'Level 3 Corrective Peel Redcliffe | Intensive Peel Therapy',
+    heroSubtitle:
+      'Our most intensive Lira Clinical peel — for complex skin concerns including melasma, acne, and significant pigmentation. Recommended in cooler months.',
+    intro: [
+      'The Level 3 Corrective Peel at The Derm Studio is our most intensive professional peel treatment. These advanced correction procedures utilise a synergistic blend of targeted Lira Clinical formulations to address complex and challenging skin concerns — including active acne, melasma, significant pigmentation disorders, and age-related skin changes that have not responded to lighter treatments.',
+      'Level 3 Corrective Peels are designed to restore optimal skin health by promoting meaningful cellular renewal and significantly improving overall skin function. The depth of these formulations delivers substantial improvement in skin texture, tone, and resilience — with results that are progressive and cumulative across a course of treatment. For clients with chronic pigmentation, significant acne scarring, or deeply entrenched textural concerns, Level 3 Corrective Peels represent the most powerful peel option available at The Derm Studio.',
+      'Level 3 treatments require both pre-treatment preparation with Lira Clinical home-care products and prior conditioning treatments in-clinic. The preparation phase is non-negotiable at this level — it is essential for achieving the safest and most effective outcome, and for reducing the risk of post-inflammatory pigmentation and other adverse reactions. Your therapist will develop a detailed preparation plan before proceeding.',
+      'Downtime is associated with Level 3 treatments. Most clients experience visible peeling and flaking over 5–10 days following the procedure. These treatments are recommended during cooler months to minimise UV exposure during the recovery phase. Your therapist will provide a complete aftercare protocol and Lira Clinical home-care prescription to support your skin through recovery and maximise results.',
+    ],
+    benefits: [
+      { title: 'Maximum Peel Correction', desc: 'The most powerful peel formulations available at The Derm Studio — for complex skin concerns that require intensive intervention.' },
+      { title: 'Targets Complex Pigmentation', desc: 'Effective for melasma, significant post-inflammatory hyperpigmentation, and pigmentation disorders that have not responded to lighter treatments.' },
+      { title: 'Significant Cellular Renewal', desc: 'Promotes deep cellular renewal and rebuilds the overall health and function of the skin.' },
+      { title: 'Collagen & Structural Improvement', desc: 'Stimulates substantial collagen production, delivering measurable improvement in firmness, texture, and skin resilience.' },
+      { title: 'Treats Acne & Post-Acne Scarring', desc: 'Addresses both active acne concerns and the scarring and pigmentation sequelae that follow.' },
+      { title: 'Long-Lasting, Progressive Results', desc: 'Each treatment in the course delivers cumulative improvement — results continue developing for weeks after each session.' },
+    ],
+    process: [
+      { step: '01', title: 'Comprehensive Consultation', desc: 'Your therapist conducts a thorough assessment, confirms Level 3 suitability, and develops a complete preparation plan including home-care prescription and prior in-clinic conditioning.' },
+      { step: '02', title: 'Preparation Phase', desc: 'You complete your Lira Clinical home-care preparation and any required prior in-clinic treatments before proceeding to Level 3.' },
+      { step: '03', title: 'Pre-Peel Assessment', desc: 'At your Level 3 appointment, your skin is reassessed to confirm readiness and the peel protocol is finalised.' },
+      { step: '04', title: 'Level 3 Peel Application', desc: 'The synergistic Lira Clinical Level 3 peel blend is applied precisely and monitored carefully throughout the treatment.' },
+      { step: '05', title: 'Neutralisation & Post-Peel Care', desc: 'The peel is neutralised at the correct endpoint and reparative products are applied immediately to support the skin barrier.' },
+      { step: '06', title: 'Aftercare Prescription', desc: 'You leave with a detailed Lira Clinical post-peel home-care protocol and comprehensive aftercare instructions for the recovery period.' },
+    ],
+    faqs: [
+      { q: 'Am I a suitable candidate for a Level 3 peel?', a: 'Level 3 peels are for clients with significant skin concerns who have already undergone a course of lighter peel treatments. Your therapist will determine suitability through consultation and prior in-clinic treatment.' },
+      { q: 'What is the expected downtime?', a: 'Most Level 3 clients experience 5–10 days of visible peeling and flaking as the skin renews. Your therapist will set clear expectations before treatment.' },
+      { q: 'Why are Level 3 peels recommended in cooler months?', a: 'Cooler months reduce UV exposure during the recovery phase, which is particularly important when treating pigmentation. Your therapist will advise on timing.' },
+      { q: 'How many treatments will I need?', a: 'This depends entirely on your skin concerns. Your therapist will develop a complete treatment plan before commencing Level 3 treatments.' },
+      { q: 'What preparation is required?', a: 'Both Lira Clinical home-care preparation (typically 4–6 weeks) and prior in-clinic conditioning treatments are required before Level 3. Your therapist will guide you through this phase.' },
+    ],
+    relatedSlugs: ['level-2-corrective-peel-redcliffe', 'skin-needling-nctf-redcliffe', 'skin-needling-exosomes-redcliffe'],
+    iconName: 'FlaskConical',
+  },
+
+  /* ── SKIN NEEDLING WITH NCTF ───────────────────── */
+  {
+    slug: 'skin-needling-nctf-redcliffe',
+    name: 'Skin Needling with NCTF',
+    tagline: 'Collagen induction therapy infused with 54 active ingredients.',
+    price: '$349',
+    duration: '45 mins',
+    category: 'Skin Needling',
+    metaTitle: 'Skin Needling Redcliffe | NCTF Treatment — The Derm Studio',
+    metaDescription:
+      'Book Skin Needling with NCTF at The Derm Studio, Redcliffe. Collagen induction therapy infused with vitamins, amino acids, minerals, and hyaluronic acid for brighter, firmer skin at Bluewater Square.',
+    heroTitle: 'Skin Needling Redcliffe | Collagen Induction with NCTF',
+    heroSubtitle:
+      'Micro-needling infused with NCTF — 54 active ingredients delivered deep into the skin for brighter, firmer, smoother results.',
+    intro: [
+      'Skin Needling with NCTF at The Derm Studio is a results-driven treatment designed to rejuvenate, hydrate, and restore your skin from within. Using a professional micro-needling device, your therapist creates thousands of precise micro-channels in the skin\'s surface, stimulating the skin\'s natural collagen production while allowing the NCTF solution to penetrate to a depth unreachable by topical application alone.',
+      'NCTF (New Cellular Treatment Factor) is a powerful cocktail of 54 active ingredients: vitamins, amino acids, minerals, coenzymes, and hyaluronic acid. Developed specifically to support cellular renewal and deep skin hydration, it is one of the most nutrient-dense solutions available for skin needling infusion. When delivered directly into the skin via micro-channels, NCTF provides comprehensive cellular support that drives lasting improvements in hydration, firmness, brightness, and overall skin quality.',
+      'The combination of collagen-stimulating needling and deep NCTF infusion delivers a uniquely comprehensive result: brighter, smoother, firmer skin with visibly improved tone, texture, and hydration. Clients commonly notice a reduction in fine lines and enlarged pores, an improvement in overall skin luminosity, and a restoration of healthy skin density over the course of treatment.',
+      'All skin needling at The Derm Studio is performed by our qualified dermal therapists using professional-grade devices that deliver consistent, precise needle depth. Topical anaesthetic cream is applied before treatment to ensure your comfort, and Lira Clinical products support the skin through treatment and recovery. As Redcliffe\'s sole Lira Clinical stockist, we prescribe the ideal home-care protocol to extend your results between sessions.',
+    ],
+    benefits: [
+      { title: 'Deep NCTF Infusion', desc: '54 active ingredients — including vitamins, amino acids, hyaluronic acid, and coenzymes — are delivered directly into the skin via micro-channels for unparalleled cellular support.' },
+      { title: 'Collagen Induction', desc: 'Micro-needling triggers the skin\'s natural healing response, stimulating new collagen and elastin production for firmer, more resilient skin.' },
+      { title: 'Improved Skin Hydration', desc: 'Hyaluronic acid and the NCTF complex restore deep hydration at a cellular level, visibly improving skin plumpness and moisture retention.' },
+      { title: 'Reduced Fine Lines & Pores', desc: 'Progressive collagen remodelling reduces the depth of fine lines and visibly tightens the appearance of enlarged pores.' },
+      { title: 'Enhanced Brightness & Luminosity', desc: 'Clients notice a meaningful improvement in skin radiance and overall glow across the course of treatment.' },
+      { title: 'Qualified Therapist Delivery', desc: 'All skin needling at The Derm Studio is performed by qualified dermal therapists using professional-grade devices.' },
+    ],
+    process: [
+      { step: '01', title: 'Consultation & Assessment', desc: 'Your therapist assesses your skin concerns, reviews contraindications, and confirms the appropriate needle depth for your treatment goals.' },
+      { step: '02', title: 'Anaesthetic Application', desc: 'Topical anaesthetic cream is applied and left for 30 minutes prior to treatment to ensure your comfort throughout the procedure.' },
+      { step: '03', title: 'Skin Needling Treatment', desc: 'The micro-needling device is passed systematically over the treatment area, creating precise micro-channels at the correct depth.' },
+      { step: '04', title: 'NCTF Infusion', desc: 'The NCTF solution is applied directly to the needled skin, penetrating through the open micro-channels to reach the deeper layers of the dermis.' },
+      { step: '05', title: 'Post-Treatment Support', desc: 'Soothing, barrier-supporting Lira Clinical products are applied to calm the skin and begin the recovery process.' },
+      { step: '06', title: 'Aftercare & Home-Care Prescription', desc: 'You receive detailed aftercare instructions and a Lira Clinical home-care prescription to support healing and maximise results.' },
+    ],
+    faqs: [
+      { q: 'Is skin needling with NCTF painful?', a: 'Topical anaesthetic cream is applied 30 minutes before treatment. Most clients report minimal discomfort — a mild vibration or scratching sensation at most.' },
+      { q: 'What is the downtime?', a: 'Skin typically appears red and feels warm for 24–48 hours post-treatment, similar to a mild sunburn. Avoid makeup and active skincare products for the first 24 hours.' },
+      { q: 'How many sessions are needed?', a: 'A course of 3–6 treatments spaced 4–6 weeks apart is typically recommended for optimal results. Your therapist will advise based on your specific concerns.' },
+      { q: 'When will I see results?', a: 'Initial improvements in skin quality and hydration are typically visible within 2 weeks of the first session. Collagen remodelling results continue developing for 3–6 months following each treatment.' },
+      { q: 'What is NCTF?', a: 'NCTF (New Cellular Treatment Factor) is a clinically formulated solution containing 54 active ingredients including vitamins, amino acids, coenzymes, minerals, and hyaluronic acid — designed for comprehensive cellular support and deep skin hydration.' },
+    ],
+    relatedSlugs: ['skin-needling-exosomes-redcliffe', 'level-2-corrective-peel-redcliffe', 'level-3-corrective-peel-redcliffe'],
+    iconName: 'Pipette',
+  },
+
+  /* ── SKIN NEEDLING WITH EXOSOMES ───────────────── */
+  {
+    slug: 'skin-needling-exosomes-redcliffe',
+    name: 'Skin Needling with Exosomes',
+    tagline: 'Our most advanced needling — exosome technology for maximum regeneration.',
+    price: '$449',
+    duration: '45 mins',
+    category: 'Skin Needling',
+    metaTitle: 'Skin Needling with Exosomes Redcliffe | Advanced Regeneration — The Derm Studio',
+    metaDescription:
+      'Book Skin Needling with Exosomes at The Derm Studio, Redcliffe. Our most advanced needling treatment — exosome technology for maximum skin repair, collagen stimulation, and rejuvenation at Bluewater Square.',
+    heroTitle: 'Skin Needling with Exosomes Redcliffe | Advanced Regeneration',
+    heroSubtitle:
+      'Our most advanced needling treatment — exosome technology supercharges the skin\'s natural repair and regeneration for maximum results.',
+    intro: [
+      'Skin Needling with Exosomes at The Derm Studio is our most advanced skin needling treatment — and the pinnacle of cellular regeneration available at our Redcliffe clinic. Combining the proven collagen-stimulating power of professional micro-needling with the extraordinary regenerative capacity of exosome technology, this treatment delivers results that surpass what standard needling can achieve.',
+      'Exosomes are cell-derived signalling molecules — tiny vesicles released by cells that carry growth factors, peptides, and genetic instructions between cells. In the context of skin treatment, exosomes act as powerful biological messengers that supercharge the skin\'s natural repair and regeneration process, amplifying the healing response triggered by micro-needling to a degree that no standard serum or nutrient solution can match.',
+      'When delivered via micro-needling, exosomes penetrate to the depth of the dermis, triggering a profound cellular renewal cascade. This makes Skin Needling with Exosomes particularly effective for clients with significant skin ageing, deep acne scarring, textural concerns, and those seeking maximum rejuvenation from a single treatment modality. For clients who have already undergone standard needling and want to take their results further, the Exosome treatment delivers a measurably superior outcome.',
+      'Like all skin needling at The Derm Studio, this treatment is performed by qualified dermal therapists using professional-grade micro-needling devices with topical anaesthetic for client comfort. Results develop progressively following each session, with peak collagen remodelling occurring over 3–6 months.',
+    ],
+    benefits: [
+      { title: 'Exosome Technology', desc: 'Cell-derived signalling molecules supercharge the skin\'s repair and regeneration response — amplifying results beyond standard needling.' },
+      { title: 'Maximum Rejuvenation', desc: 'For clients seeking the highest level of skin renewal available through needle-based treatment.' },
+      { title: 'Deep Collagen Stimulation', desc: 'Exosomes trigger a profound collagen and elastin regeneration cascade, delivering measurable improvements in skin firmness and structure.' },
+      { title: 'Effective for Significant Scarring', desc: 'The amplified healing response makes this treatment particularly effective for deeper atrophic acne scarring and textural concerns.' },
+      { title: 'Superior to Standard Serums', desc: 'Exosomes outperform standard needling serums and nutrient solutions in driving cellular regeneration and healing.' },
+      { title: 'Qualified Therapist Delivery', desc: 'Performed exclusively by qualified dermal therapists at The Derm Studio using professional-grade needling devices.' },
+    ],
+    process: [
+      { step: '01', title: 'Consultation & Assessment', desc: 'Your therapist reviews your skin history, concerns, and needling experience, and confirms the Exosome treatment is appropriate for your goals.' },
+      { step: '02', title: 'Anaesthetic Application', desc: 'Topical anaesthetic cream is applied and left for 30 minutes to ensure comfort throughout the procedure.' },
+      { step: '03', title: 'Skin Needling Treatment', desc: 'The micro-needling device is passed systematically over the treatment area at the precise depth required for your skin and concerns.' },
+      { step: '04', title: 'Exosome Application', desc: 'The exosome solution is applied to the needled skin, penetrating deeply through the open micro-channels to the dermal layer where it activates cellular repair.' },
+      { step: '05', title: 'Post-Treatment Recovery Support', desc: 'Soothing, reparative Lira Clinical products are applied immediately to calm the skin and support the recovery process.' },
+      { step: '06', title: 'Aftercare & Home-Care Prescription', desc: 'Detailed aftercare guidance and a prescribed Lira Clinical home-care regimen to support healing and maximise long-term results.' },
+    ],
+    faqs: [
+      { q: 'What are exosomes and why are they used in skin needling?', a: 'Exosomes are cell-derived vesicles that carry biological signals between cells — triggering collagen production, cellular repair, and regeneration at a level that standard serums cannot achieve.' },
+      { q: 'How is this different from Skin Needling with NCTF?', a: 'Both treatments deliver active ingredients via micro-channels. Exosomes are biological signalling molecules that trigger the skin\'s own regeneration pathways at a cellular level — delivering a more powerful and advanced outcome than NCTF.' },
+      { q: 'Is there downtime?', a: 'Similar to standard skin needling — skin appears red and feels warm for 24–48 hours. Avoid makeup and active skincare for 24 hours after treatment.' },
+      { q: 'How many sessions are recommended?', a: 'Your therapist will advise based on your skin concerns. Typically 2–4 sessions for anti-ageing; 3–6 for significant acne scarring.' },
+      { q: 'Who is this treatment best suited for?', a: 'Clients with significant skin concerns — deep acne scarring, advanced skin ageing, or textural issues — who want maximum regeneration. Also ideal for existing needling clients seeking superior results.' },
+    ],
+    relatedSlugs: ['skin-needling-nctf-redcliffe', 'level-3-corrective-peel-redcliffe', 'level-2-corrective-peel-redcliffe'],
+    iconName: 'Pipette',
+  },
+
+  /* ── KOREAN LASH LIFT & TINT ───────────────────── */
+  {
+    slug: 'korean-lash-lift-tint-redcliffe',
+    name: 'Korean Lash Lift & Tint',
+    tagline: 'Lifted, curled, and tinted natural lashes — results last 6–8 weeks.',
+    price: '$129',
+    duration: '1 hr',
+    category: 'Lash & Brow',
+    metaTitle: 'Korean Lash Lift & Tint Redcliffe | Natural Lash Treatment — The Derm Studio',
+    metaDescription:
+      'Book a Korean Lash Lift & Tint at The Derm Studio, Redcliffe. Lifted, curled, and darkened natural lashes lasting 6–8 weeks — no extensions required. At Bluewater Square, Redcliffe.',
+    heroTitle: 'Korean Lash Lift & Tint Redcliffe | Natural Lash Enhancement',
+    heroSubtitle:
+      'Lifted, curled, and darkened natural lashes with precision Korean technique. Effortless eye definition lasting 6–8 weeks.',
+    intro: [
+      'The Korean Lash Lift & Tint at The Derm Studio is a semi-permanent lash treatment that lifts, curls, and darkens your natural lashes — delivering the appearance of longer, fuller lashes without extensions, strip lashes, or daily mascara. Using techniques refined in Korean beauty culture and renowned for their precision and longevity, this treatment gives your eyes a beautifully open, wide-awake look that lasts up to 6–8 weeks.',
+      'The treatment uses a specially formulated lifting solution to gently reshape the lashes around a precisely selected rod, creating a consistent, lifted curl from root to tip. Unlike traditional lash perms, the Korean technique uses refined chemistry and precise application that preserves lash condition and delivers a more natural, flattering result — one that suits your natural lash length and eye shape.',
+      'A professional tint is then applied to darken your natural lashes, adding depth, definition, and the appearance of volume. The combination of lifted curl and rich tint creates a striking eye-opening effect — equivalent to wearing mascara even with completely bare skin. The result is effortless, polished, and requires no daily maintenance.',
+      'At The Derm Studio, the Korean Lash Lift & Tint is performed by our experienced team using professional-grade lifting solutions that are gentle on the lash fibre. This treatment beautifully complements your overall skin investment — clean, defined lashes frame your skin and enhance the results of every facial and peel treatment you receive.',
+    ],
+    benefits: [
+      { title: 'Long-Lasting Lifted Curl', desc: 'Results typically last 6–8 weeks before requiring a touch-up — effortless lash definition without daily effort.' },
+      { title: 'Natural-Looking Results', desc: 'The Korean lifting technique delivers a precise, flattering curl that suits your natural lash length and eye shape.' },
+      { title: 'Tint Included', desc: 'Professional lash tinting adds depth, richness, and definition — reducing or eliminating the need for daily mascara.' },
+      { title: 'No Extensions Required', desc: 'All results are achieved using your natural lashes — no adhesives, no extension maintenance, no damage.' },
+      { title: 'Eye-Opening Effect', desc: 'The combination of lifted curl and dark tint creates a wide-awake, luminous eye effect that enhances your overall appearance.' },
+      { title: 'Complements Your Skin Treatments', desc: 'Beautifully groomed lashes frame and enhance the skin results you achieve through your facial and peel treatments.' },
+    ],
+    process: [
+      { step: '01', title: 'Lash Assessment', desc: 'Your therapist assesses your natural lash length, condition, and growth direction, and selects the appropriate lift rod and protocol.' },
+      { step: '02', title: 'Lash Preparation', desc: 'Lashes are cleaned and separated to ensure a clean, even application surface.' },
+      { step: '03', title: 'Lifting Rod Application', desc: 'The correctly sized rod is applied to the upper lid, and lashes are carefully arranged and secured around it.' },
+      { step: '04', title: 'Lifting Solution', desc: 'The Korean lifting formula is applied precisely and left for the appropriate development time based on your lash type.' },
+      { step: '05', title: 'Setting Solution', desc: 'A setting solution is applied to lock in the new curl and restore the lash fibre structure.' },
+      { step: '06', title: 'Lash Tint', desc: 'A professional lash tint is applied and developed to deliver the desired depth of colour and definition.' },
+      { step: '07', title: 'Nourishing Finish', desc: 'A lash conditioning treatment is applied to restore moisture and maintain the health of the lash fibre post-treatment.' },
+    ],
+    faqs: [
+      { q: 'How long does a Korean Lash Lift last?', a: 'Results typically last 6–8 weeks, depending on your natural lash growth cycle. Most clients return for a touch-up at 6–8 weekly intervals.' },
+      { q: 'Can I wear mascara after a lash lift?', a: 'Yes. Most clients find they need little to no mascara after a lash lift and tint. If you choose to wear mascara, avoid waterproof formulas as they can weaken the lift over time.' },
+      { q: 'What should I avoid after treatment?', a: 'Avoid getting your lashes wet, rubbing your eyes, and applying skincare products to the lash area for the first 24 hours. Your therapist will provide full aftercare instructions.' },
+      { q: 'Is a lash lift safe for my natural lashes?', a: 'Yes, when performed correctly using professional-grade solutions. Our therapists are trained in the precise application required to achieve beautiful results while preserving lash condition.' },
+      { q: 'Is a Lash Lift & Tint suitable for short or straight lashes?', a: 'A lash lift is effective on most natural lash types. Your therapist will assess your lashes and recommend the best approach for your specific lash characteristics.' },
+    ],
+    relatedSlugs: ['dermaplaning-facial-redcliffe', 'corrective-facial-redcliffe', 'hybrid-facial-redcliffe'],
+    iconName: 'Sun',
+  },
+]
+
+export const serviceMenu: MenuCategory[] = [
+  {
+    id: 'consultations',
+    category: 'Consultations',
+    note: 'All new clients are welcome to book a complimentary consultation before committing to treatment.',
+    items: [
+      { name: 'Consultation', price: 'Free', duration: '30 mins', tagline: 'Professional skin analysis with personalised treatment and skincare recommendations.', externalHref: '/book' },
+      { name: 'Consultation + Treatment — New Clients', price: 'Price varies', duration: '1 hr', tagline: 'A skin consultation followed by a bespoke treatment tailored precisely to your skin\'s needs.', externalHref: '/book' },
+    ],
+  },
+  {
+    id: 'facials',
+    category: 'Facials',
+    items: [
+      { name: 'Corrective Facial', price: '$220', duration: '45 mins', tagline: 'The ideal starting point for your skincare journey.', slug: 'corrective-facial-redcliffe' },
+      { name: 'Hybrid Facial', price: '$220', duration: '45 mins', tagline: 'The next-level upgrade — peel infusion meets clinical facial.', slug: 'hybrid-facial-redcliffe' },
+      { name: 'Luminous Silk Dermaplaning Facial', price: '$199', duration: '1 hr', tagline: 'Ultra-luxurious dermaplaning for flawlessly smooth, glowing skin.', slug: 'dermaplaning-facial-redcliffe' },
+    ],
+  },
+  {
+    id: 'corrective-peels',
+    category: 'Corrective Peels',
+    note: 'All peel treatments use Lira Clinical professional formulations. Level 2 and Level 3 require pre-treatment preparation — your therapist will advise.',
+    items: [
+      { name: 'Level 1 Corrective Peel', price: '$199', duration: '45 mins', tagline: 'Brightening Lira Clinical peel — no preparation required.', slug: 'level-1-corrective-peel-redcliffe' },
+      { name: 'Level 2 Corrective Peel', price: '$220', duration: '45 mins', tagline: 'Advanced peel for pigmentation, scarring and fine lines. Prep required.', slug: 'level-2-corrective-peel-redcliffe' },
+      { name: 'Level 3 Corrective Peel', price: '$250', duration: '45 mins', tagline: 'Intensive correction for complex skin concerns. Prep required.', slug: 'level-3-corrective-peel-redcliffe' },
+    ],
+  },
+  {
+    id: 'skin-needling',
+    category: 'Skin Needling',
+    items: [
+      { name: 'Skin Needling with NCTF', price: '$349', duration: '45 mins', tagline: 'Collagen induction therapy infused with 54 active ingredients.', slug: 'skin-needling-nctf-redcliffe' },
+      { name: 'Skin Needling with Exosomes', price: '$449', duration: '45 mins', tagline: 'Our most advanced needling — exosome technology for maximum regeneration.', slug: 'skin-needling-exosomes-redcliffe' },
+      { name: 'Neck Add-On', price: '$50', duration: '5 mins', tagline: 'Extend your skin needling treatment to include the neck.', externalHref: '/book' },
+      { name: 'Décolletage Add-On', price: '$50', duration: '5 mins', tagline: 'Extend your skin needling treatment to include the décolletage.', externalHref: '/book' },
+    ],
+  },
+  {
+    id: 'add-ons',
+    category: 'Add-Ons',
+    items: [
+      { name: 'LED Light Therapy Add-On', price: '$49', duration: '15 mins', tagline: 'Enhance any treatment with medical-grade LED light therapy.', externalHref: '/book' },
+    ],
+  },
+  {
+    id: 'lash-brow',
+    category: 'Lash & Brow',
+    items: [
+      { name: 'Korean Lash Lift & Tint', price: '$129', duration: '1 hr', tagline: 'Lifted, curled, and tinted natural lashes — results last 6–8 weeks.', slug: 'korean-lash-lift-tint-redcliffe' },
+      { name: 'Lash & Brow Tint', price: '$30', duration: '30 mins', tagline: 'Tint lashes and brows for definition and depth.', externalHref: '/book' },
+      { name: 'Brow Tint', price: '$15', duration: '15 mins', tagline: 'Professional brow tinting for shape and definition.', externalHref: '/book' },
+    ],
+  },
+  {
+    id: 'retail',
+    category: 'Retail',
+    note: 'Shop Lira Clinical professional home-care products in-studio. Your therapist will prescribe the right products to extend your treatment results at home.',
+    items: [
+      { name: 'Product Collection', price: 'Price varies', duration: '5 mins', tagline: 'Lira Clinical professional homecare — prescribed and available exclusively in-studio.', externalHref: '/lira-clinical' },
+    ],
   },
 ]
 

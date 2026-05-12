@@ -4,26 +4,26 @@ import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { ShieldCheck, Heart, TrendingUp, UserCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'About The Derm Studio | Expert Dermal Therapists in Redcliffe',
+  title: 'About The Derm Studio | Rachael Liquorish, Dermal Nurse — Redcliffe',
   description:
-    "Meet the qualified dermal therapists at The Derm Studio — Redcliffe's specialist skin clinic and sole Lira Clinical stockist. Learn about our approach to skin health.",
+    "Meet Rachael Liquorish, Dermal Nurse and founder of The Derm Studio — Redcliffe's results-focused skin clinic and sole Lira Clinical stockist at Bluewater Square.",
 }
 
 const pillars = [
   {
     icon: ShieldCheck,
     title: 'Clinical Expertise',
-    body: "Our therapists hold formal qualifications in dermal therapy and undergo ongoing professional development. Every treatment recommendation is backed by clinical evidence — we don't follow trends, we follow science.",
+    body: "Every treatment at The Derm Studio is grounded in clinical evidence. Rachael brings nursing-level knowledge to skin treatment — meaning every recommendation is backed by science, not trends.",
   },
   {
     icon: Heart,
     title: 'Personalised Care',
-    body: "No two skin types are the same, and no two treatment plans should be either. We take the time to understand your skin, your lifestyle, and your goals before recommending a single product or procedure.",
+    body: "No two skin types are the same, and no two treatment plans should be either. Rachael takes the time to understand your skin, your lifestyle, and your goals before recommending a single product or procedure.",
   },
   {
     icon: TrendingUp,
-    title: 'Proven Results',
-    body: "We measure our success by your results. Our treatment protocols are built around what delivers measurable improvement — in texture, tone, clarity, and overall skin health — not what looks impressive on social media.",
+    title: 'Visible Results',
+    body: "The Derm Studio is results-focused — full stop. Every treatment protocol is built around what delivers measurable improvement in texture, tone, clarity, and skin health, not what looks impressive on social media.",
   },
 ]
 
@@ -54,108 +54,87 @@ export default function AboutPage() {
             style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
           >
             <p>
-              At The Derm Studio, we believe great skin starts with understanding your skin. We&apos;re Redcliffe&apos;s dedicated specialist skin clinic — a place where clinical expertise meets genuine, personal care.
+              The Derm Studio is a results-focused skin clinic founded by Rachael Liquorish, a Dermal Nurse with a deep commitment to skin health and evidence-based treatment. Located at Shop 10, 20 Anzac Avenue, Bluewater Square in Redcliffe, the clinic specialises in advanced skin treatments tailored to the individual — with a focus on visible results and a genuinely personalised experience.
             </p>
             <p>
-              Located at Shop 10, Bluewater Square in the heart of Redcliffe, we&apos;ve built a welcoming clinic that serves clients from across the Moreton Bay Peninsula. Whether you&apos;re visiting from nearby Scarborough or travelling from North Lakes or Mango Hill, you&apos;ll find a space where your skin health is taken seriously.
+              Every treatment at The Derm Studio begins with understanding your skin. No two clients are the same, and no two treatment plans should be either. Rachael works with you to assess your skin, understand your concerns and goals, and develop a protocol that makes sense for your skin specifically — not a generic menu approach.
             </p>
             <p>
-              Our team of fully qualified dermal therapists works with you to understand your skin before recommending any treatment or product. Every new client receives a complimentary skin consultation — because we&apos;d rather take the time to get it right than rush to a recommendation.
+              Every new client is welcome to start with a complimentary 30-minute consultation. It&apos;s an opportunity to have your skin professionally assessed, ask questions, and receive honest recommendations — obligation-free.
             </p>
             <p>
-              We are proud to be <strong>Redcliffe&apos;s sole Lira Clinical stockist</strong>. This professional-grade skincare line sits at the heart of our treatment protocols and home-care recommendations. You won&apos;t find it anywhere else on the Redcliffe Peninsula — and that&apos;s intentional. We partner with brands we genuinely believe in and use every day in our clinic.
+              The Derm Studio is proud to be <strong>Redcliffe&apos;s sole Lira Clinical stockist</strong>. Lira Clinical is a professional-grade skincare brand trusted by skin therapists globally, and it sits at the heart of every treatment protocol and home-care prescription at the studio. You won&apos;t find it elsewhere on the Redcliffe Peninsula — and that partnership is intentional. The Derm Studio works exclusively with brands it genuinely uses and believes in.
             </p>
             <p>
-              Our services include customised facials, chemical peels, LED light therapy, skin needling, HydraFacial, microdermabrasion, and specialist dermal therapy — each tailored to your individual skin concerns and goals. We believe that lasting results come from the right combination of evidence-based treatments and professional skincare, not from one-size-fits-all protocols.
+              Treatments on offer include corrective facials, hybrid facials, dermaplaning, Lira Clinical corrective peels (Levels 1–3), skin needling with NCTF and Exosomes, and Korean lash lifting — each tailored to your individual skin concerns and delivered with clinical precision.
             </p>
             <p>
-              Great skin is an ongoing relationship, not a single treatment. That&apos;s why we focus on building long-term plans that evolve as your skin does — whether you&apos;re addressing pigmentation, acne scarring, fine lines, or simply wanting to maintain a healthy, radiant complexion.
-            </p>
-            <p>
-              When you visit The Derm Studio, you&apos;re not just booking a treatment. You&apos;re starting a relationship with therapists who genuinely care about the long-term health of your skin.
+              Great skin is a relationship, not a single appointment. The Derm Studio is built around long-term skin health — developing treatment plans that evolve as your skin does, and pairing in-clinic treatments with the right home-care to extend and protect your results every day.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ── Meet the Team ── */}
+      {/* ── Meet Rachael ── */}
       <section className="py-20 px-4" style={{ backgroundColor: 'var(--color-cream)' }}>
         <div className="max-w-7xl mx-auto">
           <h2
             className="text-3xl sm:text-4xl font-bold text-center mb-14"
             style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
           >
-            Meet the Team
+            Meet Rachael
           </h2>
 
-          {/* TODO: Replace placeholders with real therapist photos + bios supplied by client */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: 'Therapist Name',
-                title: 'Principal Dermal Therapist',
-                bio: 'Fully qualified dermal therapist with advanced training in clinical skin treatments. Lira Clinical certified. Passionate about achieving measurable results for every client.',
-                quals: 'Diploma of Beauty Therapy | Cert IV in Dermal Therapies | Lira Clinical Certified',
-              },
-              {
-                name: 'Therapist Name',
-                title: 'Dermal Therapist',
-                bio: 'Specialising in LED light therapy, chemical peels, and advanced skin treatments. Committed to ongoing education and evidence-based practice.',
-                quals: 'Diploma of Beauty Therapy | Cert IV in Dermal Therapies',
-              },
-            ].map((therapist, i) => (
+          {/* TODO: Replace UserCircle placeholder with Rachael's photo once supplied */}
+          <div className="max-w-2xl mx-auto">
+            <div
+              className="bg-white rounded-2xl overflow-hidden shadow-sm"
+              style={{ border: '1px solid var(--color-cream-dark)' }}
+            >
+              {/* Photo placeholder */}
               <div
-                key={i}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm"
-                style={{ border: '1px solid var(--color-cream-dark)' }}
+                className="h-64 flex items-center justify-center"
+                style={{ backgroundColor: 'var(--color-cream-dark)' }}
               >
-                {/* Photo placeholder */}
-                <div
-                  className="h-64 flex items-center justify-center"
-                  style={{ backgroundColor: 'var(--color-cream-dark)' }}
-                >
-                  <div className="text-center">
-                    <UserCircle className="w-20 h-20 mx-auto mb-2" style={{ color: 'var(--color-rose)' }} />
-                    {/* TODO: Replace with <Image> component once client supplies therapist photo */}
-                    <p
-                      className="text-xs"
-                      style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
-                    >
-                      Photo coming soon
-                    </p>
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <h3
-                    className="text-xl font-bold mb-1"
-                    style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
-                  >
-                    {/* TODO: Confirm therapist names with client */}
-                    {therapist.name}
-                  </h3>
+                <div className="text-center">
+                  <UserCircle className="w-20 h-20 mx-auto mb-2" style={{ color: 'var(--color-rose)' }} />
                   <p
-                    className="text-sm font-semibold mb-3"
-                    style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-rose)' }}
-                  >
-                    {therapist.title}
-                  </p>
-                  <p
-                    className="text-sm leading-relaxed mb-4"
+                    className="text-xs"
                     style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
                   >
-                    {therapist.bio}
-                  </p>
-                  <p
-                    className="text-xs leading-relaxed"
-                    style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)', opacity: 0.7 }}
-                  >
-                    {/* TODO: Confirm qualifications with client */}
-                    {therapist.quals}
+                    Photo coming soon
                   </p>
                 </div>
               </div>
-            ))}
+
+              <div className="p-8">
+                <h3
+                  className="text-2xl font-bold mb-1"
+                  style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
+                >
+                  Rachael Liquorish
+                </h3>
+                <p
+                  className="text-sm font-semibold mb-5"
+                  style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-rose)' }}
+                >
+                  Dermal Nurse &amp; Founder
+                </p>
+                {/* TODO: Add Rachael's personal background, story, years of experience, and approach to skin health once provided */}
+                <p
+                  className="text-sm sm:text-base leading-relaxed mb-4"
+                  style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
+                >
+                  Rachael Liquorish is a Dermal Nurse and the founder of The Derm Studio. She established the clinic at Bluewater Square in Redcliffe to provide the Moreton Bay Peninsula with access to genuinely results-focused skin treatment — combining clinical expertise with a personalised approach that puts each client&apos;s skin health first.
+                </p>
+                <p
+                  className="text-sm sm:text-base leading-relaxed"
+                  style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
+                >
+                  Rachael works exclusively with Lira Clinical — a professional-grade skincare brand trusted by skin therapists globally — ensuring that every in-clinic treatment is supported by the right home-care for lasting results.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

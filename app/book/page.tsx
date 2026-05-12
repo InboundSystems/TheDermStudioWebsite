@@ -42,9 +42,8 @@ export default function BookPage() {
             className="rounded-2xl overflow-hidden shadow-sm"
             style={{ border: '1px solid var(--color-cream-dark)' }}
           >
-            {/* TODO: Update iframe src when Square booking URL confirmed */}
             <iframe
-              src="https://the-derm-studio.square.site/appointments"
+              src="https://the-derm-studio.square.site/"
               width="100%"
               height="700"
               style={{ border: 0, display: 'block' }}
@@ -136,12 +135,11 @@ export default function BookPage() {
                   Prefer to Call?
                 </p>
                 <a
-                  href="tel:TODO"
+                  href="tel:+61414185007"
                   className="text-sm transition-opacity hover:opacity-70"
                   style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-rose)' }}
                 >
-                  {/* TODO: Confirm phone with client */}
-                  Call to book directly
+                  +61 414 185 007
                 </a>
               </div>
             </div>

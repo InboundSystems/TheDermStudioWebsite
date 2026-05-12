@@ -6,13 +6,13 @@ import { motion, AnimatePresence, useMotionValueEvent, useScroll } from 'framer-
 import { Menu, X, ChevronDown } from 'lucide-react'
 
 const treatments = [
-  { name: 'Facials', href: '/services/facials-redcliffe' },
-  { name: 'Chemical Peels', href: '/services/chemical-peel-redcliffe' },
-  { name: 'LED Light Therapy', href: '/services/led-light-therapy-redcliffe' },
-  { name: 'Skin Needling', href: '/services/skin-needling-redcliffe' },
-  { name: 'Dermal Therapy', href: '/services/dermal-therapy-redcliffe' },
-  { name: 'HydraFacial', href: '/services/hydrafacial-redcliffe' },
-  { name: 'Microdermabrasion', href: '/services/microdermabrasion-redcliffe' },
+  { name: 'Corrective Facial', href: '/services/corrective-facial-redcliffe' },
+  { name: 'Hybrid Facial', href: '/services/hybrid-facial-redcliffe' },
+  { name: 'Dermaplaning Facial', href: '/services/dermaplaning-facial-redcliffe' },
+  { name: 'Corrective Peels', href: '/services#corrective-peels' },
+  { name: 'Skin Needling', href: '/services/skin-needling-nctf-redcliffe' },
+  { name: 'Korean Lash Lift & Tint', href: '/services/korean-lash-lift-tint-redcliffe' },
+  { name: 'All Treatments', href: '/services' },
   { name: 'Lira Clinical', href: '/lira-clinical' },
 ]
 
@@ -139,13 +139,13 @@ export function Navbar() {
             {/* CTA + Phone */}
             <div className="hidden md:flex items-center gap-4">
               <motion.a
-                href="tel:TODO"
+                href="tel:+61414185007"
                 className="text-xs"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
                 animate={{ color: subtextColor }}
                 transition={{ duration: 0.3 }}
               >
-                {/* TODO: Confirm phone with client */}
+                +61 414 185 007
               </motion.a>
               <Link
                 href="/book"

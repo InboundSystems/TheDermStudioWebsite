@@ -4,9 +4,9 @@ export function LocalBusinessSchema() {
     "@type": "BeautySalon",
     "name": "The Derm Studio",
     "url": "https://thedermstudio.com.au",
-    "telephone": "/* TODO: Add client phone */",
-    "email": "/* TODO: Add client email */",
-    "description": "The Derm Studio is Redcliffe's specialist skin clinic offering expert facials, dermal therapy, chemical peels, LED light therapy and Lira Clinical skincare.",
+    "telephone": "+61414185007",
+    "email": "thedermstudio.contact@gmail.com",
+    "description": "The Derm Studio is Redcliffe's results-focused skin clinic offering corrective facials, Lira Clinical corrective peels, skin needling with NCTF and Exosomes, dermaplaning, and Korean lash lifting.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Shop 10, Bluewater Square, 20 Anzac Avenue",
@@ -41,17 +41,16 @@ export function LocalBusinessSchema() {
       "@type": "OfferCatalog",
       "name": "Skin Treatments",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Facial" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Chemical Peel" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "LED Light Therapy" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Skin Needling" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dermal Therapy" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "HydraFacial" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corrective Facial" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hybrid Facial" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dermaplaning Facial" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corrective Peel" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Skin Needling with NCTF" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Skin Needling with Exosomes" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Korean Lash Lift & Tint" } }
       ]
     },
     "sameAs": [
-      "/* TODO: Add Google Business Profile URL */",
-      "/* TODO: Add Facebook page URL */",
       "https://www.instagram.com/thedermstudio_/"
     ]
   }

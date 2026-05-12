@@ -1,34 +1,78 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
-import { Package } from 'lucide-react'
+import { Package, Leaf, Shield, Sparkles, Droplets, Sun, Zap } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Lira Clinical Skincare Redcliffe | The Derm Studio — Sole Redcliffe Stockist',
+  title: 'Lira Clinical Skincare Redcliffe | The Derm Studio — Sole Stockist',
   description:
-    'The Derm Studio is the only Lira Clinical stockist in Redcliffe. Shop professional-grade Lira Clinical skincare at Bluewater Square, Redcliffe QLD.',
+    'The Derm Studio is the only authorised Lira Clinical stockist in Redcliffe. Professional-grade skincare built on plant stem cell technology, topical probiotics, and Smart Peels™ — available exclusively in-clinic at Bluewater Square.',
 }
+
+const features = [
+  {
+    icon: Sparkles,
+    title: '98%+ Brightening Formulations',
+    desc: 'Over 98% of Lira Clinical products contain brightening and skin-evening ingredients — addressing uneven tone and dullness as a baseline across the entire range.',
+  },
+  {
+    icon: Leaf,
+    title: 'Plant Stem Cell Technology',
+    desc: 'Advanced plant stem cells from Alpine Rose, Swiss Apple, Sea Fennel, Edelweiss, Madonna Lily and more — targeting cellular renewal and visible anti-ageing at the source.',
+  },
+  {
+    icon: Shield,
+    title: 'Topical Probiotics',
+    desc: 'Clinically selected probiotic strains strengthen the skin barrier, reduce inflammation, and improve penetration of active ingredients for more effective treatment outcomes.',
+  },
+  {
+    icon: Zap,
+    title: 'Smart Peels™',
+    desc: 'Professional resurfacing treatments that combine active acids with antioxidants, anti-inflammatories, and plant stem cells — delivering results with less irritation and more clinical benefit.',
+  },
+  {
+    icon: Droplets,
+    title: 'Advanced Peptide Complex',
+    desc: 'Argireline, Matrixyl 3000, and Syn-Ake work topically in a similar manner to injectables — measurably reducing dynamic fine lines and improving skin firmness without needles.',
+  },
+]
 
 const productRanges = [
   {
-    name: 'OSC (Optimal Skin Care)',
-    desc: "A comprehensive range of clinically active serums, moisturisers, and cleansers formulated to target specific skin concerns including pigmentation, aging, and sensitivity.",
-    tag: 'Core Range',
+    icon: Sparkles,
+    name: 'PRO',
+    tag: 'Anti-Aging',
+    desc: 'Advanced anti-ageing formulations powered by plant stem cells and peptides including Argireline, Matrixyl 3000, and Syn-Ake. Designed to visibly reduce fine lines, improve firmness, and restore a youthful complexion.',
   },
   {
-    name: 'Mystiq iQ',
-    desc: "Advanced anti-ageing formulations combining powerful antioxidants, peptides, and plant stem cells to visibly reduce the appearance of fine lines, wrinkles, and loss of firmness.",
-    tag: 'Anti-Ageing',
+    icon: Droplets,
+    name: 'BIO',
+    tag: 'Hydration',
+    desc: 'Deeply hydrating formulations that strengthen the skin barrier using topical probiotics and botanical ingredients. Ideal for dehydrated, sensitive, or compromised skin seeking lasting moisture and resilience.',
   },
   {
-    name: 'Perfect C',
-    desc: "A brightening and antioxidant range centred around Vitamin C, designed to even skin tone, reduce pigmentation, and protect against environmental damage.",
+    icon: Sparkles,
+    name: 'MYSTIQ',
     tag: 'Brightening',
+    desc: 'Targeted brightening treatments with a rich concentration of skin-evening actives. Addresses hyperpigmentation, uneven skin tone, and dullness for a visibly clearer, more luminous complexion.',
   },
   {
-    name: 'Lira Rx',
-    desc: "Practitioner-prescribed professional treatments and targeted corrective products for more intensive skin concerns, used in-clinic and prescribed for advanced home care.",
-    tag: 'Professional',
+    icon: Zap,
+    name: 'ICE',
+    tag: 'Acne Correction',
+    desc: 'Clinical-grade acne correction combining active resurfacing with anti-inflammatory botanicals. Treats active breakouts, prevents congestion, and progressively improves post-acne scarring and residual marks.',
+  },
+  {
+    icon: Sun,
+    name: 'SPF',
+    tag: 'Sun Protection',
+    desc: 'Professional-grade broad-spectrum sun protection formulated with skin-beneficial actives — not just UV filters. Essential for protecting the investment of every in-clinic treatment.',
+  },
+  {
+    icon: Leaf,
+    name: 'REGEN',
+    tag: 'Skin Regeneration',
+    desc: 'Advanced regenerative formulations harnessing plant stem cell technology to accelerate skin renewal, support healing post-procedure, and restore optimal skin function and health.',
   },
 ]
 
@@ -46,13 +90,13 @@ export default function LiraClinicalPage() {
             className="mt-5 text-4xl sm:text-5xl font-bold text-white leading-tight"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Lira Clinical Skincare Redcliffe | The Derm Studio
+            Lira Clinical Skincare Redcliffe
           </h1>
           <p
             className="mt-4 text-base sm:text-lg max-w-2xl"
             style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-blush)' }}
           >
-            Professional-grade skincare available exclusively at The Derm Studio — Redcliffe&apos;s sole authorised stockist.
+            Science discovering nature&apos;s secrets. Professional-grade skincare available exclusively through authorised clinics — at The Derm Studio, Redcliffe.
           </p>
         </div>
       </section>
@@ -71,43 +115,66 @@ export default function LiraClinicalPage() {
             style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
           >
             <p>
-              Lira Clinical is a professional-grade, clinically tested skincare brand founded by a team of skincare experts and physicians. Built on the principle that effective skincare must be rooted in science, every Lira Clinical product is formulated with powerful active ingredients — including plant stem cells, botanical extracts, peptides, and antioxidants — all working in synergy to deliver visible, measurable results.
+              Lira Clinical is a globally recognised, professional-grade skincare brand founded by four female skincare professionals and educators. Built on the philosophy of <em>&ldquo;Science discovering nature&apos;s secrets,&rdquo;</em> the brand sits at the intersection of clinical science and high-performance botanical ingredients — with every product formulated to deliver three outcomes: <strong>brighter, healthier, younger-looking skin.</strong>
             </p>
             <p>
-              What sets Lira Clinical apart from over-the-counter skincare is its clinical formulation philosophy. These are not products designed to sit on a supermarket shelf. Every active ingredient is chosen for its evidence base, every concentration is optimised for efficacy, and every product is designed to work synergistically within a professional treatment protocol.
+              Lira Clinical is not available in general retail. It is exclusively distributed through authorised skin professionals — ensuring that every product is recommended correctly, used as part of a professional treatment protocol, and matched to each client&apos;s individual skin concerns. This practitioner-only model protects the integrity of the formulations and, more importantly, protects your skin from the misapplication of high-potency actives.
             </p>
             <p>
-              Lira Clinical products are available <strong>exclusively through certified skin clinics and trained practitioners</strong>. This ensures that each product is recommended and used correctly — tailored to your specific skin type and concerns, rather than sold generically. This practitioner-only model protects the integrity of the products and, more importantly, protects your skin from misuse of high-potency formulations.
+              What distinguishes Lira Clinical from over-the-counter skincare is its commitment to both science and ingredient quality. Every active is chosen for its evidence base, every concentration is optimised for clinical efficacy, and every product is designed to work as part of a comprehensive treatment plan — not in isolation. The result is skincare that performs at a level inaccessible through retail channels.
             </p>
             <p>
-              The full Lira Clinical range spans cleansers, serums, moisturisers, SPF protection, and targeted treatment products across several specialised lines — each addressing different skin concerns and conditions.
+              The Derm Studio is a proud authorised Lira Clinical stockist. All products and treatments used in the studio meet professional clinical standards, and Rachael prescribes Lira Clinical home-care protocols to extend and protect the results achieved in-clinic.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ── Why We Stock It ── */}
+      {/* ── Technology Features ── */}
       <section className="py-20 px-4" style={{ backgroundColor: 'var(--color-cream)' }}>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <h2
-            className="text-3xl sm:text-4xl font-bold mb-8"
+            className="text-3xl sm:text-4xl font-bold text-center mb-4"
             style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
           >
-            Why The Derm Studio Partners with Lira Clinical
+            What Makes Lira Clinical Different
           </h2>
-          <div
-            className="space-y-5 text-base sm:text-lg leading-relaxed"
+          <p
+            className="text-base text-center max-w-2xl mx-auto mb-12"
             style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
           >
-            <p>
-              Our therapists hold comprehensive Lira Clinical training and certification. We don&apos;t stock a brand simply because it&apos;s popular — we chose Lira Clinical because it aligns precisely with our evidence-based approach to skin health. The clinical data behind these formulations is robust, the ingredients are thoughtfully selected, and the results we see in our clients&apos; skin speak for themselves.
-            </p>
-            <p>
-              We use Lira Clinical products as an integral part of our in-clinic treatment protocols — from pre-treatment preparation to post-procedure recovery and ongoing maintenance. We also prescribe home-care routines using Lira Clinical products, creating a seamless continuity between your clinic sessions and your daily skincare practice.
-            </p>
-            <p>
-              When you purchase Lira Clinical products through The Derm Studio, you receive expert guidance on how to use them correctly for your specific skin type and concerns. This personalised approach is what makes professional skincare genuinely effective — and it&apos;s something you simply cannot replicate by purchasing products online.
-            </p>
+            Five clinically significant features that set Lira Clinical apart from standard skincare.
+          </p>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {features.map((feature) => {
+              const Icon = feature.icon
+              return (
+                <div
+                  key={feature.title}
+                  className="flex flex-col gap-4 p-7 rounded-2xl bg-white"
+                  style={{ border: '1px solid var(--color-cream-dark)' }}
+                >
+                  <div
+                    className="w-11 h-11 rounded-full flex items-center justify-center shrink-0"
+                    style={{ backgroundColor: 'var(--color-cream-dark)' }}
+                  >
+                    <Icon className="w-5 h-5" style={{ color: 'var(--color-rose)' }} />
+                  </div>
+                  <h3
+                    className="text-base font-bold leading-snug"
+                    style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-espresso)' }}
+                  >
+                    {feature.title}
+                  </h3>
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
+                  >
+                    {feature.desc}
+                  </p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -125,13 +192,13 @@ export default function LiraClinicalPage() {
             className="text-2xl sm:text-3xl font-bold text-white mb-5 leading-tight"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            The Derm Studio is the Only Lira Clinical Stockist in Redcliffe
+            The Derm Studio is the Only Authorised Lira Clinical Stockist in Redcliffe
           </h2>
           <p
             className="text-base sm:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
-            You cannot purchase authentic Lira Clinical skincare online. It is available exclusively through certified clinics — and on the Redcliffe Peninsula, The Derm Studio is the only authorised stockist. Visit us in-clinic to browse the range and receive personalised recommendations from our qualified therapists.
+            Lira Clinical cannot be purchased online or through general retail — and on the Redcliffe Peninsula, The Derm Studio is the only authorised stockist. Visit the clinic to browse the full range and receive a personalised product prescription from Rachael.
           </p>
         </div>
       </section>
@@ -140,51 +207,53 @@ export default function LiraClinicalPage() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2
-            className="text-3xl sm:text-4xl font-bold text-center mb-5"
+            className="text-3xl sm:text-4xl font-bold text-center mb-4"
             style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
           >
-            Key Product Ranges
+            Product Lines Available In-Studio
           </h2>
           <p
             className="text-center text-base mb-12 max-w-2xl mx-auto"
             style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
           >
-            Ask our therapists which range is right for your skin concerns.
+            Rachael will recommend the right products for your skin and concerns. All lines are stocked at The Derm Studio.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {productRanges.map((range) => (
               <div
                 key={range.name}
-                className="flex flex-col gap-4 p-6 rounded-2xl"
+                className="flex flex-col gap-4 p-7 rounded-2xl"
                 style={{ backgroundColor: 'var(--color-cream)', border: '1px solid var(--color-cream-dark)' }}
               >
                 {/* Product image placeholder */}
                 <div
-                  className="h-40 rounded-xl flex items-center justify-center"
+                  className="h-36 rounded-xl flex items-center justify-center"
                   style={{ backgroundColor: 'var(--color-cream-dark)' }}
                 >
                   <div className="text-center">
-                    <Package className="w-10 h-10 mx-auto mb-1" style={{ color: 'var(--color-rose)' }} />
-                    {/* TODO: Replace with product image supplied by client */}
+                    <Package className="w-9 h-9 mx-auto mb-1" style={{ color: 'var(--color-rose)' }} />
+                    {/* TODO: Replace with product line image supplied by client or Lira Clinical */}
                     <p className="text-xs" style={{ color: 'var(--color-charcoal)', opacity: 0.6, fontFamily: "'DM Sans', sans-serif" }}>
                       Image coming soon
                     </p>
                   </div>
                 </div>
 
-                <span
-                  className="text-xs font-semibold tracking-wider uppercase px-2 py-1 rounded-full w-fit"
-                  style={{ backgroundColor: 'var(--color-rose)', color: 'white', fontFamily: "'DM Sans', sans-serif" }}
-                >
-                  {range.tag}
-                </span>
+                <div className="flex items-center gap-3">
+                  <span
+                    className="text-xs font-semibold tracking-wider uppercase px-2.5 py-1 rounded-full"
+                    style={{ backgroundColor: 'var(--color-rose)', color: 'white', fontFamily: "'DM Sans', sans-serif" }}
+                  >
+                    {range.tag}
+                  </span>
+                </div>
 
                 <h3
-                  className="text-lg font-bold leading-tight"
+                  className="text-xl font-bold leading-tight"
                   style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
                 >
-                  {range.name}
+                  Lira Clinical {range.name}
                 </h3>
                 <p
                   className="text-sm leading-relaxed flex-1"
@@ -194,10 +263,10 @@ export default function LiraClinicalPage() {
                 </p>
                 <Link
                   href="/contact"
-                  className="text-sm font-semibold mt-auto transition-opacity hover:opacity-70"
+                  className="text-sm font-semibold transition-opacity hover:opacity-70"
                   style={{ color: 'var(--color-rose)', fontFamily: "'DM Sans', sans-serif" }}
                 >
-                  Ask us about this range →
+                  Ask about this range →
                 </Link>
               </div>
             ))}
@@ -212,20 +281,20 @@ export default function LiraClinicalPage() {
             className="text-3xl sm:text-4xl font-bold text-white mb-5"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Visit Us In-Clinic to Shop Lira Clinical
+            Shop Lira Clinical In-Studio
           </h2>
           <p
             className="text-base mb-2"
             style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-blush)' }}
           >
-            📍 Shop 10, Bluewater Square, 20 Anzac Avenue, Redcliffe QLD 4020
+            Shop 10, Bluewater Square, 20 Anzac Avenue, Redcliffe QLD 4020
           </p>
           <p
             className="text-sm mb-8"
             style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-blush)', opacity: 0.75 }}
           >
-            {/* TODO: Add confirmed hours */}
-            Mon–Fri 9:00am–5:00pm · Sat 9:00am–2:00pm
+            {/* TODO: Add confirmed hours once provided by client */}
+            Book a consultation to receive a personalised Lira Clinical home-care prescription.
           </p>
           <Link
             href="/book"

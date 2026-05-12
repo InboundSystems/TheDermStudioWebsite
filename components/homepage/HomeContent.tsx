@@ -39,50 +39,50 @@ const scrollFadeUp = (delay = 0) => ({
 const services = [
   {
     icon: Sparkles,
-    name: 'Facials',
-    desc: 'Customised facial treatments targeting your unique skin concerns — from hydration to anti-ageing.',
-    href: '/services/facials-redcliffe',
+    name: 'Corrective Facial',
+    desc: 'Meticulously curated by expert skin therapists — brightening, resurfacing, and delivering a surge of hydration. Includes LED light therapy and a neck and shoulder massage.',
+    href: '/services/corrective-facial-redcliffe',
+  },
+  {
+    icon: Droplets,
+    name: 'Hybrid Facial',
+    desc: 'The next-level upgrade — corrective facial blended with a gentle peel infusion for deeper results with zero downtime. Includes LED light therapy.',
+    href: '/services/hybrid-facial-redcliffe',
+  },
+  {
+    icon: Scan,
+    name: 'Dermaplaning Facial',
+    desc: 'Ultra-luxurious dermaplaning to reveal flawlessly smooth, radiant skin. Enhanced with a hydrating mask and LED light therapy.',
+    href: '/services/dermaplaning-facial-redcliffe',
   },
   {
     icon: FlaskConical,
-    name: 'Chemical Peels',
-    desc: 'Professional skin resurfacing to treat pigmentation, acne scarring, and uneven texture.',
-    href: '/services/chemical-peel-redcliffe',
-  },
-  {
-    icon: Sun,
-    name: 'LED Light Therapy',
-    desc: 'Red and blue LED treatments for anti-ageing, acne reduction and skin rejuvenation.',
-    href: '/services/led-light-therapy-redcliffe',
+    name: 'Corrective Peels',
+    desc: 'Three levels of Lira Clinical professional peel therapy — from brightening Level 1s to intensive Level 3 correction for pigmentation, acne, and ageing.',
+    href: '/services#corrective-peels',
   },
   {
     icon: Pipette,
     name: 'Skin Needling',
-    desc: 'Collagen induction therapy for scarring, fine lines and skin texture improvement.',
-    href: '/services/skin-needling-redcliffe',
+    desc: 'Collagen induction therapy infused with NCTF (54 active ingredients) or Exosomes for brighter, firmer, smoother skin from within.',
+    href: '/services/skin-needling-nctf-redcliffe',
+  },
+  {
+    icon: Sun,
+    name: 'Korean Lash Lift & Tint',
+    desc: 'Lifted, curled, and darkened natural lashes lasting 6–8 weeks. Effortless eye definition without extensions or daily mascara.',
+    href: '/services/korean-lash-lift-tint-redcliffe',
   },
   {
     icon: ShieldCheck,
-    name: 'Dermal Therapy',
-    desc: 'Evidence-based advanced skin treatments delivered by qualified dermal therapists.',
-    href: '/services/dermal-therapy-redcliffe',
-  },
-  {
-    icon: Droplets,
-    name: 'HydraFacial',
-    desc: 'The 3-step cleanse, exfoliate and hydrate treatment for instantly glowing skin.',
-    href: '/services/hydrafacial-redcliffe',
-  },
-  {
-    icon: Scan,
-    name: 'Microdermabrasion',
-    desc: 'Gentle skin resurfacing to smooth texture, refine pores and brighten complexion.',
-    href: '/services/microdermabrasion-redcliffe',
+    name: 'Free Consultation',
+    desc: 'A professional skin analysis with personalised recommendations for treatments and skincare. The perfect obligation-free starting point.',
+    href: '/book',
   },
   {
     icon: Package,
     name: 'Lira Clinical',
-    desc: "Redcliffe's sole stockist of Lira Clinical professional skincare. Shop in-clinic.",
+    desc: "Redcliffe's sole stockist of Lira Clinical professional skincare. Prescribed and available exclusively in-studio.",
     href: '/lira-clinical',
   },
 ]
@@ -184,7 +184,7 @@ export function HomeContent() {
             className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Skin Clinic Redcliffe | Expert Facials &amp; Dermal Therapy
+            Skin Clinic Redcliffe | Expert Facials &amp; Skin Treatments
           </motion.h1>
 
           <motion.p
@@ -192,7 +192,7 @@ export function HomeContent() {
             className="text-lg sm:text-xl leading-relaxed mb-10 max-w-3xl mx-auto text-white/90"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
-            Redcliffe&apos;s specialist skin clinic — expert dermal therapy, facials, chemical peels, LED light therapy, and Lira Clinical skincare. Located at Bluewater Square, Redcliffe.
+            Redcliffe&apos;s specialist skin clinic — corrective facials, Lira Clinical corrective peels, advanced skin needling, and professional lash treatments. Located at Bluewater Square, Redcliffe.
           </motion.p>
 
           <motion.div
@@ -278,7 +278,7 @@ export function HomeContent() {
               className="text-base sm:text-lg max-w-2xl mx-auto"
               style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
             >
-              Clinically proven treatments tailored to your skin — from regular facials to advanced dermal therapy.
+              Expert treatments tailored to your skin — corrective facials, clinical peels, skin needling, and more.
             </p>
           </motion.div>
 
@@ -596,16 +596,14 @@ export function HomeContent() {
                 </div>
                 <div className="flex gap-3 items-center">
                   <span>📞</span>
-                  <a href="tel:TODO" style={{ color: 'var(--color-charcoal)' }}>
-                    {/* TODO: Confirm with client */}
-                    Contact us to book
+                  <a href="tel:+61414185007" style={{ color: 'var(--color-charcoal)' }}>
+                    +61 414 185 007
                   </a>
                 </div>
                 <div className="flex gap-3 items-center">
                   <span>✉️</span>
-                  <a href="mailto:TODO" style={{ color: 'var(--color-charcoal)' }}>
-                    {/* TODO: Confirm with client */}
-                    Get in touch
+                  <a href="mailto:thedermstudio.contact@gmail.com" style={{ color: 'var(--color-charcoal)' }}>
+                    thedermstudio.contact@gmail.com
                   </a>
                 </div>
                 <div className="flex gap-3">
@@ -670,7 +668,7 @@ export function HomeContent() {
               Book a Consultation
             </Link>
             <a
-              href="tel:TODO"
+              href="tel:+61414185007"
               className="inline-block font-semibold px-8 py-4 rounded-full text-base text-white border-2 border-white transition-colors hover:bg-white/10"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
