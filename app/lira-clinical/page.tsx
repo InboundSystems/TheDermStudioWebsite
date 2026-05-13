@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { Package, Leaf, Shield, Sparkles, Droplets, Sun, Zap } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -79,6 +80,10 @@ const productRanges = [
 export default function LiraClinicalPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', href: '/' },
+        { name: 'Lira Clinical', href: '/lira-clinical' },
+      ]} />
       {/* ── Hero Banner ── */}
       <section className="pt-20" style={{ backgroundColor: 'var(--color-espresso)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

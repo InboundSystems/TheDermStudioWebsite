@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { serviceMenu } from '@/lib/services'
 import { ArrowRight } from 'lucide-react'
 
@@ -13,7 +14,12 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <main>
+    <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', href: '/' },
+        { name: 'Services', href: '/services' },
+      ]} />
+      <main>
       {/* Hero */}
       <section
         className="relative py-28 md:py-36"
@@ -145,5 +151,6 @@ export default function ServicesPage() {
         </div>
       </section>
     </main>
+    </>
   )
 }

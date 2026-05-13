@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
+import { FAQSchema } from '@/components/seo/FAQSchema'
 import { FaqAccordion } from '@/components/ui/FaqAccordion'
 import { getServiceBySlug, getRelatedServices, services } from '@/lib/services'
 
@@ -31,7 +33,14 @@ export default async function ServicePage({ params }: Props) {
   const related = getRelatedServices(service.relatedSlugs)
 
   return (
-    <main>
+    <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', href: '/' },
+        { name: 'Services', href: '/services' },
+        { name: service.name, href: `/services/${service.slug}` },
+      ]} />
+      <FAQSchema faqs={service.faqs.map((f) => ({ question: f.q, answer: f.a }))} />
+      <main>
       {/* Hero */}
       <section
         className="relative py-28 md:py-36"
@@ -334,5 +343,6 @@ export default async function ServicePage({ params }: Props) {
         </div>
       </section>
     </main>
+    </>
   )
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ContactContent } from '@/components/contact/ContactContent'
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 
 export const metadata: Metadata = {
   title: 'Contact The Derm Studio | Book a Skin Consultation in Redcliffe',
@@ -8,5 +9,13 @@ export const metadata: Metadata = {
 }
 
 export default function ContactPage() {
-  return <ContactContent />
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', href: '/' },
+        { name: 'Contact', href: '/contact' },
+      ]} />
+      <ContactContent />
+    </>
+  )
 }

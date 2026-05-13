@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { ShieldCheck, Heart, TrendingUp, UserCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -30,6 +31,10 @@ const pillars = [
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', href: '/' },
+        { name: 'About', href: '/about' },
+      ]} />
       {/* ── Hero Banner ── */}
       <section className="pt-20" style={{ backgroundColor: 'var(--color-rose)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
