@@ -6,14 +6,12 @@ import { motion, AnimatePresence, useMotionValueEvent, useScroll } from 'framer-
 import { Menu, X, ChevronDown } from 'lucide-react'
 
 const treatments = [
-  { name: 'Corrective Facial', href: '/services/corrective-facial-redcliffe' },
-  { name: 'Hybrid Facial', href: '/services/hybrid-facial-redcliffe' },
-  { name: 'Dermaplaning Facial', href: '/services/dermaplaning-facial-redcliffe' },
-  { name: 'Corrective Peels', href: '/services#corrective-peels' },
-  { name: 'Skin Needling', href: '/services/skin-needling-nctf-redcliffe' },
-  { name: 'Korean Lash Lift & Tint', href: '/services/korean-lash-lift-tint-redcliffe' },
-  { name: 'All Treatments', href: '/services' },
+  { name: 'Facials', href: '/services/facials-redcliffe' },
+  { name: 'Chemical Peels', href: '/services/chemical-peel-redcliffe' },
+  { name: 'LED Light Therapy', href: '/services/led-light-therapy-redcliffe' },
+  { name: 'Skin Needling', href: '/services/skin-needling-redcliffe' },
   { name: 'Lira Clinical', href: '/lira-clinical' },
+  { name: 'All Treatments', href: '/services' },
 ]
 
 const navLinks = [
