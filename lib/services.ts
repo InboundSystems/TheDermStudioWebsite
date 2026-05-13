@@ -60,7 +60,7 @@ export const services: Service[] = [
     category: 'Facials',
     metaTitle: 'Corrective Facial Redcliffe | Expert Skin Treatment — The Derm Studio',
     metaDescription:
-      'Book a Corrective Facial at The Derm Studio, Redcliffe. A results-focused clinical facial with LED light therapy and neck massage — the perfect starting point for your skin journey at Bluewater Square.',
+      'Book a Corrective Facial at The Derm Studio, Redcliffe. A results-focused clinical facial with LED light therapy and neck massage — the perfect starting point for your skin journey at Marine Parade, Redcliffe.',
     heroTitle: 'Corrective Facial Redcliffe | Expert Skin Treatment',
     heroSubtitle:
       'Meticulously curated by expert skin therapists — brightening, resurfacing, and delivering a surge of hydration. Includes LED light therapy.',
@@ -68,7 +68,7 @@ export const services: Service[] = [
       'The Corrective Facial at The Derm Studio is meticulously curated by our expert skin therapists to deliver a perfect balance of results and relaxation. Designed as the ideal starting point for your skincare journey, this treatment is built around a progressive approach to skin revision — gently resurfacing, brightening, and addressing imperfections while delivering an exceptional clinical experience.',
       'At the core of every Corrective Facial is a precisely selected combination of professional Lira Clinical products chosen for your skin\'s unique needs on the day. The treatment gently resurfaces the outermost layers of the skin — brightening the complexion, refining texture, and addressing common concerns such as congestion, dullness, uneven tone, and mild dehydration. A powerful surge of targeted hydration then replenishes the skin barrier, leaving you with a noticeably glowing, radiant complexion.',
       'The Corrective Facial includes an indulgent tension-releasing neck and shoulder massage, performed while your treatment mask works on the skin. The session concludes with medical-grade LED light therapy, which stimulates collagen production, soothes any reactivity, and enhances the overall outcome of the treatment.',
-      'Whether you are new to professional skin treatments or returning after a break, the Corrective Facial is the perfect foundation treatment. It provides a thorough assessment of your skin, introduces your skin to clinical-grade actives, and delivers a result you can see and feel — all in a 45-minute appointment. As Redcliffe\'s sole Lira Clinical stockist, The Derm Studio is uniquely placed to prescribe home-care products to extend your results between visits.',
+      'Whether you are new to professional skin treatments or returning after a break, the Corrective Facial is the perfect foundation treatment. It provides a thorough assessment of your skin, introduces your skin to clinical-grade actives, and delivers a result you can see and feel — all in a 45-minute appointment. As an authorised Lira Clinical stockist, The Derm Studio is uniquely placed to prescribe home-care products to extend your results between visits.',
     ],
     benefits: [
       { title: 'Progressive Skin Resurfacing', desc: 'Gently removes the dull, dead surface layer to reveal brighter, fresher skin with improved clarity and texture.' },
@@ -108,7 +108,7 @@ export const services: Service[] = [
     category: 'Facials',
     metaTitle: 'Hybrid Facial Redcliffe | Peel Infusion Facial — The Derm Studio',
     metaDescription:
-      'Book a Hybrid Facial at The Derm Studio, Redcliffe. A corrective facial blended with a gentle peel infusion for deeper results with zero downtime. Includes LED light therapy at Bluewater Square.',
+      'Book a Hybrid Facial at The Derm Studio, Redcliffe. A corrective facial blended with a gentle peel infusion for deeper results with zero downtime. Includes LED light therapy at Marine Parade, Redcliffe.',
     heroTitle: 'Hybrid Facial Redcliffe | Peel Infusion Facial',
     heroSubtitle:
       'The next-level upgrade your skin has been craving — corrective facial meets gentle peel infusion. Zero downtime. Includes LED light therapy.',
@@ -156,7 +156,7 @@ export const services: Service[] = [
     category: 'Facials',
     metaTitle: 'Dermaplaning Facial Redcliffe | Luminous Silk Treatment — The Derm Studio',
     metaDescription:
-      'Book a Luminous Silk Dermaplaning Facial at The Derm Studio, Redcliffe. Expert dermaplaning with hydrating mask and LED light therapy for flawlessly smooth, radiant skin at Bluewater Square.',
+      'Book a Luminous Silk Dermaplaning Facial at The Derm Studio, Redcliffe. Expert dermaplaning with hydrating mask and LED light therapy for flawlessly smooth, radiant skin at Marine Parade, Redcliffe.',
     heroTitle: 'Dermaplaning Facial Redcliffe | Luminous Silk Treatment',
     heroSubtitle:
       'Reveal your smoothest, most radiant skin — luxurious dermaplaning with a hydrating mask and LED light therapy.',
@@ -204,7 +204,7 @@ export const services: Service[] = [
     category: 'Corrective Peels',
     metaTitle: 'Level 1 Corrective Peel Redcliffe | Lira Clinical Peel — The Derm Studio',
     metaDescription:
-      'Book a Level 1 Lira Clinical Corrective Peel at The Derm Studio, Redcliffe. No preparation required. Brightening, hydrating, and corrective peel therapy with neck massage at Bluewater Square.',
+      'Book a Level 1 Lira Clinical Corrective Peel at The Derm Studio, Redcliffe. No preparation required. Brightening, hydrating, and corrective peel therapy with neck massage at Marine Parade, Redcliffe.',
     heroTitle: 'Level 1 Corrective Peel Redcliffe | Lira Clinical Peel Therapy',
     heroSubtitle:
       'Professional brightening and corrective peel therapy with no preparation required. Suitable for all skin types.',
@@ -251,7 +251,7 @@ export const services: Service[] = [
     category: 'Corrective Peels',
     metaTitle: 'Level 2 Corrective Peel Redcliffe | Advanced Skin Peel — The Derm Studio',
     metaDescription:
-      'Book a Level 2 Lira Clinical Corrective Peel at The Derm Studio, Redcliffe. Advanced peel therapy targeting hyperpigmentation, acne scarring, and fine lines at Bluewater Square.',
+      'Book a Level 2 Lira Clinical Corrective Peel at The Derm Studio, Redcliffe. Advanced peel therapy targeting hyperpigmentation, acne scarring, and fine lines at Marine Parade, Redcliffe.',
     heroTitle: 'Level 2 Corrective Peel Redcliffe | Advanced Peel Therapy',
     heroSubtitle:
       'Advanced Lira Clinical peel procedures targeting hyperpigmentation, fine lines, and acne scarring. Preparation required.',
@@ -345,7 +345,7 @@ export const services: Service[] = [
     category: 'Skin Needling',
     metaTitle: 'Skin Needling Redcliffe | NCTF Treatment — The Derm Studio',
     metaDescription:
-      'Book Skin Needling with NCTF at The Derm Studio, Redcliffe. Collagen induction therapy infused with vitamins, amino acids, minerals, and hyaluronic acid for brighter, firmer skin at Bluewater Square.',
+      'Book Skin Needling with NCTF at The Derm Studio, Redcliffe. Collagen induction therapy infused with vitamins, amino acids, minerals, and hyaluronic acid for brighter, firmer skin at Marine Parade, Redcliffe.',
     heroTitle: 'Skin Needling Redcliffe | Collagen Induction with NCTF',
     heroSubtitle:
       'Micro-needling infused with NCTF — 54 active ingredients delivered deep into the skin for brighter, firmer, smoother results.',
@@ -353,7 +353,7 @@ export const services: Service[] = [
       'Skin Needling with NCTF at The Derm Studio is a results-driven treatment designed to rejuvenate, hydrate, and restore your skin from within. Using a professional micro-needling device, your therapist creates thousands of precise micro-channels in the skin\'s surface, stimulating the skin\'s natural collagen production while allowing the NCTF solution to penetrate to a depth unreachable by topical application alone.',
       'NCTF (New Cellular Treatment Factor) is a powerful cocktail of 54 active ingredients: vitamins, amino acids, minerals, coenzymes, and hyaluronic acid. Developed specifically to support cellular renewal and deep skin hydration, it is one of the most nutrient-dense solutions available for skin needling infusion. When delivered directly into the skin via micro-channels, NCTF provides comprehensive cellular support that drives lasting improvements in hydration, firmness, brightness, and overall skin quality.',
       'The combination of collagen-stimulating needling and deep NCTF infusion delivers a uniquely comprehensive result: brighter, smoother, firmer skin with visibly improved tone, texture, and hydration. Clients commonly notice a reduction in fine lines and enlarged pores, an improvement in overall skin luminosity, and a restoration of healthy skin density over the course of treatment.',
-      'All skin needling at The Derm Studio is performed by our qualified dermal therapists using professional-grade devices that deliver consistent, precise needle depth. Topical anaesthetic cream is applied before treatment to ensure your comfort, and Lira Clinical products support the skin through treatment and recovery. As Redcliffe\'s sole Lira Clinical stockist, we prescribe the ideal home-care protocol to extend your results between sessions.',
+      'All skin needling at The Derm Studio is performed by our qualified dermal therapists using professional-grade devices that deliver consistent, precise needle depth. Topical anaesthetic cream is applied before treatment to ensure your comfort, and Lira Clinical products support the skin through treatment and recovery. As an authorised Lira Clinical stockist, we prescribe the ideal home-care protocol to extend your results between sessions.',
     ],
     benefits: [
       { title: 'Deep NCTF Infusion', desc: '54 active ingredients — including vitamins, amino acids, hyaluronic acid, and coenzymes — are delivered directly into the skin via micro-channels for unparalleled cellular support.' },
@@ -392,7 +392,7 @@ export const services: Service[] = [
     category: 'Skin Needling',
     metaTitle: 'Skin Needling with Exosomes Redcliffe | Advanced Regeneration — The Derm Studio',
     metaDescription:
-      'Book Skin Needling with Exosomes at The Derm Studio, Redcliffe. Our most advanced needling treatment — exosome technology for maximum skin repair, collagen stimulation, and rejuvenation at Bluewater Square.',
+      'Book Skin Needling with Exosomes at The Derm Studio, Redcliffe. Our most advanced needling treatment — exosome technology for maximum skin repair, collagen stimulation, and rejuvenation at Marine Parade, Redcliffe.',
     heroTitle: 'Skin Needling with Exosomes Redcliffe | Advanced Regeneration',
     heroSubtitle:
       'Our most advanced needling treatment — exosome technology supercharges the skin\'s natural repair and regeneration for maximum results.',
@@ -439,7 +439,7 @@ export const services: Service[] = [
     category: 'Lash & Brow',
     metaTitle: 'Korean Lash Lift & Tint Redcliffe | Natural Lash Treatment — The Derm Studio',
     metaDescription:
-      'Book a Korean Lash Lift & Tint at The Derm Studio, Redcliffe. Lifted, curled, and darkened natural lashes lasting 6–8 weeks — no extensions required. At Bluewater Square, Redcliffe.',
+      'Book a Korean Lash Lift & Tint at The Derm Studio, Redcliffe. Lifted, curled, and darkened natural lashes lasting 6–8 weeks — no extensions required. At Marine Parade, Redcliffe.',
     heroTitle: 'Korean Lash Lift & Tint Redcliffe | Natural Lash Enhancement',
     heroSubtitle:
       'Lifted, curled, and darkened natural lashes with precision Korean technique. Effortless eye definition lasting 6–8 weeks.',

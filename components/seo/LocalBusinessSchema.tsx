@@ -9,7 +9,7 @@ export function LocalBusinessSchema() {
     "description": "The Derm Studio is Redcliffe's results-focused skin clinic offering corrective facials, Lira Clinical corrective peels, skin needling with NCTF and Exosomes, dermaplaning, and Korean lash lifting.",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Shop 10, Bluewater Square, 20 Anzac Avenue",
+      "streetAddress": "1/93 Marine Parade",
       "addressLocality": "Redcliffe",
       "addressRegion": "QLD",
       "postalCode": "4020",

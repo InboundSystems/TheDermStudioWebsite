@@ -7,7 +7,7 @@ import { Package, Leaf, Shield, Sparkles, Droplets, Sun, Zap } from 'lucide-reac
 export const metadata: Metadata = {
   title: 'Lira Clinical Skincare Redcliffe | The Derm Studio — Sole Stockist',
   description:
-    'The Derm Studio is the only authorised Lira Clinical stockist in Redcliffe. Professional-grade skincare built on plant stem cell technology, topical probiotics, and Smart Peels™ — available exclusively in-clinic at Bluewater Square.',
+    'The Derm Studio is an authorised Lira Clinical stockist in Redcliffe. Professional-grade skincare built on plant stem cell technology, topical probiotics, and Smart Peels™ — available exclusively through authorised clinics at Marine Parade, Redcliffe.',
 }
 
 const features = [
@@ -197,13 +197,13 @@ export default function LiraClinicalPage() {
             className="text-2xl sm:text-3xl font-bold text-white mb-5 leading-tight"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            The Derm Studio is the Only Authorised Lira Clinical Stockist in Redcliffe
+            The Derm Studio is an Authorised Lira Clinical Stockist in Redcliffe
           </h2>
           <p
             className="text-base sm:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
-            Lira Clinical cannot be purchased online or through general retail — and on the Redcliffe Peninsula, The Derm Studio is the only authorised stockist. Visit the clinic to browse the full range and receive a personalised product prescription from Rachael.
+            Lira Clinical cannot be purchased online or through general retail — it is exclusively distributed through authorised skin professionals. Visit The Derm Studio on Marine Parade, Redcliffe to browse the full range and receive a personalised product prescription from Rachael.
           </p>
         </div>
       </section>
@@ -292,7 +292,7 @@ export default function LiraClinicalPage() {
             className="text-base mb-2"
             style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-blush)' }}
           >
-            Shop 10, Bluewater Square, 20 Anzac Avenue, Redcliffe QLD 4020
+            1/93 Marine Parade, Redcliffe QLD 4020
           </p>
           <p
             className="text-sm mb-8"

@@ -4,7 +4,7 @@ import { ServicePageTemplate } from '@/components/seo/ServicePageTemplate'
 export const metadata: Metadata = {
   title: 'Chemical Peel Redcliffe | Professional Skin Peel Treatments — The Derm Studio',
   description:
-    'Professional chemical peel treatments in Redcliffe at The Derm Studio. Treat pigmentation, acne scarring, fine lines and uneven texture. Book at Bluewater Square.',
+    'Professional chemical peel treatments in Redcliffe at The Derm Studio. Treat pigmentation, acne scarring, fine lines and uneven texture. Book at Marine Parade, Redcliffe.',
   alternates: { canonical: 'https://thedermstudio.com.au/services/chemical-peel-redcliffe' },
 }
 
@@ -75,7 +75,7 @@ export default function ChemicalPeelPage() {
   return (
     <ServicePageTemplate
       h1="Chemical Peel Redcliffe | Professional Skin Resurfacing"
-      intro="Professional chemical peel treatments at The Derm Studio, Bluewater Square, Redcliffe. Our qualified dermal therapist selects and performs the right peel for your skin — addressing pigmentation, acne scarring, fine lines, and uneven texture with clinical precision."
+      intro="Professional chemical peel treatments at The Derm Studio, Marine Parade, Redcliffe. Our qualified dermal therapist selects and performs the right peel for your skin — addressing pigmentation, acne scarring, fine lines, and uneven texture with clinical precision."
       sections={sections}
       faqs={faqs}
       relatedServices={relatedServices}

@@ -4,7 +4,7 @@ import { ServicePageTemplate } from '@/components/seo/ServicePageTemplate'
 export const metadata: Metadata = {
   title: 'Facials Redcliffe | Expert Skin Facials — The Derm Studio Skin Clinic',
   description:
-    'Professional facials in Redcliffe tailored to your skin. The Derm Studio at Bluewater Square offers customised facials, express facials and anti-ageing facials.',
+    'Professional facials in Redcliffe tailored to your skin. The Derm Studio at Marine Parade, Redcliffe offers customised facials, express facials and anti-ageing facials.',
   alternates: { canonical: 'https://thedermstudio.com.au/services/facials-redcliffe' },
 }
 
@@ -23,7 +23,7 @@ const sections = [
   {
     heading: 'Types of Facials We Offer',
     content:
-      'Our facial menu covers the full spectrum of skin concerns. The Classic Facial is a comprehensive skin reset: deep cleansing, professional exfoliation, targeted extractions where appropriate, and a finishing mask matched to your skin type — leaving skin visibly clearer and healthier. Our Corrective Facial uses clinical-grade active ingredients and advanced techniques to address specific concerns such as pigmentation, congestion, or accelerated ageing, with results that build progressively over a treatment plan. The Anti-Ageing Facial focuses on lifting, firming, and collagen stimulation — combining advanced serums, massage techniques, and targeted technology to restore a more youthful appearance. Our Acne Facial is designed to treat active breakouts, reduce congestion, and progressively improve post-breakout scarring and residual pigmentation without compromising the skin barrier. All facials use Lira Clinical professional-grade skincare — the same range available for home care through The Derm Studio as the sole Lira Clinical stockist in Redcliffe.',
+      'Our facial menu covers the full spectrum of skin concerns. The Classic Facial is a comprehensive skin reset: deep cleansing, professional exfoliation, targeted extractions where appropriate, and a finishing mask matched to your skin type — leaving skin visibly clearer and healthier. Our Corrective Facial uses clinical-grade active ingredients and advanced techniques to address specific concerns such as pigmentation, congestion, or accelerated ageing, with results that build progressively over a treatment plan. The Anti-Ageing Facial focuses on lifting, firming, and collagen stimulation — combining advanced serums, massage techniques, and targeted technology to restore a more youthful appearance. Our Acne Facial is designed to treat active breakouts, reduce congestion, and progressively improve post-breakout scarring and residual pigmentation without compromising the skin barrier. All facials use Lira Clinical professional-grade skincare — the same range available for home care through The Derm Studio, an authorised Lira Clinical stockist in Redcliffe.',
   },
   {
     heading: 'What to Expect',
@@ -61,7 +61,7 @@ const faqs = [
   {
     question: 'What skincare does The Derm Studio use in facials?',
     answer:
-      'The Derm Studio uses Lira Clinical professional-grade skincare in all in-clinic treatments. Lira Clinical is a practitioner-only brand not available in general retail, and The Derm Studio is the sole authorised stockist in Redcliffe. Your therapist can also prescribe a Lira Clinical home-care protocol to extend your results between appointments.',
+      'The Derm Studio uses Lira Clinical professional-grade skincare in all in-clinic treatments. Lira Clinical is a practitioner-only brand not available in general retail — it is exclusively distributed through authorised clinics, and The Derm Studio is an authorised Lira Clinical stockist in Redcliffe. Your therapist can also prescribe a Lira Clinical home-care protocol to extend your results between appointments.',
   },
 ]
 
@@ -75,7 +75,7 @@ export default function FacialsPage() {
   return (
     <ServicePageTemplate
       h1="Facials Redcliffe | Expert Skin Facials at The Derm Studio"
-      intro="Professional facials in Redcliffe at The Derm Studio, Bluewater Square — customised to your skin type, concerns, and goals. Every facial begins with a consultation and uses Lira Clinical professional-grade skincare, exclusively available through The Derm Studio on the Redcliffe Peninsula."
+      intro="Professional facials in Redcliffe at The Derm Studio, Marine Parade — customised to your skin type, concerns, and goals. Every facial begins with a consultation and uses Lira Clinical professional-grade skincare, available exclusively through authorised clinics including The Derm Studio."
       sections={sections}
       faqs={faqs}
       relatedServices={relatedServices}

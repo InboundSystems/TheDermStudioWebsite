@@ -4,7 +4,7 @@ import { ServicePageTemplate } from '@/components/seo/ServicePageTemplate'
 export const metadata: Metadata = {
   title: 'Skin Needling Redcliffe | Collagen Induction Therapy — The Derm Studio',
   description:
-    'Professional skin needling (collagen induction therapy) in Redcliffe for acne scars, fine lines and skin texture. The Derm Studio at Bluewater Square, Redcliffe QLD.',
+    'Professional skin needling (collagen induction therapy) in Redcliffe for acne scars, fine lines and skin texture. The Derm Studio at Marine Parade, Redcliffe QLD.',
   alternates: { canonical: 'https://thedermstudio.com.au/services/skin-needling-redcliffe' },
 }
 
@@ -75,7 +75,7 @@ export default function SkinNeedlingPage() {
   return (
     <ServicePageTemplate
       h1="Skin Needling Redcliffe | Professional Collagen Induction Therapy"
-      intro="Professional skin needling at The Derm Studio, Bluewater Square, Redcliffe. Collagen induction therapy for acne scarring, fine lines, enlarged pores, and uneven skin texture — performed by a qualified dermal therapist with clinical-grade equipment."
+      intro="Professional skin needling at The Derm Studio, Marine Parade, Redcliffe. Collagen induction therapy for acne scarring, fine lines, enlarged pores, and uneven skin texture — performed by a qualified dermal therapist with clinical-grade equipment."
       sections={sections}
       faqs={faqs}
       relatedServices={relatedServices}

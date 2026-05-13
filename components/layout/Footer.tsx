@@ -56,7 +56,7 @@ export function Footer() {
               className="text-sm leading-relaxed"
               style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-blush)' }}
             >
-              Redcliffe&apos;s sole Lira Clinical stockist.
+              Authorised Lira Clinical stockist.
             </p>
             <a
               href="https://www.instagram.com/thedermstudio_/"
@@ -138,8 +138,7 @@ export function Footer() {
                   className="text-sm not-italic leading-relaxed"
                   style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-blush)' }}
                 >
-                  Shop 10, Bluewater Square,<br />
-                  20 Anzac Avenue,<br />
+                  1/93 Marine Parade,<br />
                   Redcliffe QLD 4020
                 </address>
               </div>
@@ -206,7 +205,7 @@ export function Footer() {
             className="text-xs leading-relaxed"
             style={{ fontFamily: "'DM Sans', sans-serif", color: 'rgba(232,181,176,0.5)' }}
           >
-            The Derm Studio | Shop 10, Bluewater Square, 20 Anzac Avenue, Redcliffe QLD 4020 | +61 414 185 007
+            The Derm Studio | 1/93 Marine Parade, Redcliffe QLD 4020 | +61 414 185 007
           </p>
           <p
             className="text-xs leading-relaxed"

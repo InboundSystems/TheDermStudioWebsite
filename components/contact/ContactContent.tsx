@@ -378,8 +378,7 @@ export function ContactContent() {
                     className="not-italic text-sm leading-relaxed"
                     style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
                   >
-                    Shop 10, Bluewater Square<br />
-                    20 Anzac Avenue<br />
+                    1/93 Marine Parade<br />
                     Redcliffe QLD 4020
                   </address>
                 </div>
@@ -419,14 +418,14 @@ export function ContactContent() {
               style={{ border: '1px solid var(--color-cream-dark)' }}
             >
               <iframe
-                src="https://www.google.com/maps?q=Shop+10+Bluewater+Square+20+Anzac+Ave+Redcliffe+QLD+4020&output=embed"
+                src="https://www.google.com/maps?q=1%2F93+Marine+Parade+Redcliffe+QLD+4020&output=embed"
                 width="100%"
                 height="320"
                 style={{ border: 0, display: 'block' }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="The Derm Studio location — Bluewater Square, Redcliffe"
+                title="The Derm Studio location — Marine Parade, Redcliffe"
               />
             </div>
           </div>

@@ -157,7 +157,7 @@ export default async function ServicePage({ params }: Props) {
                   className="mt-4 text-xs text-center"
                   style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
                 >
-                  Shop 10, Bluewater Square, Redcliffe QLD
+                  1/93 Marine Parade, Redcliffe QLD
                 </p>
               </div>
             </div>
@@ -327,7 +327,7 @@ export default async function ServicePage({ params }: Props) {
             className="text-base mb-8"
             style={{ fontFamily: "'DM Sans', sans-serif", color: 'rgba(255,255,255,0.85)' }}
           >
-            Book a consultation at The Derm Studio, Redcliffe — Shop 10, Bluewater Square.
+            Book a consultation at The Derm Studio — 1/93 Marine Parade, Redcliffe.
           </p>
           <Link
             href="/book"

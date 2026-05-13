@@ -179,7 +179,7 @@ export function ServicePageTemplate({
             className="text-base mb-8"
             style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-blush)' }}
           >
-            Shop 10, Bluewater Square, 20 Anzac Avenue, Redcliffe QLD 4020
+            1/93 Marine Parade, Redcliffe QLD 4020
           </p>
           <Link
             href="/book"

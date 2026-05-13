@@ -7,7 +7,7 @@ import { ShieldCheck, Heart, TrendingUp, UserCircle } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'About The Derm Studio | Rachael Liquorish, Dermal Nurse — Redcliffe',
   description:
-    "Meet Rachael Liquorish, Dermal Nurse and founder of The Derm Studio — Redcliffe's results-focused skin clinic and sole Lira Clinical stockist at Bluewater Square.",
+    "Meet Rachael Liquorish, Dermal Nurse and founder of The Derm Studio — Redcliffe's results-focused skin clinic and authorised Lira Clinical stockist at Marine Parade, Redcliffe.",
 }
 
 const pillars = [
@@ -59,7 +59,7 @@ export default function AboutPage() {
             style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
           >
             <p>
-              The Derm Studio is a results-focused skin clinic founded by Rachael Liquorish, a Dermal Nurse with a deep commitment to skin health and evidence-based treatment. Located at Shop 10, 20 Anzac Avenue, Bluewater Square in Redcliffe, the clinic specialises in advanced skin treatments tailored to the individual — with a focus on visible results and a genuinely personalised experience.
+              The Derm Studio is a results-focused skin clinic founded by Rachael Liquorish, a Dermal Nurse with a deep commitment to skin health and evidence-based treatment. Located at 1/93 Marine Parade, Redcliffe, the clinic specialises in advanced skin treatments tailored to the individual — with a focus on visible results and a genuinely personalised experience.
             </p>
             <p>
               Every treatment at The Derm Studio begins with understanding your skin. No two clients are the same, and no two treatment plans should be either. Rachael works with you to assess your skin, understand your concerns and goals, and develop a protocol that makes sense for your skin specifically — not a generic menu approach.
@@ -68,7 +68,7 @@ export default function AboutPage() {
               Every new client is welcome to start with a complimentary 30-minute consultation. It&apos;s an opportunity to have your skin professionally assessed, ask questions, and receive honest recommendations — obligation-free.
             </p>
             <p>
-              The Derm Studio is proud to be <strong>Redcliffe&apos;s sole Lira Clinical stockist</strong>. Lira Clinical is a professional-grade skincare brand trusted by skin therapists globally, and it sits at the heart of every treatment protocol and home-care prescription at the studio. You won&apos;t find it elsewhere on the Redcliffe Peninsula — and that partnership is intentional. The Derm Studio works exclusively with brands it genuinely uses and believes in.
+              The Derm Studio is a proud <strong>authorised Lira Clinical stockist</strong>. Lira Clinical is a professional-grade skincare brand trusted by skin therapists globally, and it sits at the heart of every treatment protocol and home-care prescription at the studio. That partnership is intentional — The Derm Studio works exclusively with brands it genuinely uses and believes in.
             </p>
             <p>
               Treatments on offer include corrective facials, hybrid facials, dermaplaning, Lira Clinical corrective peels (Levels 1–3), skin needling with NCTF and Exosomes, and Korean lash lifting — each tailored to your individual skin concerns and delivered with clinical precision.
@@ -130,7 +130,7 @@ export default function AboutPage() {
                   className="text-sm sm:text-base leading-relaxed mb-4"
                   style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
                 >
-                  Rachael Liquorish is a Dermal Nurse and the founder of The Derm Studio. She established the clinic at Bluewater Square in Redcliffe to provide the Moreton Bay Peninsula with access to genuinely results-focused skin treatment — combining clinical expertise with a personalised approach that puts each client&apos;s skin health first.
+                  Rachael Liquorish is a Dermal Nurse and the founder of The Derm Studio. She established the clinic at 1/93 Marine Parade, Redcliffe to provide the Moreton Bay Peninsula with access to genuinely results-focused skin treatment — combining clinical expertise with a personalised approach that puts each client&apos;s skin health first.
                 </p>
                 <p
                   className="text-sm sm:text-base leading-relaxed"
@@ -212,7 +212,7 @@ export default function AboutPage() {
                 className="text-sm sm:text-base leading-relaxed mb-4"
                 style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
               >
-                We are proud to be the sole Lira Clinical stockist in Redcliffe — find out why our clients love it and how it can transform your home skincare routine.
+                We are proud to be an authorised Lira Clinical stockist — find out why our clients love it and how it can transform your home skincare routine.
               </p>
               <Link
                 href="/lira-clinical"
@@ -239,7 +239,7 @@ export default function AboutPage() {
             className="text-base leading-relaxed mb-8"
             style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-blush)' }}
           >
-            Start your skin journey with a complimentary consultation at The Derm Studio, Bluewater Square, Redcliffe.
+            Start your skin journey with a complimentary consultation at The Derm Studio, 1/93 Marine Parade, Redcliffe.
           </p>
           <Link
             href="/book"

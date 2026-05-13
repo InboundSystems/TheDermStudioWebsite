@@ -5,7 +5,7 @@ import { MapPin, Clock, Phone } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Book a Skin Treatment | The Derm Studio Redcliffe',
   description:
-    "Book your facial, chemical peel, LED light therapy or skin consultation at The Derm Studio — Redcliffe's specialist skin clinic at Bluewater Square.",
+    "Book your facial, chemical peel, LED light therapy or skin consultation at The Derm Studio — Redcliffe's specialist skin clinic at Marine Parade, Redcliffe.",
 }
 
 export default function BookPage() {
@@ -18,7 +18,7 @@ export default function BookPage() {
             className="text-sm font-semibold tracking-widest uppercase mb-4"
             style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-rose)' }}
           >
-            Bluewater Square, Redcliffe
+            Marine Parade, Redcliffe
           </p>
           <h1
             className="text-4xl sm:text-5xl font-bold mb-5 leading-tight"
@@ -87,8 +87,7 @@ export default function BookPage() {
                   className="text-sm not-italic leading-relaxed"
                   style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
                 >
-                  Shop 10, Bluewater Square<br />
-                  20 Anzac Avenue<br />
+                  1/93 Marine Parade<br />
                   Redcliffe QLD 4020
                 </address>
               </div>

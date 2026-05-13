@@ -4,7 +4,7 @@ import { ServicePageTemplate } from '@/components/seo/ServicePageTemplate'
 export const metadata: Metadata = {
   title: 'LED Light Therapy Redcliffe | Skin Rejuvenation — The Derm Studio',
   description:
-    'Professional LED light therapy in Redcliffe for anti-ageing, acne reduction and skin rejuvenation at The Derm Studio, Bluewater Square. Book your session today.',
+    'Professional LED light therapy in Redcliffe for anti-ageing, acne reduction and skin rejuvenation at The Derm Studio, Marine Parade, Redcliffe. Book your session today.',
   alternates: { canonical: 'https://thedermstudio.com.au/services/led-light-therapy-redcliffe' },
 }
 
@@ -75,7 +75,7 @@ export default function LedLightTherapyPage() {
   return (
     <ServicePageTemplate
       h1="LED Light Therapy Redcliffe | Anti-Ageing Skin Treatment"
-      intro="Professional LED light therapy at The Derm Studio, Bluewater Square, Redcliffe. A non-invasive, clinically proven treatment for anti-ageing, acne reduction, and skin rejuvenation — safe for all skin types and tones with zero downtime."
+      intro="Professional LED light therapy at The Derm Studio, Marine Parade, Redcliffe. A non-invasive, clinically proven treatment for anti-ageing, acne reduction, and skin rejuvenation — safe for all skin types and tones with zero downtime."
       sections={sections}
       faqs={faqs}
       relatedServices={relatedServices}

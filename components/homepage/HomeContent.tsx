@@ -82,7 +82,7 @@ const services = [
   {
     icon: Package,
     name: 'Lira Clinical',
-    desc: "Redcliffe's sole stockist of Lira Clinical professional skincare. Prescribed and available exclusively in-studio.",
+    desc: 'Authorised stockist of Lira Clinical professional skincare. Prescribed and available exclusively through authorised clinics.',
     href: '/lira-clinical',
   },
 ]
@@ -91,8 +91,8 @@ const services = [
 const reasons = [
   {
     icon: MapPin,
-    title: 'Located at Bluewater Square, Redcliffe',
-    desc: 'Convenient central Redcliffe location with easy parking at Bluewater Square.',
+    title: 'Located on Marine Parade, Redcliffe',
+    desc: 'Convenient Redcliffe location on Marine Parade with easy access and parking nearby.',
   },
   {
     icon: GraduationCap,
@@ -101,8 +101,8 @@ const reasons = [
   },
   {
     icon: ShoppingBag,
-    title: 'Sole Lira Clinical Stockist',
-    desc: 'The only clinic on the Redcliffe Peninsula stocking Lira Clinical professional skincare.',
+    title: 'Authorised Lira Clinical Stockist',
+    desc: 'An authorised Lira Clinical stockist on the Redcliffe Peninsula — professional-grade skincare prescribed in-clinic.',
   },
   {
     icon: ClipboardList,
@@ -149,7 +149,7 @@ const testimonials = [
     suburb: 'Kippa-Ring',
   },
   {
-    text: "I've been using Lira Clinical products since The Derm Studio introduced me to them. The difference in my skin is remarkable. Love that they're the only stockist in Redcliffe!",
+    text: "I've been using Lira Clinical products since The Derm Studio introduced me to them. The difference in my skin is remarkable. Love that they're an authorised stockist right here in Redcliffe!",
     author: 'Lisa K.',
     suburb: 'Scarborough',
   },
@@ -192,7 +192,7 @@ export function HomeContent() {
             className="text-lg sm:text-xl leading-relaxed mb-10 max-w-3xl mx-auto text-white/90"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
-            Redcliffe&apos;s specialist skin clinic — corrective facials, Lira Clinical corrective peels, advanced skin needling, and professional lash treatments. Located at Bluewater Square, Redcliffe.
+            Redcliffe&apos;s specialist skin clinic — corrective facials, Lira Clinical corrective peels, advanced skin needling, and professional lash treatments. Located on Marine Parade, Redcliffe.
           </motion.p>
 
           <motion.div
@@ -422,7 +422,7 @@ export function HomeContent() {
               className="text-base leading-relaxed mb-8"
               style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-blush)' }}
             >
-              The Derm Studio is the only clinic on the Redcliffe Peninsula where you can purchase authentic Lira Clinical products and receive expert guidance from qualified dermal therapists.
+              The Derm Studio is an authorised Lira Clinical stockist — products can only be purchased through approved clinics, not online or through general retail. Rachael prescribes every Lira Clinical home-care protocol in-clinic.
             </p>
             <Link
               href="/lira-clinical"
@@ -473,7 +473,7 @@ export function HomeContent() {
               className="text-base sm:text-lg leading-relaxed max-w-3xl mx-auto"
               style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
             >
-              Located at Bluewater Square in the heart of Redcliffe, The Derm Studio provides expert skin treatments to clients from across the Moreton Bay Peninsula. Our team welcomes clients from Scarborough, Clontarf, Kippa-Ring, Brighton, Newport, Deception Bay, Mango Hill, North Lakes and all surrounding suburbs.
+              Located on Marine Parade in Redcliffe, The Derm Studio provides expert skin treatments to clients from across the Moreton Bay Peninsula. Our team welcomes clients from Scarborough, Clontarf, Kippa-Ring, Brighton, Newport, Deception Bay, Mango Hill, North Lakes and all surrounding suburbs.
             </p>
           </motion.div>
 
@@ -551,7 +551,7 @@ export function HomeContent() {
             className="text-3xl sm:text-4xl font-bold text-center mb-12"
             style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
           >
-            Find Us at Bluewater Square, Redcliffe
+            Find Us at The Derm Studio, Redcliffe
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
@@ -562,14 +562,14 @@ export function HomeContent() {
               style={{ border: '1px solid var(--color-cream-dark)' }}
             >
               <iframe
-                src="https://www.google.com/maps?q=Shop+10+Bluewater+Square+20+Anzac+Ave+Redcliffe+QLD+4020&output=embed"
+                src="https://www.google.com/maps?q=1%2F93+Marine+Parade+Redcliffe+QLD+4020&output=embed"
                 width="100%"
                 height="400"
                 style={{ border: 0, display: 'block' }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="The Derm Studio location — Bluewater Square, Redcliffe"
+                title="The Derm Studio location — Marine Parade, Redcliffe"
               />
             </motion.div>
 
@@ -590,8 +590,8 @@ export function HomeContent() {
                 <div className="flex gap-3">
                   <span className="shrink-0 mt-0.5">📍</span>
                   <address className="not-italic" style={{ color: 'var(--color-charcoal)' }}>
-                    Shop 10, Bluewater Square,<br />
-                    20 Anzac Avenue, Redcliffe QLD 4020
+                    1/93 Marine Parade,<br />
+                    Redcliffe QLD 4020
                   </address>
                 </div>
                 <div className="flex gap-3 items-center">
@@ -651,7 +651,7 @@ export function HomeContent() {
             className="text-base sm:text-lg text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
-            Book a free skin consultation at Redcliffe&apos;s specialist skin clinic. Located at Bluewater Square — Redcliffe&apos;s sole Lira Clinical stockist.
+            Book a free skin consultation at Redcliffe&apos;s specialist skin clinic. Located on Marine Parade, Redcliffe — authorised Lira Clinical stockist.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link

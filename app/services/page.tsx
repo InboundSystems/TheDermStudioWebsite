@@ -8,7 +8,7 @@ import { ArrowRight } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Skin Treatments Redcliffe | Full Service Menu — The Derm Studio',
   description:
-    "Explore The Derm Studio's full service menu in Redcliffe — corrective facials, Lira Clinical corrective peels, skin needling with NCTF and Exosomes, dermaplaning, and lash lifting at Bluewater Square.",
+    "Explore The Derm Studio's full service menu in Redcliffe — corrective facials, Lira Clinical corrective peels, skin needling with NCTF and Exosomes, dermaplaning, and lash lifting at Marine Parade, Redcliffe.",
   alternates: { canonical: 'https://thedermstudio.com.au/services' },
 }
 
@@ -37,7 +37,7 @@ export default function ServicesPage() {
             className="mt-4 text-lg max-w-2xl"
             style={{ fontFamily: "'DM Sans', sans-serif", color: 'rgba(255,255,255,0.8)' }}
           >
-            From corrective facials and Lira Clinical peels to advanced skin needling and lash lifting — expert treatments delivered by qualified dermal therapists at Bluewater Square, Redcliffe.
+            From corrective facials and Lira Clinical peels to advanced skin needling and lash lifting — expert treatments delivered by qualified dermal therapists at Marine Parade, Redcliffe.
           </p>
         </div>
       </section>
