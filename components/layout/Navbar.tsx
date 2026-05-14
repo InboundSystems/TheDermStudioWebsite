@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, AnimatePresence, useMotionValueEvent, useScroll } from 'framer-motion'
 import { Menu, X, ChevronDown } from 'lucide-react'
 
@@ -49,23 +50,15 @@ export function Navbar() {
           <div className="flex items-center justify-between h-20">
 
             {/* Logo */}
-            <Link href="/" className="flex flex-col group">
-              <motion.span
-                className="text-xl font-bold leading-tight"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-                animate={{ color: textColor }}
-                transition={{ duration: 0.3 }}
-              >
-                The Derm Studio
-              </motion.span>
-              <motion.span
-                className="text-xs tracking-wide"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
-                animate={{ color: subtextColor }}
-                transition={{ duration: 0.3 }}
-              >
-                Advanced Skin &amp; Aesthetics
-              </motion.span>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/logo.png"
+                alt="The Derm Studio — Advanced Skin & Aesthetics"
+                width={52}
+                height={52}
+                className="rounded-full"
+                priority
+              />
             </Link>
 
             {/* Desktop Nav Links */}

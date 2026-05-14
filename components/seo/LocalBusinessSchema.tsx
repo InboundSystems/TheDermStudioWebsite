@@ -51,7 +51,8 @@ export function LocalBusinessSchema() {
       ]
     },
     "sameAs": [
-      "https://www.instagram.com/thedermstudio_/"
+      "https://www.instagram.com/thedermstudio_/",
+      "https://www.facebook.com/100089228680337/photos/"
     ]
   }
 
