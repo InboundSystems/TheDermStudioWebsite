@@ -47,7 +47,6 @@ export function Footer() {
                 width={130}
                 height={52}
                 className="object-contain"
-                style={{ mixBlendMode: 'screen' }}
               />
             </div>
             <p

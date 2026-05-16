@@ -52,15 +52,19 @@ export function Navbar() {
 
             {/* Logo */}
             <Link href="/" className="flex items-center">
-              <Image
-                src="/logo.png"
-                alt="The Derm Studio — Advanced Skin & Aesthetics"
-                width={130}
-                height={52}
-                className="object-contain"
-                style={{ mixBlendMode: 'screen' }}
-                priority
-              />
+              <motion.div
+                animate={{ filter: scrolled ? 'brightness(0)' : 'brightness(1)' }}
+                transition={{ duration: 0.3, ease: 'easeInOut' as const }}
+              >
+                <Image
+                  src="/logo.png"
+                  alt="The Derm Studio — Advanced Skin & Aesthetics"
+                  width={130}
+                  height={52}
+                  className="object-contain"
+                  priority
+                />
+              </motion.div>
             </Link>
 
             {/* Desktop Nav Links */}
