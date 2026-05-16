@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 
 const treatmentLinks = [
@@ -11,6 +12,7 @@ const treatmentLinks = [
   { name: 'Skin Needling', href: '/services/skin-needling-nctf-redcliffe' },
   { name: 'Korean Lash Lift & Tint', href: '/services/korean-lash-lift-tint-redcliffe' },
   { name: 'Lira Clinical Skincare', href: '/lira-clinical' },
+  { name: 'Memberships', href: '/memberships' },
 ]
 
 const serviceAreas = [
@@ -39,18 +41,14 @@ export function Footer() {
           {/* Column 1 — Brand */}
           <div className="flex flex-col gap-4">
             <div>
-              <h3
-                className="text-xl font-bold text-white leading-tight"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                The Derm Studio
-              </h3>
-              <p
-                className="text-sm italic mt-1"
-                style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-blush)' }}
-              >
-                Advanced Skin &amp; Aesthetics
-              </p>
+              <Image
+                src="/logo.png"
+                alt="The Derm Studio — Advanced Skin & Aesthetics"
+                width={130}
+                height={52}
+                className="object-contain"
+                style={{ mixBlendMode: 'screen' }}
+              />
             </div>
             <p
               className="text-sm leading-relaxed"

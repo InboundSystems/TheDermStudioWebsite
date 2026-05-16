@@ -18,6 +18,7 @@ const treatments = [
 const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'Treatments', href: '#', dropdown: true },
+  { name: 'Memberships', href: '/memberships' },
   { name: 'Lira Clinical', href: '/lira-clinical' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
@@ -54,9 +55,10 @@ export function Navbar() {
               <Image
                 src="/logo.png"
                 alt="The Derm Studio — Advanced Skin & Aesthetics"
-                width={52}
+                width={130}
                 height={52}
-                className="rounded-full"
+                className="object-contain"
+                style={{ mixBlendMode: 'screen' }}
                 priority
               />
             </Link>

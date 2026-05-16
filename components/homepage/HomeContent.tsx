@@ -136,22 +136,23 @@ const suburbs = [
   { name: '+ All Surrounding Areas', href: '/service-areas' },
 ]
 
-/* ─── Section 7: Testimonials ─── */
-const testimonials = [
+/* ─── Section 7: Google Reviews ─── */
+const reviews = [
   {
-    text: "The Derm Studio completely transformed my skin. I've been struggling with pigmentation for years and after a course of chemical peels my confidence is through the roof. Absolutely recommend.",
-    author: 'Sarah M.',
-    suburb: 'Redcliffe',
+    author: 'Pia Schwämmle',
+    text: "My skin has never looked or felt better. Every visit is such a wonderful experience — I always feel truly cared for and looked after. Rachael puts in so much extra effort and it really shows. My skin is glowing, healthy, and happy every time I leave. You can tell she genuinely cares about her clients. Highly recommend to anyone who wants their skin to feel amazing and their heart full!",
   },
   {
-    text: "Best skin clinic in Redcliffe by far. The team really takes the time to understand your skin. I drive from Kippa-Ring every time and it's 100% worth it.",
-    author: 'Emma T.',
-    suburb: 'Kippa-Ring',
+    author: 'Leah Lewis-Macpherson',
+    text: "A truly amazing experience, regardless of whether you are wanting to relax and be pampered with a facial, or services that pack a punch and offer true results, Rachel delivers time after time. If you are looking for someone who actually listens to your skincare concerns and is invested in working with you to address them, then this is your place.",
   },
   {
-    text: "I've been using Lira Clinical products since The Derm Studio introduced me to them. The difference in my skin is remarkable. Love that they're an authorised stockist right here in Redcliffe!",
-    author: 'Lisa K.',
-    suburb: 'Scarborough',
+    author: 'Muscle Nerds',
+    text: "I wouldn't go to anyone else ever for my skin treatments — I've been with Rach for over 6 years now, and the improvement in skin over that time has been unreal. She doesn't sell you stuff for the sake of selling you stuff — she's honest about what you need and don't need. And she's just SUCH A JOY. Couldn't recommend her any more highly. Infinity stars ⭐",
+  },
+  {
+    author: 'Niomi Loveridge',
+    text: "Absolutely loved my face needling treatment! The service was excellent, and the results exceeded my expectations. My skin has never looked this good — smooth, refreshed, and glowing. Highly recommend to anyone considering it!",
   },
 ]
 
@@ -496,53 +497,213 @@ export function HomeContent() {
       </section>
 
       {/* ──────────────────────────────────────
-          SECTION 7 — TESTIMONIALS
+          SECTION 7 — GOOGLE REVIEWS
       ────────────────────────────────────── */}
       <section className="py-20 px-4" style={{ backgroundColor: 'var(--color-cream)' }}>
         <div className="max-w-7xl mx-auto">
           <motion.div {...scrollFadeUp(0)} className="text-center mb-12">
             <h2
-              className="text-3xl sm:text-4xl font-bold"
+              className="text-3xl sm:text-4xl font-bold mb-3"
               style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
             >
-              What Our Clients Say
+              Real Results, Real People
             </h2>
+            {/* Google Reviews badge */}
+            <div className="inline-flex items-center gap-2.5 mt-2 px-4 py-2 rounded-full bg-white shadow-sm"
+              style={{ border: '1px solid var(--color-cream-dark)' }}>
+              {/* Google G icon */}
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+              </svg>
+              <span className="text-sm font-semibold" style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-espresso)' }}>
+                5.0
+              </span>
+              <div className="flex gap-0.5">
+                {[...Array(5)].map((_, j) => (
+                  <Star key={j} className="w-3.5 h-3.5 fill-current" style={{ color: '#F59E0B' }} />
+                ))}
+              </div>
+              <span className="text-sm" style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}>
+                on Google Reviews
+              </span>
+            </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {reviews.map((r, i) => (
               <motion.div
-                key={t.author}
-                {...scrollFadeUp(i * 0.12)}
-                className="bg-white rounded-2xl shadow-sm p-6 sm:p-8 flex flex-col gap-4"
+                key={r.author}
+                {...scrollFadeUp(i * 0.1)}
+                className="bg-white rounded-2xl p-7 flex flex-col gap-5"
+                style={{ border: '1px solid var(--color-cream-dark)' }}
               >
-                {/* Stars */}
-                <div className="flex gap-1">
-                  {[...Array(5)].map((_, j) => (
-                    <Star key={j} className="w-4 h-4 fill-current" style={{ color: '#F59E0B' }} />
-                  ))}
+                {/* Top row: stars + Google badge */}
+                <div className="flex items-center justify-between">
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, j) => (
+                      <Star key={j} className="w-4 h-4 fill-current" style={{ color: '#F59E0B' }} />
+                    ))}
+                  </div>
+                  <div className="flex items-center gap-1.5 opacity-60">
+                    <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                      <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                      <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                      <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                    </svg>
+                    <span className="text-xs" style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}>
+                      Google Review
+                    </span>
+                  </div>
                 </div>
+
+                {/* Review text */}
                 <p
                   className="text-sm sm:text-base leading-relaxed flex-1"
                   style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
                 >
-                  &ldquo;{t.text}&rdquo;
+                  &ldquo;{r.text}&rdquo;
                 </p>
-                <p
-                  className="text-sm font-semibold"
-                  style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-espresso)' }}
-                >
-                  — {t.author}, {t.suburb}
-                </p>
+
+                {/* Reviewer name */}
+                <div className="flex items-center gap-3 pt-1" style={{ borderTop: '1px solid var(--color-cream-dark)' }}>
+                  <div
+                    className="w-9 h-9 rounded-full flex items-center justify-center shrink-0 text-sm font-bold text-white"
+                    style={{ backgroundColor: 'var(--color-rose)', fontFamily: "'DM Sans', sans-serif" }}
+                  >
+                    {r.author.charAt(0)}
+                  </div>
+                  <p
+                    className="text-sm font-semibold"
+                    style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-espresso)' }}
+                  >
+                    {r.author}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
-          {/* TODO: Replace with live Google Reviews widget — see Session 2 */}
         </div>
       </section>
 
       {/* ──────────────────────────────────────
-          SECTION 8 — GOOGLE MAPS EMBED
+          SECTION 8 — MEMBERSHIPS TEASER
+      ────────────────────────────────────── */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <motion.div {...scrollFadeUp(0)} className="text-center mb-14">
+            <h2
+              className="text-3xl sm:text-4xl font-bold mb-4"
+              style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
+            >
+              Skin Memberships
+            </h2>
+            <p
+              className="text-base sm:text-lg leading-relaxed max-w-2xl mx-auto"
+              style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
+            >
+              The clients who see the biggest results are those who commit to regular treatment.
+              Our membership program makes consistency simple — regular treatments, exclusive savings,
+              and priority booking rolled into one plan.
+            </p>
+            <div
+              className="inline-block mt-5 px-4 py-1.5 rounded-full text-sm font-semibold"
+              style={{ backgroundColor: 'var(--color-rose)', color: '#fff', fontFamily: "'DM Sans', sans-serif" }}
+            >
+              Coming Soon
+            </div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+            {[
+              {
+                name: 'The Essential',
+                tagline: 'Perfect introduction to consistent skin care',
+                perks: ['1 treatment / month', '10% off additional treatments', 'Priority booking'],
+              },
+              {
+                name: 'The Glow',
+                tagline: 'Targeting real, lasting results',
+                perks: ['1 premium + 1 add-on / month', '15% off additional treatments', '6-monthly skin review'],
+                highlight: true,
+              },
+              {
+                name: 'The Studio',
+                tagline: 'Total commitment to your skin',
+                perks: ['2 treatments / month (full menu)', '20% off additional treatments', 'Quarterly skin review'],
+              },
+            ].map((tier, i) => (
+              <motion.div
+                key={tier.name}
+                {...scrollFadeUp(i * 0.1)}
+                className="rounded-2xl p-7 flex flex-col gap-4"
+                style={{
+                  backgroundColor: tier.highlight ? 'var(--color-rose)' : 'var(--color-cream)',
+                  border: tier.highlight ? '2px solid var(--color-rose)' : '1px solid var(--color-cream-dark)',
+                }}
+              >
+                <div>
+                  <h3
+                    className="text-xl font-bold mb-1"
+                    style={{
+                      fontFamily: "'Playfair Display', serif",
+                      color: tier.highlight ? '#fff' : 'var(--color-espresso)',
+                    }}
+                  >
+                    {tier.name}
+                  </h3>
+                  <p
+                    className="text-sm"
+                    style={{
+                      fontFamily: "'DM Sans', sans-serif",
+                      color: tier.highlight ? 'rgba(255,255,255,0.85)' : 'var(--color-charcoal)',
+                    }}
+                  >
+                    {tier.tagline}
+                  </p>
+                </div>
+                <ul className="flex flex-col gap-2">
+                  {tier.perks.map((perk) => (
+                    <li key={perk} className="flex items-start gap-2">
+                      <CheckCircle
+                        className="w-4 h-4 mt-0.5 shrink-0"
+                        style={{ color: tier.highlight ? 'rgba(255,255,255,0.8)' : 'var(--color-rose)' }}
+                      />
+                      <span
+                        className="text-sm"
+                        style={{
+                          fontFamily: "'DM Sans', sans-serif",
+                          color: tier.highlight ? 'rgba(255,255,255,0.9)' : 'var(--color-charcoal)',
+                        }}
+                      >
+                        {perk}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div {...scrollFadeUp(0.2)} className="text-center">
+            <Link
+              href="/memberships"
+              className="inline-block text-center text-sm font-semibold text-white px-7 py-3.5 rounded-full transition-colors"
+              style={{ backgroundColor: 'var(--color-rose)', fontFamily: "'DM Sans', sans-serif" }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--color-rose-dark)' }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--color-rose)' }}
+            >
+              View Full Membership Details
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ──────────────────────────────────────
+          SECTION 9 — GOOGLE MAPS EMBED
       ────────────────────────────────────── */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
