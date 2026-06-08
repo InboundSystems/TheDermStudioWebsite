@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import {
@@ -139,20 +140,20 @@ const suburbs = [
 /* ─── Section 7: Google Reviews ─── */
 const reviews = [
   {
-    author: 'Pia Schwämmle',
-    text: "My skin has never looked or felt better. Every visit is such a wonderful experience — I always feel truly cared for and looked after. Rachael puts in so much extra effort and it really shows. My skin is glowing, healthy, and happy every time I leave. You can tell she genuinely cares about her clients. Highly recommend to anyone who wants their skin to feel amazing and their heart full!",
-  },
-  {
-    author: 'Leah Lewis-Macpherson',
-    text: "A truly amazing experience, regardless of whether you are wanting to relax and be pampered with a facial, or services that pack a punch and offer true results, Rachel delivers time after time. If you are looking for someone who actually listens to your skincare concerns and is invested in working with you to address them, then this is your place.",
-  },
-  {
-    author: 'Muscle Nerds',
-    text: "I wouldn't go to anyone else ever for my skin treatments — I've been with Rach for over 6 years now, and the improvement in skin over that time has been unreal. She doesn't sell you stuff for the sake of selling you stuff — she's honest about what you need and don't need. And she's just SUCH A JOY. Couldn't recommend her any more highly. Infinity stars ⭐",
+    author: 'Tali McMahon',
+    text: "I had the most incredible experience with Rachael at The Derm Studio. From the moment I walked in, she made me feel completely at ease with her warm and calming presence. The facial itself was absolutely amazing, so relaxing and thoughtfully tailored to my skin's needs. Every step felt luxurious, and you can truly tell how passionate and knowledgeable Rachael is about what she does. I left feeling refreshed, glowing, and completely rejuvenated. I can't recommend her enough. If you're looking for the ultimate self-care treat, Rachael is the one to see! ✨",
   },
   {
     author: 'Niomi Loveridge',
     text: "Absolutely loved my face needling treatment! The service was excellent, and the results exceeded my expectations. My skin has never looked this good — smooth, refreshed, and glowing. Highly recommend to anyone considering it!",
+  },
+  {
+    author: 'Monica C',
+    text: "Rachel is professional and always does a great job, it's fun too and I love my Lira products — thank you Rach!",
+  },
+  {
+    author: 'Leah Lewis-Macpherson',
+    text: "A truly amazing experience, regardless of whether you are wanting to relax and be pampered with a facial, or services that pack a punch and offer true results, Rachel delivers time after time. If you are looking for someone who actually listens to your skincare concerns and is invested in working with you to address them, then this is your place.",
   },
 ]
 
@@ -590,7 +591,63 @@ export function HomeContent() {
       </section>
 
       {/* ──────────────────────────────────────
-          SECTION 8 — MEMBERSHIPS TEASER
+          SECTION 8 — MEET THE OWNER
+      ────────────────────────────────────── */}
+      <section className="py-24 px-4 bg-white">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <motion.div
+            {...scrollFadeUp(0)}
+            className="relative h-[520px] rounded-2xl overflow-hidden shadow-md"
+          >
+            <Image
+              src="/rachael.png"
+              alt="Rachael — Owner of The Derm Studio, Redcliffe"
+              fill
+              className="object-cover object-top"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </motion.div>
+
+          <motion.div {...scrollFadeUp(0.2)} className="flex flex-col gap-6">
+            <p
+              className="text-sm font-semibold tracking-widest uppercase"
+              style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-rose)' }}
+            >
+              Meet the Owner
+            </p>
+            <h2
+              className="text-3xl sm:text-4xl font-bold leading-tight"
+              style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
+            >
+              Hi, I&apos;m Rachael
+            </h2>
+            <p
+              className="text-base leading-relaxed"
+              style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
+            >
+              I&apos;m a qualified dermal therapist and the founder of The Derm Studio. My passion is helping clients genuinely understand their skin and achieve real, lasting results — not just a one-off glow.
+            </p>
+            <p
+              className="text-base leading-relaxed"
+              style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
+            >
+              Every treatment I offer is backed by science and tailored specifically to you. Whether you&apos;re starting your skin journey or looking to address a specific concern, I&apos;m here to guide you every step of the way.
+            </p>
+            <Link
+              href="/book"
+              className="inline-block self-start font-semibold px-7 py-3.5 rounded-full text-white transition-colors"
+              style={{ backgroundColor: 'var(--color-rose)', fontFamily: "'DM Sans', sans-serif" }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--color-rose-dark)' }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--color-rose)' }}
+            >
+              Book with Rachael
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ──────────────────────────────────────
+          SECTION 9 — MEMBERSHIPS TEASER
       ────────────────────────────────────── */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
