@@ -102,7 +102,8 @@ export default function AboutPage() {
                   src="/rachael.png"
                   alt="Rachael Liquorish — Dermal Nurse & Founder of The Derm Studio"
                   fill
-                  className="object-cover object-center"
+                  className="object-cover"
+                  style={{ objectPosition: 'center 30%' }}
                   sizes="(max-width: 768px) 100vw, 672px"
                 />
               </div>
