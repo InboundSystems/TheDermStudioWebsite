@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
-import { ShieldCheck, Heart, TrendingUp, UserCircle } from 'lucide-react'
+import { ShieldCheck, Heart, TrendingUp } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'About The Derm Studio | Rachael Liquorish, Dermal Nurse — Redcliffe',
@@ -96,20 +97,14 @@ export default function AboutPage() {
               className="bg-white rounded-2xl overflow-hidden shadow-sm"
               style={{ border: '1px solid var(--color-cream-dark)' }}
             >
-              {/* Photo placeholder */}
-              <div
-                className="h-64 flex items-center justify-center"
-                style={{ backgroundColor: 'var(--color-cream-dark)' }}
-              >
-                <div className="text-center">
-                  <UserCircle className="w-20 h-20 mx-auto mb-2" style={{ color: 'var(--color-rose)' }} />
-                  <p
-                    className="text-xs"
-                    style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
-                  >
-                    Photo coming soon
-                  </p>
-                </div>
+              <div className="relative h-80 w-full">
+                <Image
+                  src="/rachael.png"
+                  alt="Rachael Liquorish — Dermal Nurse & Founder of The Derm Studio"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, 672px"
+                />
               </div>
 
               <div className="p-8">

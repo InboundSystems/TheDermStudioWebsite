@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
-import { Package, Leaf, Shield, Sparkles, Droplets, Sun, Zap } from 'lucide-react'
+import { Leaf, Shield, Sparkles, Droplets, Sun, Zap } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Lira Clinical Skincare Redcliffe | The Derm Studio — Sole Stockist',
@@ -43,37 +44,94 @@ const productRanges = [
     icon: Sparkles,
     name: 'PRO',
     tag: 'Anti-Aging',
+    categoryImg: '/lira/pro/_category.webp',
     desc: 'Advanced anti-ageing formulations powered by plant stem cells and peptides including Argireline, Matrixyl 3000, and Syn-Ake. Designed to visibly reduce fine lines, improve firmness, and restore a youthful complexion.',
+    products: [
+      { name: 'PRO Refining Eye Creme', img: '/lira/pro/pro-refining-eye-creme.webp' },
+      { name: 'PRO Brite-Plus Serum', img: '/lira/pro/pro-brite-plus-serum.webp' },
+      { name: 'PRO Brightening Masque', img: '/lira/pro/pro-brightening-masque.webp' },
+      { name: 'PRO Retinal-Plus Treatment', img: '/lira/pro/pro-retinal-plus-treatment.webp' },
+      { name: 'PRO Retinol Creme', img: '/lira/pro/pro-retinol-creme.webp' },
+      { name: 'PRO Lux Lash', img: '/lira/pro/pro-lux-lash.webp' },
+      { name: 'PRO Lite Serum', img: '/lira/pro/pro-lite-serum.webp' },
+      { name: 'PRO Firming Serum', img: '/lira/pro/pro-firming-serum.webp' },
+      { name: 'PRO Exfoliating Cleanser', img: '/lira/pro/pro-exfoliating-cleanser.jpg' },
+      { name: 'PRO C4 Retinol Serum', img: '/lira/pro/pro-c4-retinol-serum.webp' },
+      { name: 'PRO Corrective Pads', img: '/lira/pro/pro-corrective-pads.webp' },
+    ],
   },
   {
     icon: Droplets,
     name: 'BIO',
     tag: 'Hydration',
+    categoryImg: '/lira/bio/_category.png',
     desc: 'Deeply hydrating formulations that strengthen the skin barrier using topical probiotics and botanical ingredients. Ideal for dehydrated, sensitive, or compromised skin seeking lasting moisture and resilience.',
+    products: [
+      { name: 'BIO Caviar Creme', img: '/lira/bio/bio-caviar-creme.webp' },
+      { name: 'BIO Enzyme Cleanser', img: '/lira/bio/bio-enzyme-cleanser.webp' },
+      { name: 'BIO Hydra C Serum', img: '/lira/bio/bio-hydra-c-serum.webp' },
+      { name: 'BIO Hydra Infusion', img: '/lira/bio/bio-hydra-infusion.webp' },
+      { name: 'BIO Hydrating Mineral Masque', img: '/lira/bio/bio-hydrating-mineral-masque.jpg' },
+      { name: 'BIO Hydrating Mineral Mist', img: '/lira/bio/bio-hydrating-mineral-mist.jpg' },
+      { name: 'BIO Lift Creme', img: '/lira/bio/bio-lift-creme.webp' },
+      { name: 'BIO Lip Factor', img: '/lira/bio/bio-lip-factor.webp' },
+    ],
   },
   {
     icon: Sparkles,
     name: 'MYSTIQ',
     tag: 'Brightening',
+    categoryImg: '/lira/mystiq/_category.png',
     desc: 'Targeted brightening treatments with a rich concentration of skin-evening actives. Addresses hyperpigmentation, uneven skin tone, and dullness for a visibly clearer, more luminous complexion.',
+    products: [
+      { name: 'MYSTIQ iLuminating Beauty Oil', img: '/lira/mystiq/mystiq-iluminating-beauty-oil.webp' },
+      { name: 'MYSTIQ iLuminating Cleanser', img: '/lira/mystiq/mystiq-iluminating-cleanser.jpg' },
+      { name: 'MYSTIQ iLuminating Polisher', img: '/lira/mystiq/mystiq-iluminating-polisher.jpg' },
+      { name: 'MYSTIQ Infused C Serum', img: '/lira/mystiq/mystiq-infused-c-serum.webp' },
+      { name: 'MYSTIQ Intense C 15 Booster', img: '/lira/mystiq/mystiq-intense-c-15-booster.webp' },
+      { name: 'MYSTIQ Lifting Masque', img: '/lira/mystiq/mystiq-lifting-masque.webp' },
+      { name: 'MYSTIQ Perfecting Eye Creme', img: '/lira/mystiq/mystiq-perfecting-eye-creme.webp' },
+    ],
   },
   {
     icon: Zap,
     name: 'ICE',
     tag: 'Acne Correction',
+    categoryImg: '/lira/ice/_category.png',
     desc: 'Clinical-grade acne correction combining active resurfacing with anti-inflammatory botanicals. Treats active breakouts, prevents congestion, and progressively improves post-acne scarring and residual marks.',
+    products: [
+      { name: 'ICE Balancing Lotion', img: '/lira/ice/ice-balancing-lotion.webp' },
+      { name: 'ICE Clarifying Scrub', img: '/lira/ice/ice-clarifying-scrub.webp' },
+      { name: 'ICE Clarifying Treatment', img: '/lira/ice/ice-clarifying-treatment.webp' },
+      { name: 'ICE Clear Stick Acne Spot Treatment', img: '/lira/ice/ice-clear-stick-acne-spot-treatment.webp' },
+      { name: 'ICE Refining Masque', img: '/lira/ice/ice-refining-masque.webp' },
+      { name: 'ICE Sal Cleanser', img: '/lira/ice/ice-sal-cleanser.webp' },
+    ],
   },
   {
     icon: Sun,
     name: 'SPF',
     tag: 'Sun Protection',
+    categoryImg: '/lira/spf/_category.png',
     desc: 'Professional-grade broad-spectrum sun protection formulated with skin-beneficial actives — not just UV filters. Essential for protecting the investment of every in-clinic treatment.',
+    products: [
+      { name: 'SPF EliōDrops 30 Glow', img: '/lira/spf/spf-eliodrops-30-glow.jpg' },
+      { name: 'SPF EliōDrops 30 Sheer', img: '/lira/spf/spf-eliodrops-30-sheer.jpg' },
+      { name: 'SPF Solar Shield 30+ Classic Tint', img: '/lira/spf/spf-solar-shield-30-classic-tint.webp' },
+      { name: 'SPF Solar Shield 30+ Hydrating', img: '/lira/spf/spf-solar-shield-30-hydrating.webp' },
+      { name: 'SPF Solar Shield 30 Oil Free', img: '/lira/spf/spf-solar-shield-30-oil-free.webp' },
+    ],
   },
   {
     icon: Leaf,
     name: 'REGEN',
     tag: 'Skin Regeneration',
+    categoryImg: '/lira/regen/_category.webp',
     desc: 'Advanced regenerative formulations harnessing plant stem cell technology to accelerate skin renewal, support healing post-procedure, and restore optimal skin function and health.',
+    products: [
+      { name: 'REGEN PDRN+ Creme', img: '/lira/regen/regen-pdrn-creme.webp' },
+      { name: 'REGEN PDRN+ Serum', img: '/lira/regen/regen-pdrn-serum.webp' },
+    ],
   },
 ]
 
@@ -231,18 +289,14 @@ export default function LiraClinicalPage() {
                 className="flex flex-col gap-4 p-7 rounded-2xl"
                 style={{ backgroundColor: 'var(--color-cream)', border: '1px solid var(--color-cream-dark)' }}
               >
-                {/* Product image placeholder */}
-                <div
-                  className="h-36 rounded-xl flex items-center justify-center"
-                  style={{ backgroundColor: 'var(--color-cream-dark)' }}
-                >
-                  <div className="text-center">
-                    <Package className="w-9 h-9 mx-auto mb-1" style={{ color: 'var(--color-rose)' }} />
-                    {/* TODO: Replace with product line image supplied by client or Lira Clinical */}
-                    <p className="text-xs" style={{ color: 'var(--color-charcoal)', opacity: 0.6, fontFamily: "'DM Sans', sans-serif" }}>
-                      Image coming soon
-                    </p>
-                  </div>
+                <div className="relative h-36 rounded-xl overflow-hidden bg-white">
+                  <Image
+                    src={range.categoryImg}
+                    alt={`Lira Clinical ${range.name} line`}
+                    fill
+                    className="object-contain p-2"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
                 </div>
 
                 <div className="flex items-center gap-3">
@@ -276,6 +330,68 @@ export default function LiraClinicalPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── Individual Products ── */}
+      <section className="py-20 px-4" style={{ backgroundColor: 'var(--color-cream)' }}>
+        <div className="max-w-7xl mx-auto">
+          <h2
+            className="text-3xl sm:text-4xl font-bold text-center mb-4"
+            style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
+          >
+            Shop the Full Range
+          </h2>
+          <p
+            className="text-base text-center max-w-2xl mx-auto mb-16"
+            style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
+          >
+            All products available exclusively in-studio. Book a consultation and Rachael will prescribe the right products for your skin.
+          </p>
+
+          {productRanges.map((range) => (
+            <div key={range.name} className="mb-16 last:mb-0">
+              <div className="flex items-center gap-3 mb-6">
+                <span
+                  className="text-xs font-semibold tracking-widest uppercase px-3 py-1.5 rounded-full"
+                  style={{ backgroundColor: 'var(--color-rose)', color: 'white', fontFamily: "'DM Sans', sans-serif" }}
+                >
+                  {range.tag}
+                </span>
+                <h3
+                  className="text-2xl font-bold"
+                  style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
+                >
+                  Lira Clinical {range.name}
+                </h3>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                {range.products.map((product) => (
+                  <div
+                    key={product.name}
+                    className="flex flex-col gap-2 bg-white rounded-xl p-3"
+                    style={{ border: '1px solid var(--color-cream-dark)' }}
+                  >
+                    <div className="relative h-36 rounded-lg overflow-hidden">
+                      <Image
+                        src={product.img}
+                        alt={product.name}
+                        fill
+                        className="object-contain p-1"
+                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
+                      />
+                    </div>
+                    <p
+                      className="text-xs font-medium text-center leading-snug"
+                      style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-espresso)' }}
+                    >
+                      {product.name}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
