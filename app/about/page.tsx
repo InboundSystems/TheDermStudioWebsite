@@ -97,12 +97,12 @@ export default function AboutPage() {
               className="bg-white rounded-2xl overflow-hidden shadow-sm"
               style={{ border: '1px solid var(--color-cream-dark)' }}
             >
-              <div className="relative h-80 w-full">
+              <div className="relative h-96 w-full">
                 <Image
                   src="/rachael.png"
                   alt="Rachael Liquorish — Dermal Nurse & Founder of The Derm Studio"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 672px"
                 />
               </div>
