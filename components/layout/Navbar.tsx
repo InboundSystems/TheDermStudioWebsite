@@ -18,7 +18,7 @@ const treatments = [
 const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'Treatments', href: '#', dropdown: true },
-  { name: 'Memberships', href: '/memberships' },
+  { name: 'Packages', href: '/memberships' },
   { name: 'Lira Clinical', href: '/lira-clinical' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },

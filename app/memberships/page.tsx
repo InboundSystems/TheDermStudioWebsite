@@ -1,89 +1,98 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CheckCircle, Star } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 
 export const metadata: Metadata = {
-  title: 'Skin Memberships Redcliffe | The Derm Studio',
+  title: 'Skin Packages Redcliffe | The Derm Studio',
   description:
-    'Join The Derm Studio membership program and enjoy regular skin treatments, exclusive member discounts, and priority booking at our Redcliffe skin clinic on Marine Parade.',
+    'Explore The Derm Studio\'s skin packages — curated treatment bundles combining peels, LED therapy, and skin needling for real, lasting results at our Redcliffe clinic.',
 }
 
-const tiers = [
+const programs = [
   {
-    name: 'The Essential',
-    tagline: 'The perfect introduction to consistent skin care',
-    price: 'TBD / month',
-    highlight: false,
-    features: [
-      '1 x facial treatment per month',
-      '10% off all additional treatments',
-      '5% off Lira Clinical skincare products',
-      'Priority booking access',
-      'Personalised skin tracking',
+    number: '01',
+    name: 'The Radiance Refresh',
+    tagline: 'Perfect for those seeking a luminous, hydrated complexion and an effortless, polished glow.',
+    includes: [
+      '4 × Level 1 Peels',
+      '4 × LED Light Therapy Sessions',
+      '10% off Core 4 Home Care',
     ],
-    cta: 'Enquire Now',
-    href: '/contact',
-    note: 'Pricing to be confirmed — contact us to register your interest.',
+    price: '$699',
+    savings: 'Save $553 Total',
+    highlight: false,
   },
   {
-    name: 'The Glow',
-    tagline: 'For clients targeting real, lasting results',
-    price: 'TBD / month',
+    number: '02',
+    name: 'The Clarifying Complexion Series',
+    tagline: 'Perfect for breakout-prone or congested skin wanting calm, clear, balanced results — without compromising comfort.',
+    includes: [
+      '1 × Clarifying Enzyme Treatment',
+      '3 × Level 2 Detoxifying Peels',
+      '4 × LED Light Therapy Sessions',
+      '10% off Core 4 Home Care',
+    ],
+    price: '$799',
+    savings: 'Save $519 Total',
+    highlight: false,
+  },
+  {
+    number: '03',
+    name: 'The Renewal Series',
+    tagline: 'A sophisticated rejuvenation journey to refine texture, boost collagen, and restore luminosity.',
+    includes: [
+      '4 × Level 1 Peels',
+      '4 × Skin Needling with NCTF',
+      '4 × LED Light Therapy Sessions',
+      '10% off Core 4 Home Care',
+    ],
+    price: '$1,799',
+    savings: 'Save $636 Total',
     highlight: true,
-    features: [
-      '1 x premium facial + 1 x add-on treatment per month',
-      '15% off all additional treatments',
-      '10% off Lira Clinical skincare products',
-      'Priority booking access',
-      'Complimentary skin review every 6 months',
-      'Personalised skin tracking',
-    ],
-    cta: 'Enquire Now',
-    href: '/contact',
-    note: 'Pricing to be confirmed — contact us to register your interest.',
   },
   {
-    name: 'The Studio',
-    tagline: 'Total commitment to your skin transformation',
-    price: 'TBD / month',
-    highlight: false,
-    features: [
-      '2 x treatments per month (your choice from the full menu)',
-      '20% off all additional treatments',
-      '15% off Lira Clinical skincare products',
-      'Highest priority booking + early access',
-      'Complimentary skin review every 3 months',
-      'Exclusive member-only offers and events',
-      'Personalised skin tracking',
+    number: '04',
+    name: 'The Collagen Luxe Journey',
+    tagline: 'For those ready for an elevated transformation — firmer, brighter, more youthful skin with an indulgent touch.',
+    includes: [
+      '1 × Level 1 Peel',
+      '3 × Level 2 Peels',
+      '4 × Skin Needling with NCTF + Neck Add-On',
+      '4 × LED Light Therapy Sessions',
+      '10% off Core 4 Home Care',
     ],
-    cta: 'Enquire Now',
-    href: '/contact',
-    note: 'Pricing to be confirmed — contact us to register your interest.',
+    price: '$1,999',
+    savings: 'Save $849 Total',
+    highlight: false,
   },
 ]
 
 const faqs = [
   {
-    q: 'How do memberships work?',
-    a: 'Memberships run on a monthly rolling basis. Each month your included treatments and discounts reset. You can use your treatments at any time during the month — we recommend booking ahead to secure your preferred time.',
+    q: 'What is a treatment program?',
+    a: 'Our programs are curated packages that bundle multiple treatments at a significant saving. Each program is designed to address a specific skin concern with a structured series of complementary treatments for cumulative, lasting results.',
   },
   {
-    q: 'Can I pause or cancel my membership?',
-    a: 'Yes. We understand that life happens. Membership pause and cancellation terms will be confirmed when memberships launch — contact us for details.',
+    q: 'How do I know which program is right for me?',
+    a: 'We recommend booking a skin consultation first. Your therapist will assess your skin and recommend the program best suited to your concerns, lifestyle, and goals.',
   },
   {
-    q: 'Can I upgrade or downgrade my tier?',
-    a: 'Yes, you can change your membership tier with notice. We will confirm the exact process when memberships go live.',
+    q: 'How long does each program take to complete?',
+    a: 'Program duration varies depending on the treatments included and how frequently you book. Most programs are designed to be completed over 8–16 weeks for optimal results.',
   },
   {
-    q: 'Do unused treatments roll over?',
-    a: 'Treatment inclusions are monthly and do not roll over. We encourage you to book regularly to get the most from your membership and maintain consistent skin progress.',
+    q: 'Do program treatments need to be used within a certain timeframe?',
+    a: 'Yes — programs must be completed within 12 months of purchase. We recommend spacing treatments as guided by your therapist to maintain skin progress and maximise results.',
   },
   {
-    q: 'When will memberships be available?',
-    a: 'Memberships are coming soon. Enquire now to register your interest and be the first to know when they launch.',
+    q: 'Can I transfer unused program sessions?',
+    a: 'Program sessions are non-transferable and must be used by the purchasing client. Please contact us if you have any questions about your program.',
+  },
+  {
+    q: 'What does the 10% off Core 4 Home Care include?',
+    a: 'All programs include a 10% discount on our Core 4 home care range — a curated selection of Lira Clinical products to support and extend your in-clinic results between appointments.',
   },
 ]
 
@@ -92,7 +101,7 @@ export default function MembershipsPage() {
     <>
       <BreadcrumbSchema items={[
         { name: 'Home', href: '/' },
-        { name: 'Memberships', href: '/memberships' },
+        { name: 'Programs', href: '/memberships' },
       ]} />
 
       {/* ── Hero ── */}
@@ -102,97 +111,88 @@ export default function MembershipsPage() {
       >
         <div className="max-w-4xl mx-auto text-center">
           <Breadcrumb
-            items={[{ label: 'Home', href: '/' }, { label: 'Memberships' }]}
+            items={[{ label: 'Home', href: '/' }, { label: 'Packages' }]}
             light
           />
           <h1
             className="text-4xl sm:text-5xl font-bold text-white mb-5 leading-tight"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Skin Memberships
+            Skin Packages
           </h1>
           <p
             className="text-base sm:text-lg leading-relaxed max-w-2xl mx-auto"
             style={{ fontFamily: "'DM Sans', sans-serif", color: 'rgba(255,255,255,0.80)' }}
           >
-            Consistent treatment is the secret to healthy, lasting skin results.
-            Our membership program makes it easy — regular treatments, exclusive
-            savings, and priority booking, all wrapped into one simple monthly plan.
+            Real skin transformation takes time and consistency. Our programs bundle
+            the treatments that work best together — so you see genuine, lasting
+            results at a significant saving.
           </p>
-          <div
-            className="inline-block mt-6 px-4 py-1.5 rounded-full text-sm font-semibold"
-            style={{ backgroundColor: 'var(--color-rose)', color: '#fff', fontFamily: "'DM Sans', sans-serif" }}
-          >
-            Coming Soon — Register Your Interest Below
-          </div>
         </div>
       </section>
 
-      {/* ── Membership Cards ── */}
+      {/* ── Program Cards ── */}
       <section className="py-20 px-4" style={{ backgroundColor: 'var(--color-cream)' }}>
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-            {tiers.map((tier) => (
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {programs.map((program) => (
               <div
-                key={tier.name}
+                key={program.name}
                 className="rounded-2xl flex flex-col overflow-hidden"
                 style={{
                   backgroundColor: '#fff',
-                  border: tier.highlight
+                  border: program.highlight
                     ? '2px solid var(--color-rose)'
                     : '1px solid var(--color-cream-dark)',
-                  boxShadow: tier.highlight ? '0 8px 32px rgba(196,152,152,0.18)' : undefined,
+                  boxShadow: program.highlight ? '0 8px 32px rgba(196,152,152,0.18)' : undefined,
                 }}
               >
                 {/* Card Header */}
                 <div
                   className="px-8 pt-8 pb-6"
                   style={{
-                    backgroundColor: tier.highlight ? 'var(--color-rose)' : 'var(--color-cream)',
+                    backgroundColor: program.highlight ? 'var(--color-rose)' : 'var(--color-cream)',
                   }}
                 >
-                  {tier.highlight && (
-                    <div
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-white mb-3 px-3 py-1 rounded-full"
-                      style={{ backgroundColor: 'rgba(255,255,255,0.25)' }}
-                    >
-                      <Star className="w-3 h-3 fill-current" />
-                      Most Popular
-                    </div>
-                  )}
-                  <h2
-                    className="text-2xl font-bold mb-1"
+                  <span
+                    className="text-xs font-semibold tracking-widest uppercase mb-3 block"
                     style={{
-                      fontFamily: "'Playfair Display', serif",
-                      color: tier.highlight ? '#fff' : 'var(--color-espresso)',
+                      fontFamily: "'DM Sans', sans-serif",
+                      color: program.highlight ? 'rgba(255,255,255,0.65)' : 'var(--color-rose)',
                     }}
                   >
-                    {tier.name}
+                    Program {program.number}
+                  </span>
+                  <h2
+                    className="text-2xl font-bold mb-2 leading-snug"
+                    style={{
+                      fontFamily: "'Playfair Display', serif",
+                      color: program.highlight ? '#fff' : 'var(--color-espresso)',
+                    }}
+                  >
+                    {program.name}
                   </h2>
                   <p
                     className="text-sm leading-snug"
                     style={{
                       fontFamily: "'DM Sans', sans-serif",
-                      color: tier.highlight ? 'rgba(255,255,255,0.85)' : 'var(--color-charcoal)',
+                      color: program.highlight ? 'rgba(255,255,255,0.85)' : 'var(--color-charcoal)',
                     }}
                   >
-                    {tier.tagline}
-                  </p>
-                  <p
-                    className="text-2xl font-bold mt-4"
-                    style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      color: tier.highlight ? '#fff' : 'var(--color-espresso)',
-                    }}
-                  >
-                    {tier.price}
+                    {program.tagline}
                   </p>
                 </div>
 
-                {/* Features */}
-                <div className="px-8 py-6 flex flex-col gap-3 flex-1">
-                  {tier.features.map((f) => (
-                    <div key={f} className="flex gap-3 items-start">
+                {/* Includes */}
+                <div className="px-8 pt-6 pb-4 flex flex-col gap-3 flex-1">
+                  <p
+                    className="text-xs font-semibold tracking-widest uppercase mb-1"
+                    style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-rose)' }}
+                  >
+                    Includes
+                  </p>
+                  {program.includes.map((item) => (
+                    <div key={item} className="flex gap-3 items-start">
                       <CheckCircle
                         className="w-4 h-4 mt-0.5 shrink-0"
                         style={{ color: 'var(--color-rose)' }}
@@ -201,64 +201,90 @@ export default function MembershipsPage() {
                         className="text-sm leading-snug"
                         style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
                       >
-                        {f}
+                        {item}
                       </span>
                     </div>
                   ))}
                 </div>
 
-                {/* CTA */}
-                <div className="px-8 pb-8">
-                  <p
-                    className="text-xs mb-4 leading-relaxed"
-                    style={{ fontFamily: "'DM Sans', sans-serif", color: 'rgba(90,72,72,0.6)' }}
-                  >
-                    {tier.note}
-                  </p>
+                {/* Price + CTA */}
+                <div
+                  className="px-8 pt-4 pb-8 mt-2"
+                  style={{ borderTop: '1px solid var(--color-cream-dark)' }}
+                >
+                  <div className="flex items-baseline gap-3 mb-4">
+                    <span
+                      className="text-2xl font-bold"
+                      style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-espresso)' }}
+                    >
+                      {program.price}
+                    </span>
+                    <span
+                      className="text-sm font-semibold px-2.5 py-0.5 rounded-full"
+                      style={{
+                        fontFamily: "'DM Sans', sans-serif",
+                        backgroundColor: 'rgba(196,152,152,0.12)',
+                        color: 'var(--color-rose)',
+                      }}
+                    >
+                      {program.savings}
+                    </span>
+                  </div>
                   <Link
-                    href={tier.href}
+                    href="/book"
                     className="block text-center text-sm font-semibold text-white px-5 py-3 rounded-full transition-colors"
                     style={{ backgroundColor: 'var(--color-rose)', fontFamily: "'DM Sans', sans-serif" }}
                   >
-                    {tier.cta}
+                    Book a Consultation
                   </Link>
                 </div>
               </div>
             ))}
           </div>
+
+          <p
+            className="text-center text-sm mt-10"
+            style={{ fontFamily: "'DM Sans', sans-serif", color: 'rgba(90,72,72,0.6)' }}
+          >
+            Not sure which program is right for you?{' '}
+            <Link href="/contact" style={{ color: 'var(--color-rose)' }}>
+              Get in touch
+            </Link>{' '}
+            and we'll guide you to the best fit.
+          </p>
         </div>
       </section>
 
-      {/* ── What's included explainer ── */}
+      {/* ── Why a program ── */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2
             className="text-2xl sm:text-3xl font-bold mb-4"
             style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
           >
-            Why Become a Member?
+            Why a Program Works
           </h2>
           <p
             className="text-base leading-relaxed mb-12"
             style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
           >
-            Skin is a long-term investment. The clients who see the most dramatic results are those
-            who commit to regular treatment — not just a one-off visit. Membership makes that easy,
-            affordable, and rewarding.
+            A single treatment can refresh your skin. A structured program transforms it.
+            When treatments are layered and repeated over time, the cumulative effect
+            on collagen, pigment, and texture is far greater than any one session alone.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-left">
             {[
               {
-                heading: 'Consistent Results',
-                body: 'Skin responds best to ongoing, structured treatment. A monthly rhythm means your skin never loses momentum.',
+                heading: 'Cumulative Results',
+                body: 'Each session builds on the last. Peels, LED, and needling work synergistically — the more consistently you treat, the more dramatic the outcome.',
               },
               {
                 heading: 'Real Savings',
-                body: 'Member discounts on treatments and Lira Clinical skincare add up quickly — especially when you are already investing in your skin regularly.',
+                body: 'Programs are priced to reward commitment. Save hundreds compared to booking treatments individually, without compromising on quality.',
               },
               {
-                heading: 'Priority Access',
-                body: 'Members get priority booking, so you always secure your preferred time — no chasing availability.',
+                heading: 'A Clear Plan',
+                body: 'No guesswork. Each program is designed by our therapists to target a specific concern with the right combination of treatments in the right order.',
               },
             ].map((item) => (
               <div key={item.heading} className="flex flex-col gap-2">
@@ -288,7 +314,7 @@ export default function MembershipsPage() {
             className="text-2xl sm:text-3xl font-bold mb-10 text-center"
             style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
           >
-            Membership FAQs
+            Program FAQs
           </h2>
           <div className="flex flex-col gap-6">
             {faqs.map((faq) => (
@@ -322,29 +348,29 @@ export default function MembershipsPage() {
             className="text-3xl sm:text-4xl font-bold text-white mb-4"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Ready to Commit to Your Skin?
+            Ready to Start Your Skin Journey?
           </h2>
           <p
             className="text-base text-white/85 mb-8 max-w-xl mx-auto leading-relaxed"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
-            Memberships are coming soon. Get in touch to register your interest and
-            we will reach out as soon as they are available.
+            Book a consultation and we'll recommend the program that best suits
+            your skin goals, timeline, and budget.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/book"
               className="inline-block text-center font-semibold px-7 py-3.5 rounded-full transition-colors text-sm"
               style={{ backgroundColor: '#fff', color: 'var(--color-rose)', fontFamily: "'DM Sans', sans-serif" }}
             >
-              Register Your Interest
+              Book a Consultation
             </Link>
             <Link
-              href="/book"
+              href="/contact"
               className="inline-block text-center font-semibold px-7 py-3.5 rounded-full transition-colors text-sm text-white"
               style={{ border: '2px solid rgba(255,255,255,0.6)', fontFamily: "'DM Sans', sans-serif" }}
             >
-              Book a Treatment
+              Ask Us a Question
             </Link>
           </div>
         </div>

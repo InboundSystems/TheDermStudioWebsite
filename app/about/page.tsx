@@ -60,13 +60,13 @@ export default function AboutPage() {
             style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
           >
             <p>
-              The Derm Studio is a results-focused skin clinic founded by Rachael Liquorish, a Dermal Nurse with a deep commitment to skin health and evidence-based treatment. Located at 1/93 Marine Parade, Redcliffe, the clinic specialises in advanced skin treatments tailored to the individual — with a focus on visible results and a genuinely personalised experience.
+              At The Derm Studio, skin treatments are more than just appointments — they are intentional moments of care, confidence, and transformation.
             </p>
             <p>
-              Every treatment at The Derm Studio begins with understanding your skin. No two clients are the same, and no two treatment plans should be either. Rachael works with you to assess your skin, understand your concerns and goals, and develop a protocol that makes sense for your skin specifically — not a generic menu approach.
+              We combine advanced clinical technology with a luxurious, personalised approach — because radiant skin should never mean compromising comfort. Our experience is built on science-backed treatments that are progressive, not aggressive. We&apos;re committed to restoring the skin&apos;s health by repairing the barrier and treating every skin differently, because no two skins are ever the same.
             </p>
             <p>
-              Every new client is welcome to start with a complimentary 30-minute consultation. It&apos;s an opportunity to have your skin professionally assessed, ask questions, and receive honest recommendations — obligation-free.
+              Every new client is welcome to start with a complimentary consultation — a professional skin analysis to understand your skin type, concerns, and goals. This ensures your treatment is tailored to what your skin truly needs, obligation-free.
             </p>
             <p>
               The Derm Studio is a proud <strong>authorised Lira Clinical stockist</strong>. Lira Clinical is a professional-grade skincare brand trusted by skin therapists globally, and it sits at the heart of every treatment protocol and home-care prescription at the studio. That partnership is intentional — The Derm Studio works exclusively with brands it genuinely uses and believes in.
@@ -126,13 +126,19 @@ export default function AboutPage() {
                   className="text-sm sm:text-base leading-relaxed mb-4"
                   style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
                 >
-                  Rachael Liquorish is a Dermal Nurse and the founder of The Derm Studio. She established the clinic at 1/93 Marine Parade, Redcliffe to provide the Moreton Bay Peninsula with access to genuinely results-focused skin treatment — combining clinical expertise with a personalised approach that puts each client&apos;s skin health first.
+                  With over 18 years of experience in the beauty and aesthetics industry, Rachael founded The Derm Studio to redefine the clinical skincare experience — combining advanced, science-led treatments with a calm, luxurious touch.
+                </p>
+                <p
+                  className="text-sm sm:text-base leading-relaxed mb-4"
+                  style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
+                >
+                  As a qualified nurse, clinical trainer, and dermal specialist, Rachael has spent her career mastering the science of skin and educating others in advanced treatment techniques. Her expertise lies in creating tailored, results-driven programs that deliver visible transformation while maintaining the integrity of the skin.
                 </p>
                 <p
                   className="text-sm sm:text-base leading-relaxed"
                   style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
                 >
-                  Rachael works exclusively with Lira Clinical — a professional-grade skincare brand trusted by skin therapists globally — ensuring that every in-clinic treatment is supported by the right home-care for lasting results.
+                  Now, as a mother, Rachael brings a deeper understanding of the importance of time, care, and meaningful results. The Derm Studio was created from her passion to help others feel confident in their skin — through treatments that are equal parts clinical precision and indulgent self-care.
                 </p>
               </div>
             </div>

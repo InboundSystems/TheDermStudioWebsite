@@ -186,7 +186,7 @@ export function HomeContent() {
             className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Skin Clinic Redcliffe | Expert Facials &amp; Skin Treatments
+            Where Clinical Results Meet Refined Luxury
           </motion.h1>
 
           <motion.p
@@ -194,7 +194,7 @@ export function HomeContent() {
             className="text-lg sm:text-xl leading-relaxed mb-10 max-w-3xl mx-auto text-white/90"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
-            Redcliffe&apos;s specialist skin clinic — corrective facials, Lira Clinical corrective peels, advanced skin needling, and professional lash treatments. Located on Marine Parade, Redcliffe.
+            At The Derm Studio, every treatment is designed to deliver visible results while offering a moment of calm. Advanced skin treatments, tailored to you — on Marine Parade, Redcliffe.
           </motion.p>
 
           <motion.div
@@ -625,13 +625,13 @@ export function HomeContent() {
               className="text-base leading-relaxed"
               style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
             >
-              I&apos;m a qualified dermal therapist and the founder of The Derm Studio. My passion is helping clients genuinely understand their skin and achieve real, lasting results — not just a one-off glow.
+              With over 18 years of experience in the beauty and aesthetics industry, I founded The Derm Studio to redefine the clinical skincare experience — combining advanced, science-led treatments with a calm, luxurious touch.
             </p>
             <p
               className="text-base leading-relaxed"
               style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
             >
-              Every treatment I offer is backed by science and tailored specifically to you. Whether you&apos;re starting your skin journey or looking to address a specific concern, I&apos;m here to guide you every step of the way.
+              As a qualified nurse, clinical trainer, and dermal specialist, I&apos;ve spent my career mastering the science of skin. My approach is progressive, not aggressive — every treatment is tailored to you, because no two skins are ever the same.
             </p>
             <Link
               href="/book"
@@ -656,22 +656,15 @@ export function HomeContent() {
               className="text-3xl sm:text-4xl font-bold mb-4"
               style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
             >
-              Skin Memberships
+              Skin Packages
             </h2>
             <p
               className="text-base sm:text-lg leading-relaxed max-w-2xl mx-auto"
               style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
             >
-              The clients who see the biggest results are those who commit to regular treatment.
-              Our membership program makes consistency simple — regular treatments, exclusive savings,
-              and priority booking rolled into one plan.
+              Real skin transformation takes time and consistency. Our packages bundle the treatments
+              that work best together — so you see genuine, lasting results at a significant saving.
             </p>
-            <div
-              className="inline-block mt-5 px-4 py-1.5 rounded-full text-sm font-semibold"
-              style={{ backgroundColor: 'var(--color-rose)', color: '#fff', fontFamily: "'DM Sans', sans-serif" }}
-            >
-              Coming Soon
-            </div>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
@@ -753,7 +746,7 @@ export function HomeContent() {
               onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--color-rose-dark)' }}
               onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--color-rose)' }}
             >
-              View Full Membership Details
+              View All Packages
             </Link>
           </motion.div>
         </div>
