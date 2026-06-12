@@ -591,7 +591,104 @@ export function HomeContent() {
       </section>
 
       {/* ──────────────────────────────────────
-          SECTION 8 — MEET THE OWNER
+          SECTION 8 — INSTAGRAM FEED
+      ────────────────────────────────────── */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <motion.div {...scrollFadeUp(0)} className="text-center mb-10">
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ color: 'var(--color-rose)' }}>
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" strokeWidth="2"/>
+                <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+              </svg>
+              <a
+                href="https://www.instagram.com/thedermstudio_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-semibold tracking-widest uppercase"
+                style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-rose)' }}
+              >
+                @thedermstudio_
+              </a>
+            </div>
+            <h2
+              className="text-3xl sm:text-4xl font-bold mb-3"
+              style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
+            >
+              Follow the Journey
+            </h2>
+            <p
+              className="text-base max-w-xl mx-auto"
+              style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
+            >
+              Skin tips, real results, and behind-the-scenes from the studio.
+            </p>
+          </motion.div>
+
+          <motion.div
+            {...scrollFadeUp(0.1)}
+            className="grid grid-cols-3 md:grid-cols-6 gap-2"
+          >
+            {[
+              { img: '/instagram/ig-1.jpg', caption: 'A little reintroduction — hi, I\'m Rachael, founder of The Derm Studio.' },
+              { img: '/instagram/ig-2.jpg', caption: 'Salmon DNA: separating the trend from the evidence.' },
+              { img: '/instagram/ig-3.jpg', caption: 'Our approach to acne: barrier repair, inflammation, skin health — real support.' },
+              { img: '/instagram/ig-4.jpg', caption: 'Somewhere between the LED light and life chats, clients become genuine friends.' },
+              { img: '/instagram/ig-5.jpg', caption: 'Book the treatment babe. Your skin and confidence are worth investing in.' },
+              { img: '/instagram/ig-6.jpg', caption: 'The Derm Studio has officially moved to 1/93 Marine Parade, Redcliffe.' },
+            ].map((post, i) => (
+              <motion.a
+                key={i}
+                href="https://www.instagram.com/thedermstudio_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                {...scrollFadeUp(i * 0.06)}
+                className="relative block aspect-square overflow-hidden group"
+                style={{ borderRadius: '8px' }}
+              >
+                <Image
+                  src={post.img}
+                  alt={post.caption}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 33vw, 16vw"
+                />
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{ backgroundColor: 'rgba(58,40,40,0.55)' }}>
+                  <svg className="w-7 h-7 text-white mb-2" fill="white" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                  <p className="text-white text-xs text-center px-3 leading-snug line-clamp-2"
+                    style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                    {post.caption}
+                  </p>
+                </div>
+              </motion.a>
+            ))}
+          </motion.div>
+
+          <motion.div {...scrollFadeUp(0.2)} className="text-center mt-8">
+            <a
+              href="https://www.instagram.com/thedermstudio_/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-semibold px-7 py-3.5 rounded-full text-white text-sm transition-colors"
+              style={{ backgroundColor: 'var(--color-rose)', fontFamily: "'DM Sans', sans-serif" }}
+            >
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="white" strokeWidth="2"/>
+                <circle cx="12" cy="12" r="4" stroke="white" strokeWidth="2"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="white"/>
+              </svg>
+              Follow on Instagram
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ──────────────────────────────────────
+          SECTION 9 — MEET THE OWNER
       ────────────────────────────────────── */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
