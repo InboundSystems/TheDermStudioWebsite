@@ -168,12 +168,12 @@ export function HomeContent() {
         {/* Hero background — next/image with priority injects <link rel="preload"> during SSR
             and generates a responsive srcset so mobile gets ~828w instead of 1920w */}
         <Image
-          src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop"
+          src="/hero.jpg"
           alt=""
           fill
           priority
           quality={85}
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, 100vw"
           className="object-cover object-center"
         />
 
