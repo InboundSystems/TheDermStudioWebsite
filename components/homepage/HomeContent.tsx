@@ -164,23 +164,27 @@ export function HomeContent() {
       {/* ──────────────────────────────────────
           SECTION 1 — HERO
       ────────────────────────────────────── */}
-      <section
-        className="relative flex items-center justify-center min-h-screen overflow-hidden"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1920&q=80')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
+      <section className="relative flex items-center justify-center min-h-screen overflow-hidden">
+        {/* Hero background — next/image with priority injects <link rel="preload"> during SSR
+            and generates a responsive srcset so mobile gets ~828w instead of 1920w */}
+        <Image
+          src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop"
+          alt=""
+          fill
+          priority
+          quality={85}
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+
         {/* Dusty Rose overlay at 60% opacity */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 z-10"
           style={{ backgroundColor: 'rgba(196,152,152,0.60)' }}
         />
 
         {/* Content */}
-        <div className="relative z-10 text-center text-white px-4 sm:px-6 max-w-5xl mx-auto py-32">
+        <div className="relative z-20 text-center text-white px-4 sm:px-6 max-w-5xl mx-auto py-32">
           <motion.h1
             {...fadeUp(0.2)}
             className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6"
@@ -222,7 +226,7 @@ export function HomeContent() {
 
         {/* Scroll arrow */}
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 z-20"
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
         >
