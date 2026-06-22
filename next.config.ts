@@ -1,16 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  async redirects() {
-    return [
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'www.thedermstudio.com.au' }],
-        destination: 'https://thedermstudio.com.au/:path*',
-        permanent: true,
-      },
-    ]
-  },
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
