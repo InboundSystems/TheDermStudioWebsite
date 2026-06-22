@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: 'Skin Packages Redcliffe | The Derm Studio',
   description:
     'Explore The Derm Studio\'s skin packages — curated treatment bundles combining peels, LED therapy, and skin needling for real, lasting results at our Redcliffe clinic.',
+  alternates: { canonical: '/memberships' },
 }
 
 const programs = [

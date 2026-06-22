@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: 'Lira Clinical Skincare Redcliffe | The Derm Studio — Sole Stockist',
   description:
     'The Derm Studio is an authorised Lira Clinical stockist in Redcliffe. Professional-grade skincare built on plant stem cell technology, topical probiotics, and Smart Peels™ — available exclusively through authorised clinics at Marine Parade, Redcliffe.',
+  alternates: { canonical: '/lira-clinical' },
 }
 
 const features = [

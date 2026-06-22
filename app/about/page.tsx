@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: 'About The Derm Studio | Rachael Liquorish, Dermal Nurse — Redcliffe',
   description:
     "Meet Rachael Liquorish, Dermal Nurse and founder of The Derm Studio — Redcliffe's results-focused skin clinic and authorised Lira Clinical stockist at Marine Parade, Redcliffe.",
+  alternates: { canonical: '/about' },
 }
 
 const pillars = [

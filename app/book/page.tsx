@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: 'Book a Skin Treatment | The Derm Studio Redcliffe',
   description:
     "Book your facial, chemical peel, LED light therapy or skin consultation at The Derm Studio — Redcliffe's specialist skin clinic at Marine Parade, Redcliffe.",
+  alternates: { canonical: '/book' },
 }
 
 export default function BookPage() {

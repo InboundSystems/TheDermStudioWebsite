@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Skin Treatments Redcliffe | Full Service Menu — The Derm Studio',
   description:
     "Explore The Derm Studio's full service menu in Redcliffe — corrective facials, Lira Clinical corrective peels, skin needling with NCTF and Exosomes, dermaplaning, and lash lifting at Marine Parade, Redcliffe.",
-  alternates: { canonical: 'https://thedermstudio.com.au/services' },
+  alternates: { canonical: '/services' },
 }
 
 export default function ServicesPage() {

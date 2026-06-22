@@ -9,6 +9,7 @@ import { MobileStickyBar } from '@/components/ui/MobileStickyBar'
 const GA_ID = 'G-PMWMMYTBMF'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://thedermstudio.com.au'),
   title: {
     default: 'Skin Clinic Redcliffe | Facials, Skin Peels & Dermal Therapy — The Derm Studio',
     template: '%s | The Derm Studio',
