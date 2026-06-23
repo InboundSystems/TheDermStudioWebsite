@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import Script from 'next/script'
 import { motion } from 'framer-motion'
 import {
   Sparkles,
@@ -14,6 +13,7 @@ import {
   Scan,
   Package,
   ChevronDown,
+  Star,
   MapPin,
   GraduationCap,
   ShoppingBag,
@@ -135,6 +135,26 @@ const suburbs = [
   { name: 'North Lakes', href: '/skin-clinic-north-lakes' },
   { name: 'Moreton Bay Peninsula', href: '/skin-clinic-moreton-bay' },
   { name: '+ All Surrounding Areas', href: '/service-areas' },
+]
+
+/* ─── Section 7: Google Reviews ─── */
+const reviews = [
+  {
+    author: 'Tali McMahon',
+    text: "I had the most incredible experience with Rachael at The Derm Studio. From the moment I walked in, she made me feel completely at ease with her warm and calming presence. The facial itself was absolutely amazing, so relaxing and thoughtfully tailored to my skin's needs. Every step felt luxurious, and you can truly tell how passionate and knowledgeable Rachael is about what she does. I left feeling refreshed, glowing, and completely rejuvenated. I can't recommend her enough. If you're looking for the ultimate self-care treat, Rachael is the one to see! ✨",
+  },
+  {
+    author: 'Niomi Loveridge',
+    text: "Absolutely loved my face needling treatment! The service was excellent, and the results exceeded my expectations. My skin has never looked this good — smooth, refreshed, and glowing. Highly recommend to anyone considering it!",
+  },
+  {
+    author: 'Monica C',
+    text: "Rachel is professional and always does a great job, it's fun too and I love my Lira products — thank you Rach!",
+  },
+  {
+    author: 'Leah Lewis-Macpherson',
+    text: "A truly amazing experience, regardless of whether you are wanting to relax and be pampered with a facial, or services that pack a punch and offer true results, Rachel delivers time after time. If you are looking for someone who actually listens to your skincare concerns and is invested in working with you to address them, then this is your place.",
+  },
 ]
 
 
@@ -483,14 +503,95 @@ export function HomeContent() {
       </section>
 
       {/* ──────────────────────────────────────
-          SECTION 7 — GOOGLE REVIEWS (Elfsight)
+          SECTION 7 — GOOGLE REVIEWS
       ────────────────────────────────────── */}
       <section className="py-20 px-4" style={{ backgroundColor: 'var(--color-cream)' }}>
-        <Script
-          src="https://elfsightcdn.com/platform.js"
-          strategy="lazyOnload"
-        />
-        <div className="elfsight-app-97a47fde-8fe8-4530-b889-5159cf61bb2c" data-elfsight-app-lazy />
+        <div className="max-w-7xl mx-auto">
+          <motion.div {...scrollFadeUp(0)} className="text-center mb-12">
+            <h2
+              className="text-3xl sm:text-4xl font-bold mb-3"
+              style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
+            >
+              Real Results, Real People
+            </h2>
+            {/* Google Reviews badge */}
+            <div className="inline-flex items-center gap-2.5 mt-2 px-4 py-2 rounded-full bg-white shadow-sm"
+              style={{ border: '1px solid var(--color-cream-dark)' }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+              </svg>
+              <span className="text-sm font-semibold" style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-espresso)' }}>
+                5.0
+              </span>
+              <div className="flex gap-0.5">
+                {[...Array(5)].map((_, j) => (
+                  <Star key={j} className="w-3.5 h-3.5 fill-current" style={{ color: '#F59E0B' }} />
+                ))}
+              </div>
+              <span className="text-sm" style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}>
+                on Google Reviews
+              </span>
+            </div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {reviews.map((r, i) => (
+              <motion.div
+                key={r.author}
+                {...scrollFadeUp(i * 0.1)}
+                className="bg-white rounded-2xl p-7 flex flex-col gap-5"
+                style={{ border: '1px solid var(--color-cream-dark)' }}
+              >
+                {/* Top row: stars + Google badge */}
+                <div className="flex items-center justify-between">
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, j) => (
+                      <Star key={j} className="w-4 h-4 fill-current" style={{ color: '#F59E0B' }} />
+                    ))}
+                  </div>
+                  <div className="flex items-center gap-1.5 opacity-60">
+                    <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                      <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                      <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                      <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                    </svg>
+                    <span className="text-xs" style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}>
+                      Google Review
+                    </span>
+                  </div>
+                </div>
+
+                {/* Review text */}
+                <p
+                  className="text-sm sm:text-base leading-relaxed flex-1"
+                  style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
+                >
+                  &ldquo;{r.text}&rdquo;
+                </p>
+
+                {/* Reviewer name */}
+                <div className="flex items-center gap-3 pt-1" style={{ borderTop: '1px solid var(--color-cream-dark)' }}>
+                  <div
+                    className="w-9 h-9 rounded-full flex items-center justify-center shrink-0 text-sm font-bold text-white"
+                    style={{ backgroundColor: 'var(--color-rose)', fontFamily: "'DM Sans', sans-serif" }}
+                  >
+                    {r.author.charAt(0)}
+                  </div>
+                  <p
+                    className="text-sm font-semibold"
+                    style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-espresso)' }}
+                  >
+                    {r.author}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* ──────────────────────────────────────
