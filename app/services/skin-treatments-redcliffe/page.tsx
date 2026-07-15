@@ -6,53 +6,69 @@ import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { ServiceSchema } from '@/components/seo/ServiceSchema'
 
 export const metadata: Metadata = {
-  title: 'Facials Redcliffe | Corrective, Hybrid & Dermaplaning Facials — The Derm Studio',
+  title: 'Skin Treatments Redcliffe | Corrective Peels & Skin Needling — The Derm Studio',
   description:
-    'Corrective, Hybrid and Luminous Silk Dermaplaning facials in Redcliffe at The Derm Studio, Marine Parade. Expert facials tailored to your skin, from $199.',
-  alternates: { canonical: 'https://thedermstudio.com.au/services/facials-redcliffe' },
+    'Advanced skin treatments in Redcliffe — Level 1-3 corrective peels and skin needling with NCTF or exosomes at The Derm Studio, Marine Parade. From $199.',
+  alternates: { canonical: 'https://thedermstudio.com.au/services/skin-treatments-redcliffe' },
 }
 
 const breadcrumbs = [
   { name: 'Home', href: '/' },
   { name: 'Services', href: '/services' },
-  { name: 'Facials Redcliffe', href: '/services/facials-redcliffe' },
+  { name: 'Skin Treatments Redcliffe', href: '/services/skin-treatments-redcliffe' },
 ]
 
-const facials = [
+const treatments = [
   {
-    name: 'Corrective Facial',
-    price: '$220',
-    duration: '45 mins',
-    href: '/services/corrective-facial-redcliffe',
-    blurb:
-      'The ideal starting point for your skincare journey — a results-focused clinical facial combining progressive resurfacing, targeted Lira Clinical actives, a tension-releasing neck and shoulder massage, and medical-grade LED light therapy. Perfect if you\'re new to professional skin treatment or want reliable monthly maintenance.',
-  },
-  {
-    name: 'Hybrid Facial',
-    price: '$220',
-    duration: '45 mins',
-    href: '/services/hybrid-facial-redcliffe',
-    blurb:
-      'The next-level upgrade — a Corrective Facial blended with a gentle peel infusion for deeper resurfacing and brighter results, with zero downtime. Includes LED light therapy. The natural bridge between a Corrective Facial and a Level 1 Corrective Peel, and safe to book year-round.',
-  },
-  {
-    name: 'Luminous Silk Dermaplaning Facial',
+    name: 'Level 1 Corrective Peel',
     price: '$199',
-    duration: '1 hr',
-    href: '/services/dermaplaning-facial-redcliffe',
+    duration: '45 mins',
+    href: '/services/level-1-corrective-peel-redcliffe',
     blurb:
-      'A sterile surgical blade gently removes dead skin cells and fine vellus hair, delivering instantly smoother, brighter skin and dramatically better product absorption. Finished with a hydrating mask and LED light therapy — a favourite before a special event.',
+      'An entry-level Lira Clinical peel that brightens, hydrates and corrects dullness, mild pigmentation and uneven tone. No pre-treatment preparation required, with minimal to no downtime — an accessible first step into professional peel therapy.',
+  },
+  {
+    name: 'Level 2 Corrective Peel',
+    price: '$220',
+    duration: '45 mins',
+    href: '/services/level-2-corrective-peel-redcliffe',
+    blurb:
+      'A deeper Lira Clinical peel for hyperpigmentation, fine lines and acne scarring that hasn’t responded to lighter treatment. Requires home-care preparation beforehand, with results that continue developing for weeks after each session.',
+  },
+  {
+    name: 'Level 3 Corrective Peel',
+    price: '$250',
+    duration: '45 mins',
+    href: '/services/level-3-corrective-peel-redcliffe',
+    blurb:
+      'Our most intensive Lira Clinical peel, for complex concerns like melasma, active acne and significant pigmentation. Requires both home-care preparation and prior conditioning treatments — recommended in cooler months to minimise UV exposure during recovery.',
+  },
+  {
+    name: 'Skin Needling with NCTF',
+    price: '$349',
+    duration: '45 mins',
+    href: '/services/skin-needling-nctf-redcliffe',
+    blurb:
+      'Collagen induction therapy infused with NCTF — 54 active ingredients including vitamins, amino acids and hyaluronic acid — delivered deep into the skin for brighter, firmer, more hydrated results.',
+  },
+  {
+    name: 'Skin Needling with Exosomes',
+    price: '$449',
+    duration: '45 mins',
+    href: '/services/skin-needling-exosomes-redcliffe',
+    blurb:
+      'Our most advanced needling treatment, pairing micro-needling with exosome technology to supercharge the skin’s natural repair response — ideal for significant scarring, textural concerns and maximum regeneration.',
   },
 ]
 
-export default function FacialsPage() {
+export default function SkinTreatmentsPage() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        serviceName="Facials"
-        description="Corrective, Hybrid and Luminous Silk Dermaplaning facials at The Derm Studio, Marine Parade, Redcliffe — customised to your skin type, concerns and goals, using Lira Clinical professional-grade skincare."
-        url="https://thedermstudio.com.au/services/facials-redcliffe"
+        serviceName="Skin Treatments"
+        description="Advanced clinical skin treatments at The Derm Studio, Marine Parade, Redcliffe — Level 1-3 Lira Clinical corrective peels and skin needling with NCTF or exosomes, delivered by qualified dermal therapists."
+        url="https://thedermstudio.com.au/services/skin-treatments-redcliffe"
       />
       <main>
         {/* Hero */}
@@ -72,7 +88,7 @@ export default function FacialsPage() {
               className="mt-4 text-4xl md:text-5xl font-bold text-white leading-tight max-w-3xl"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Facials Redcliffe | Expert Skin Facials
+              Skin Treatments Redcliffe | Advanced Clinical Treatments
             </h1>
           </div>
         </section>
@@ -84,45 +100,31 @@ export default function FacialsPage() {
               className="text-2xl md:text-3xl font-bold mb-6"
               style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
             >
-              Expert Facials at The Derm Studio
+              Advanced Skin Treatments at The Derm Studio
             </h2>
             <p
               className="text-base sm:text-lg leading-relaxed"
               style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
             >
-              Every facial at The Derm Studio begins with a proper skin consultation — your therapist assesses your
-              skin type, identifies your primary concerns, and recommends the treatment that will deliver the most
-              meaningful result on the day, not just the one at the top of the menu. Our facials sit at the more
-              relaxation-focused end of our treatment range: results-driven, but built around comfort, a tension-
-              releasing massage, and an experience you actually look forward to, rather than clinical intensity for
-              its own sake. All three facials use Lira Clinical professional-grade skincare — available for home
-              care exclusively through authorised stockists including The Derm Studio — and each includes medical-
-              grade LED light therapy to stimulate collagen and enhance your results.
-            </p>
-            <p
-              className="mt-6 text-base sm:text-lg leading-relaxed"
-              style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
-            >
-              Whether you’re booking your very first professional skin treatment or you’re a regular
-              looking for reliable monthly maintenance, one of the three facials below is the right starting point.
-              If your concerns run deeper than a facial can address — significant pigmentation, acne scarring, or
-              more advanced signs of ageing — our{' '}
-              <Link href="/services/skin-treatments-redcliffe" className="underline" style={{ color: 'var(--color-rose)' }}>
-                Skin Treatments
-              </Link>{' '}
-              category covers the more clinical, results-driven tier of corrective peels and skin needling.
+              Where our facials are built around relaxation as much as results, this is our clinical, results-driven
+              tier — treatments designed for clients who want to make meaningful, measurable progress on a specific
+              skin concern. Corrective peels and skin needling work beneath the surface, correcting pigmentation,
+              scarring, fine lines and texture at a depth that facials and home care alone cannot reach. Every
+              treatment in this group is performed by a qualified dermal therapist at our Marine Parade clinic,
+              using professional-grade Lira Clinical formulations and equipment, with a treatment plan built around
+              your skin’s specific goals rather than a one-size-fits-all protocol.
             </p>
           </div>
         </section>
 
-        {/* Facial Cards */}
+        {/* Treatment Cards */}
         <section className="py-16 md:py-20" style={{ backgroundColor: '#FFFFFF' }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {facials.map((f) => (
+              {treatments.map((t) => (
                 <Link
-                  key={f.name}
-                  href={f.href}
+                  key={t.name}
+                  href={t.href}
                   className="group block rounded-3xl p-7 transition-all duration-300 hover:shadow-lg"
                   style={{ backgroundColor: 'var(--color-cream)', border: '1px solid var(--color-cream-dark)' }}
                 >
@@ -131,23 +133,23 @@ export default function FacialsPage() {
                       className="text-lg font-bold"
                       style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
                     >
-                      {f.price}
+                      {t.price}
                     </span>
                     <span className="text-xs" style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}>
-                      · {f.duration}
+                      · {t.duration}
                     </span>
                   </div>
                   <h3
                     className="text-lg font-bold mb-3"
                     style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
                   >
-                    {f.name}
+                    {t.name}
                   </h3>
                   <p
                     className="text-sm leading-relaxed mb-5"
                     style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
                   >
-                    {f.blurb}
+                    {t.blurb}
                   </p>
                   <div className="flex items-center gap-1.5" style={{ color: 'var(--color-rose)' }}>
                     <span className="text-sm font-semibold" style={{ fontFamily: "'DM Sans', sans-serif" }}>
@@ -188,6 +190,29 @@ export default function FacialsPage() {
           </div>
         </section>
 
+        {/* Guidance */}
+        <section className="py-16 md:py-20" style={{ backgroundColor: 'var(--color-cream)' }}>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2
+              className="text-2xl md:text-3xl font-bold mb-6"
+              style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
+            >
+              Which Treatment Is Right for You?
+            </h2>
+            <p
+              className="text-base leading-relaxed"
+              style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
+            >
+              With corrective peels available across three levels of intensity, and skin needling offered with
+              either NCTF or exosome infusion, the right starting point depends on your skin’s current
+              condition, your concerns, and how much downtime you can accommodate. Rather than guess, we recommend
+              a free skin consultation with one of our qualified dermal therapists — they will assess your skin in
+              person and recommend a treatment plan matched to your goals, whether that’s a single session or
+              a progressive course spaced over several months.
+            </p>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="py-20" style={{ backgroundColor: 'var(--color-espresso)' }}>
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -195,7 +220,7 @@ export default function FacialsPage() {
               className="text-3xl md:text-4xl font-bold text-white mb-5"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Book Your Facial at The Derm Studio
+              Book Your Free Skin Consultation
             </h2>
             <p className="text-base mb-8" style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-blush)' }}>
               1/93 Marine Parade, Redcliffe QLD 4020

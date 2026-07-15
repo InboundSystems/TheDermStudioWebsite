@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { FAQSchema } from '@/components/seo/FAQSchema'
+import { ServiceSchema } from '@/components/seo/ServiceSchema'
 import { FaqAccordion } from '@/components/ui/FaqAccordion'
 import { getServiceBySlug, getRelatedServices, services } from '@/lib/services'
 
@@ -40,6 +41,11 @@ export default async function ServicePage({ params }: Props) {
         { name: service.name, href: `/services/${service.slug}` },
       ]} />
       <FAQSchema faqs={service.faqs.map((f) => ({ question: f.q, answer: f.a }))} />
+      <ServiceSchema
+        serviceName={service.name}
+        description={service.heroSubtitle}
+        url={`https://thedermstudio.com.au/services/${service.slug}`}
+      />
       <main>
       {/* Hero */}
       <section
@@ -159,6 +165,17 @@ export default async function ServicePage({ params }: Props) {
                 >
                   1/93 Marine Parade, Redcliffe QLD
                 </p>
+                {service.relatedPackage && (
+                  <p
+                    className="mt-4 text-xs text-center leading-relaxed"
+                    style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
+                  >
+                    Want to save with a program?{' '}
+                    <Link href={service.relatedPackage.href} className="underline" style={{ color: 'var(--color-rose)' }}>
+                      See {service.relatedPackage.name}
+                    </Link>
+                  </p>
+                )}
               </div>
             </div>
           </div>

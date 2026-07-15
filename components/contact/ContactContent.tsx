@@ -1,18 +1,19 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { MapPin, Phone, Mail, Clock, CheckCircle } from 'lucide-react'
 
 const serviceOptions = [
-  'Facial',
-  'Chemical Peel',
-  'LED Light Therapy',
-  'Skin Needling',
-  'Dermal Therapy',
-  'HydraFacial',
-  'Microdermabrasion',
+  'Corrective Facial',
+  'Hybrid Facial',
+  'Dermaplaning Facial',
+  'Corrective Peel (Level 1-3)',
+  'Skin Needling (NCTF or Exosomes)',
+  'Korean Lash Lift & Tint',
   'Lira Clinical Products',
+  'Skin Package / Program',
   'General Enquiry',
 ]
 
@@ -341,11 +342,21 @@ export function ContactContent() {
           <div className="flex flex-col gap-10">
             <div>
               <h2
-                className="text-2xl font-bold mb-8"
+                className="text-2xl font-bold mb-3"
                 style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
               >
                 Get in Touch
               </h2>
+              <p
+                className="text-sm mb-8"
+                style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
+              >
+                Common questions about treatments, pricing and booking are answered on our{' '}
+                <Link href="/faq" style={{ color: 'var(--color-rose)' }}>
+                  FAQ page
+                </Link>
+                .
+              </p>
               <div className="flex flex-col gap-6">
 
                 {/* Phone — prominent */}

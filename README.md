@@ -8,6 +8,21 @@ Next.js 16 (App Router) website for The Derm Studio skin clinic, Redcliffe QLD.
 
 ---
 
+## Month 2 Corrections (Sessions 5–8)
+
+The site's Month 1 build (Sessions 1–4) shipped against an early planning document that predated real client content. Sessions 5–8 brought the live site in line with reality:
+
+- **Address changed.** The business relocated from the original planning address (Shop 10, Bluewater Square, 20 Anzac Avenue) to **1/93 Marine Parade, Redcliffe QLD 4020**. Every NAP reference, `LocalBusinessSchema`, and the geo-coordinates (`-27.2340, 153.1149`, re-geocoded for Marine Parade — the old coordinates were still Bluewater Square's) now reflect the current address.
+- **Service menu corrected.** The original plan invented six treatments (Chemical Peel, LED Light Therapy, Skin Needling, Dermal Therapy, HydraFacial, Microdermabrasion) that were never real, bookable services. The real menu — Corrective Facial, Hybrid Facial, Dermaplaning, Level 1–3 Corrective Peels, Skin Needling (NCTF/Exosomes), Korean Lash Lift & Tint — lives in `lib/services.ts` and drives `/services/[slug]`. The three surviving fictional-service URLs (`chemical-peel-redcliffe`, `led-light-therapy-redcliffe`, `skin-needling-redcliffe`) are 301-redirected in `next.config.ts` to their real equivalents.
+- **Category-page architecture restored**, built against the real menu: `/services/facials-redcliffe` and `/services/skin-treatments-redcliffe` (category pages), `/service-areas` (peninsula + 9 suburb pages), and `/treatments` (master hub linking everything). The Navbar mega menu, homepage, and Footer all link through to this structure.
+- **New this pass:** `/faq` (9 real Q&As, `FAQPage` schema), `Offer` schema on the 4 Skin Packages at `/memberships`, and cross-links from individual treatment pages to a matching package.
+
+**After this deploys, resubmit the sitemap to Google Search Console** (Indexing → Sitemaps → re-enter `sitemap.xml`) so the corrected URLs, redirects, and new pages get recrawled.
+
+**Separate from this codebase:** if the Google Business Profile still lists the old Bluewater Square address, that needs fixing directly in GBP — it won't update from anything in this repo.
+
+---
+
 ## Development
 
 ```bash
@@ -37,18 +52,20 @@ Complete these steps once the domain `thedermstudio.com.au` is pointed at Vercel
 3. Enter `sitemap.xml` and click **Submit**
 4. The full URL being submitted is: `https://thedermstudio.com.au/sitemap.xml`
 
-The sitemap covers all 22 pages including all service pages. It is regenerated automatically on every `npm run build`.
+The sitemap covers all 30 pages, including the 9 real service pages, 2 category pages, the treatments hub, 9 suburb pages, `/service-areas` and `/faq`. It is regenerated automatically on every `npm run build`.
 
-### 3. Request Indexing for the Homepage
+### 3. Request Indexing for Priority Pages
 
 1. In Search Console, go to the **URL Inspection** tool
 2. Enter `https://thedermstudio.com.au/`
 3. Click **Request Indexing**
-4. Repeat for priority pages:
-   - `https://thedermstudio.com.au/services/chemical-peel-redcliffe`
-   - `https://thedermstudio.com.au/services/led-light-therapy-redcliffe`
-   - `https://thedermstudio.com.au/services/skin-needling-redcliffe`
+4. Repeat for priority pages — especially anything new or changed in Sessions 5–8:
+   - `https://thedermstudio.com.au/treatments`
    - `https://thedermstudio.com.au/services/facials-redcliffe`
+   - `https://thedermstudio.com.au/services/skin-treatments-redcliffe`
+   - `https://thedermstudio.com.au/service-areas`
+   - `https://thedermstudio.com.au/faq`
+   - `https://thedermstudio.com.au/memberships`
 
 ### 4. Verify Structured Data
 
@@ -57,10 +74,12 @@ Use Google's Rich Results Test to verify structured data on each page type:
 - https://search.google.com/test/rich-results
 
 Pages to test:
-- Homepage (`/`) — LocalBusiness schema
-- Any service detail page (e.g. `/services/corrective-facial-redcliffe`) — BreadcrumbList + FAQPage
-- `/services/chemical-peel-redcliffe` — BreadcrumbList + FAQPage
-- `/about`, `/contact`, `/lira-clinical` — BreadcrumbList
+- Homepage (`/`) — `LocalBusiness` (BeautySalon) schema
+- Any of the 9 real service pages (e.g. `/services/corrective-facial-redcliffe`) — `Service` + `FAQPage` + `BreadcrumbList`
+- `/faq` — `FAQPage` + `BreadcrumbList`
+- `/memberships` — `Offer` (×4) + `BreadcrumbList`
+- `/service-areas` and any `/skin-clinic-*` suburb page — `BreadcrumbList` + `BeautySalon`/areaServed
+- `/about`, `/contact`, `/lira-clinical` — `BreadcrumbList`
 
 ### 5. Connect Google Analytics (optional)
 
@@ -93,17 +112,20 @@ app/
   contact/page.tsx                  Contact
   book/page.tsx                     Book (Square.site iframe)
   lira-clinical/page.tsx            Lira Clinical
+  treatments/page.tsx               Treatments hub — all 9 services + 3 categories
+  service-areas/page.tsx            Skin Clinic Redcliffe Peninsula category page
+  skin-clinic-*/page.tsx            9 suburb landing pages (Redcliffe, Scarborough, Clontarf, Kippa-Ring, Brighton, Newport, Deception Bay, Mango Hill, North Lakes)
+  faq/page.tsx                      FAQ page — 9 real Q&As, FAQPage schema
+  memberships/page.tsx              Skin Packages — 4 programs with Offer schema
   services/
     page.tsx                        Services listing (all categories)
     [slug]/page.tsx                 Dynamic service pages (9 treatments from lib/services.ts)
-    chemical-peel-redcliffe/        Chemical Peel (Session 4)
-    led-light-therapy-redcliffe/    LED Light Therapy (Session 4)
-    skin-needling-redcliffe/        Skin Needling (Session 4)
-    facials-redcliffe/              Facials category page (Session 4)
+    facials-redcliffe/              Facials category page
+    skin-treatments-redcliffe/      Skin Treatments (corrective peels + skin needling) category page
 
 components/
   layout/
-    Navbar.tsx                      Sticky nav, treatments dropdown, mobile menu
+    Navbar.tsx                      Sticky nav, two-tier treatments mega menu, mobile menu
     Footer.tsx                      Footer with NAP, links, Instagram
   homepage/
     HomeContent.tsx                 All homepage sections (client component)
@@ -113,7 +135,10 @@ components/
     LocalBusinessSchema.tsx         JSON-LD BeautySalon schema (rendered in layout)
     BreadcrumbSchema.tsx            JSON-LD BreadcrumbList (per page)
     FAQSchema.tsx                   JSON-LD FAQPage (service pages)
-    ServicePageTemplate.tsx         Reusable layout for Session 4 service pages
+    ServiceSchema.tsx               JSON-LD Service schema (9 service pages + 2 category pages + hub)
+    AreaServedSchema.tsx            JSON-LD BeautySalon+areaServed schema (suburb + service-areas pages)
+    OfferSchema.tsx                 JSON-LD Offer schema (4 Skin Packages on /memberships)
+    SuburbPageTemplate.tsx          Reusable layout for the 9 suburb pages
   ui/
     Breadcrumb.tsx                  Visual breadcrumb nav
     FaqAccordion.tsx                Animated FAQ accordion (client component)
@@ -124,9 +149,11 @@ lib/
 
 public/
   sitemap.xml                       Sitemap index
-  sitemap-0.xml                     All 22 page URLs
+  sitemap-0.xml                     All page URLs
   robots.txt                        Allows all, points to sitemap
 ```
+
+Note: `/services/chemical-peel-redcliffe`, `/services/led-light-therapy-redcliffe` and `/services/skin-needling-redcliffe` were removed (301-redirected in `next.config.ts` to their real equivalents) — they described generic treatments that never matched the real service menu above.
 
 ---
 
@@ -152,3 +179,5 @@ public/
 - [ ] Google Business Profile URL — not yet added to LocalBusinessSchema `sameAs`
 - [ ] Facebook page URL — not yet added to LocalBusinessSchema `sameAs`
 - [ ] Lira Clinical product images — placeholder on Lira Clinical page
+- [ ] Lira Clinical distributor outreach — request a stockist-directory listing/backlink (manual task, not tracked in this repo)
+- [ ] Audit Google Business Profile separately — if GBP still lists the old Bluewater Square address, fix it directly in GBP (outside this codebase)

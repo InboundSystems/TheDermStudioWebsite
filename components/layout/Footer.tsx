@@ -13,6 +13,7 @@ const treatmentLinks = [
   { name: 'Korean Lash Lift & Tint', href: '/services/korean-lash-lift-tint-redcliffe' },
   { name: 'Lira Clinical Skincare', href: '/lira-clinical' },
   { name: 'Packages', href: '/memberships' },
+  { name: 'FAQ', href: '/faq' },
 ]
 
 const serviceAreas = [

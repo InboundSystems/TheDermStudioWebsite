@@ -5,7 +5,7 @@ import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 export const metadata: Metadata = {
   title: 'Contact The Derm Studio | Book a Skin Consultation in Redcliffe',
   description:
-    'Contact The Derm Studio at Marine Parade, Redcliffe. Book a facial, chemical peel, LED light therapy or skin consultation online or by phone.',
+    'Contact The Derm Studio at 1/93 Marine Parade, Redcliffe. Book a facial, corrective peel, skin needling or skin consultation online or by phone.',
   alternates: { canonical: '/contact' },
 }
 

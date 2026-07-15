@@ -10,6 +10,25 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/services/chemical-peel-redcliffe',
+        destination: '/services/skin-treatments-redcliffe',
+        permanent: true,
+      },
+      {
+        source: '/services/skin-needling-redcliffe',
+        destination: '/services/skin-treatments-redcliffe',
+        permanent: true,
+      },
+      {
+        source: '/services/led-light-therapy-redcliffe',
+        destination: '/treatments',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

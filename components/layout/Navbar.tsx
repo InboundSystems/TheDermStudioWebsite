@@ -6,18 +6,28 @@ import Image from 'next/image'
 import { motion, AnimatePresence, useMotionValueEvent, useScroll } from 'framer-motion'
 import { Menu, X, ChevronDown } from 'lucide-react'
 
-const treatments = [
+const treatmentCategories = [
   { name: 'Facials', href: '/services/facials-redcliffe' },
-  { name: 'Chemical Peels', href: '/services/chemical-peel-redcliffe' },
-  { name: 'LED Light Therapy', href: '/services/led-light-therapy-redcliffe' },
-  { name: 'Skin Needling', href: '/services/skin-needling-redcliffe' },
+  { name: 'Skin Treatments', href: '/services/skin-treatments-redcliffe' },
+  { name: 'Skin Clinic Redcliffe Peninsula', href: '/service-areas' },
+]
+
+const treatments = [
+  { name: 'Corrective Facial', href: '/services/corrective-facial-redcliffe' },
+  { name: 'Hybrid Facial', href: '/services/hybrid-facial-redcliffe' },
+  { name: 'Dermaplaning Facial', href: '/services/dermaplaning-facial-redcliffe' },
+  { name: 'Level 1 Corrective Peel', href: '/services/level-1-corrective-peel-redcliffe' },
+  { name: 'Level 2 Corrective Peel', href: '/services/level-2-corrective-peel-redcliffe' },
+  { name: 'Level 3 Corrective Peel', href: '/services/level-3-corrective-peel-redcliffe' },
+  { name: 'Skin Needling with NCTF', href: '/services/skin-needling-nctf-redcliffe' },
+  { name: 'Skin Needling with Exosomes', href: '/services/skin-needling-exosomes-redcliffe' },
+  { name: 'Korean Lash Lift & Tint', href: '/services/korean-lash-lift-tint-redcliffe' },
   { name: 'Lira Clinical', href: '/lira-clinical' },
-  { name: 'All Treatments', href: '/services' },
 ]
 
 const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'Treatments', href: '#', dropdown: true },
+  { name: 'Treatments', href: '/treatments', dropdown: true },
   { name: 'Packages', href: '/memberships' },
   { name: 'Lira Clinical', href: '/lira-clinical' },
   { name: 'About', href: '/about' },
@@ -77,15 +87,17 @@ export function Navbar() {
                     onMouseEnter={() => setDropdownOpen(true)}
                     onMouseLeave={() => setDropdownOpen(false)}
                   >
-                    <motion.button
-                      className="flex items-center gap-1 text-sm font-medium"
-                      style={{ fontFamily: "'DM Sans', sans-serif" }}
-                      animate={{ color: textColor }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      {link.name}
-                      <ChevronDown className="w-3.5 h-3.5" />
-                    </motion.button>
+                    <Link href={link.href} className="flex items-center gap-1">
+                      <motion.span
+                        className="text-sm font-medium"
+                        style={{ fontFamily: "'DM Sans', sans-serif" }}
+                        animate={{ color: textColor }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        {link.name}
+                      </motion.span>
+                      <ChevronDown className="w-3.5 h-3.5" style={{ color: textColor }} />
+                    </Link>
                     <AnimatePresence>
                       {dropdownOpen && (
                         <motion.div
@@ -93,27 +105,61 @@ export function Navbar() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -8 }}
                           transition={{ duration: 0.15 }}
-                          className="absolute top-full left-0 mt-2 w-56 bg-white rounded-2xl shadow-lg overflow-hidden"
+                          className="absolute top-full left-0 mt-2 w-[38rem] bg-white rounded-2xl shadow-lg overflow-hidden grid grid-cols-2"
                           style={{ border: '1px solid var(--color-cream-dark)' }}
                         >
-                          {treatments.map((t) => (
-                            <Link
-                              key={t.name}
-                              href={t.href}
-                              className="block px-4 py-2.5 text-sm transition-colors"
-                              style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
-                              onMouseEnter={(e) => {
-                                e.currentTarget.style.backgroundColor = 'var(--color-cream)'
-                                e.currentTarget.style.color = 'var(--color-rose)'
-                              }}
-                              onMouseLeave={(e) => {
-                                e.currentTarget.style.backgroundColor = ''
-                                e.currentTarget.style.color = 'var(--color-charcoal)'
-                              }}
+                          <div className="py-3" style={{ borderRight: '1px solid var(--color-cream-dark)' }}>
+                            <p
+                              className="px-4 pb-2 text-xs font-semibold uppercase tracking-wide"
+                              style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-rose)' }}
                             >
-                              {t.name}
-                            </Link>
-                          ))}
+                              Categories
+                            </p>
+                            {treatmentCategories.map((c) => (
+                              <Link
+                                key={c.name}
+                                href={c.href}
+                                className="block px-4 py-2.5 text-sm transition-colors"
+                                style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
+                                onMouseEnter={(e) => {
+                                  e.currentTarget.style.backgroundColor = 'var(--color-cream)'
+                                  e.currentTarget.style.color = 'var(--color-rose)'
+                                }}
+                                onMouseLeave={(e) => {
+                                  e.currentTarget.style.backgroundColor = ''
+                                  e.currentTarget.style.color = 'var(--color-charcoal)'
+                                }}
+                              >
+                                {c.name}
+                              </Link>
+                            ))}
+                          </div>
+                          <div className="py-3">
+                            <p
+                              className="px-4 pb-2 text-xs font-semibold uppercase tracking-wide"
+                              style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-rose)' }}
+                            >
+                              Treatments
+                            </p>
+                            {treatments.map((t) => (
+                              <Link
+                                key={t.name}
+                                href={t.href}
+                                className="block px-4 py-2.5 text-sm transition-colors"
+                                style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
+                                onMouseEnter={(e) => {
+                                  e.currentTarget.style.backgroundColor = 'var(--color-cream)'
+                                  e.currentTarget.style.color = 'var(--color-rose)'
+                                }}
+                                onMouseLeave={(e) => {
+                                  e.currentTarget.style.backgroundColor = ''
+                                  e.currentTarget.style.color = 'var(--color-charcoal)'
+                                }}
+                              >
+                                {t.name}
+                              </Link>
+                            ))}
+                          </div>
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -191,9 +237,36 @@ export function Navbar() {
                 <div key={link.name}>
                   {link.dropdown ? (
                     <>
-                      <p
-                        className="text-lg font-bold mb-3"
+                      <Link
+                        href={link.href}
+                        onClick={() => setMobileOpen(false)}
+                        className="text-lg font-bold mb-3 block"
                         style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
+                      >
+                        Treatments
+                      </Link>
+                      <p
+                        className="text-xs font-semibold uppercase tracking-wide mb-2 pl-4"
+                        style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-rose)' }}
+                      >
+                        Categories
+                      </p>
+                      <div className="pl-4 flex flex-col gap-3 mb-4">
+                        {treatmentCategories.map((c) => (
+                          <Link
+                            key={c.name}
+                            href={c.href}
+                            onClick={() => setMobileOpen(false)}
+                            className="text-base transition-colors"
+                            style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
+                          >
+                            {c.name}
+                          </Link>
+                        ))}
+                      </div>
+                      <p
+                        className="text-xs font-semibold uppercase tracking-wide mb-2 pl-4"
+                        style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-rose)' }}
                       >
                         Treatments
                       </p>

@@ -31,6 +31,7 @@ export interface Service {
   faqs: ServiceFaq[]
   relatedSlugs: string[]
   iconName: string
+  relatedPackage?: { name: string; href: string }
 }
 
 export interface MenuServiceItem {
@@ -239,6 +240,7 @@ export const services: Service[] = [
     ],
     relatedSlugs: ['hybrid-facial-redcliffe', 'level-2-corrective-peel-redcliffe', 'corrective-facial-redcliffe'],
     iconName: 'FlaskConical',
+    relatedPackage: { name: 'The Radiance Refresh', href: '/memberships#radiance-refresh' },
   },
 
   /* ── LEVEL 2 CORRECTIVE PEEL ───────────────────── */
@@ -286,6 +288,7 @@ export const services: Service[] = [
     ],
     relatedSlugs: ['level-1-corrective-peel-redcliffe', 'level-3-corrective-peel-redcliffe', 'skin-needling-nctf-redcliffe'],
     iconName: 'FlaskConical',
+    relatedPackage: { name: 'The Clarifying Complexion Series', href: '/memberships#clarifying-complexion-series' },
   },
 
   /* ── LEVEL 3 CORRECTIVE PEEL ───────────────────── */
@@ -333,6 +336,7 @@ export const services: Service[] = [
     ],
     relatedSlugs: ['level-2-corrective-peel-redcliffe', 'skin-needling-nctf-redcliffe', 'skin-needling-exosomes-redcliffe'],
     iconName: 'FlaskConical',
+    relatedPackage: { name: 'Skin Packages', href: '/memberships' },
   },
 
   /* ── SKIN NEEDLING WITH NCTF ───────────────────── */
@@ -380,6 +384,7 @@ export const services: Service[] = [
     ],
     relatedSlugs: ['skin-needling-exosomes-redcliffe', 'level-2-corrective-peel-redcliffe', 'level-3-corrective-peel-redcliffe'],
     iconName: 'Pipette',
+    relatedPackage: { name: 'The Renewal Series', href: '/memberships#renewal-series' },
   },
 
   /* ── SKIN NEEDLING WITH EXOSOMES ───────────────── */
@@ -427,6 +432,7 @@ export const services: Service[] = [
     ],
     relatedSlugs: ['skin-needling-nctf-redcliffe', 'level-3-corrective-peel-redcliffe', 'level-2-corrective-peel-redcliffe'],
     iconName: 'Pipette',
+    relatedPackage: { name: 'Skin Packages', href: '/memberships' },
   },
 
   /* ── KOREAN LASH LIFT & TINT ───────────────────── */

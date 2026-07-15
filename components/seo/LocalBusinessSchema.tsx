@@ -17,8 +17,8 @@ export function LocalBusinessSchema() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": -27.2308,
-      "longitude": 153.1154
+      "latitude": -27.2340,
+      "longitude": 153.1149
     },
     "openingHoursSpecification": [
       {

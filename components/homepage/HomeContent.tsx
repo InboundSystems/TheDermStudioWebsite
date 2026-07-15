@@ -133,7 +133,7 @@ const suburbs = [
   { name: 'Deception Bay', href: '/skin-clinic-deception-bay' },
   { name: 'Mango Hill', href: '/skin-clinic-mango-hill' },
   { name: 'North Lakes', href: '/skin-clinic-north-lakes' },
-  { name: 'Moreton Bay Peninsula', href: '/skin-clinic-moreton-bay' },
+  { name: 'Moreton Bay Peninsula', href: '/service-areas' },
   { name: '+ All Surrounding Areas', href: '/service-areas' },
 ]
 
@@ -333,6 +333,16 @@ export function HomeContent() {
                 </motion.div>
               )
             })}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/treatments"
+              className="inline-block text-sm font-semibold px-7 py-3.5 rounded-full text-white transition-colors"
+              style={{ backgroundColor: 'var(--color-rose)', fontFamily: "'DM Sans', sans-serif" }}
+            >
+              View All Treatments
+            </Link>
           </div>
         </div>
       </section>

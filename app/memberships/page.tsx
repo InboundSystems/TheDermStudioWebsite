@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
+import { OfferSchema } from '@/components/seo/OfferSchema'
 
 export const metadata: Metadata = {
   title: 'Skin Packages Redcliffe | The Derm Studio',
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 
 const programs = [
   {
+    id: 'radiance-refresh',
     number: '01',
     name: 'The Radiance Refresh',
     tagline: 'Perfect for those seeking a luminous, hydrated complexion and an effortless, polished glow.',
@@ -22,10 +24,12 @@ const programs = [
       '10% off Core 4 Home Care',
     ],
     price: '$699',
+    priceValue: 699,
     savings: 'Save $553 Total',
     highlight: false,
   },
   {
+    id: 'clarifying-complexion-series',
     number: '02',
     name: 'The Clarifying Complexion Series',
     tagline: 'Perfect for breakout-prone or congested skin wanting calm, clear, balanced results — without compromising comfort.',
@@ -36,10 +40,12 @@ const programs = [
       '10% off Core 4 Home Care',
     ],
     price: '$799',
+    priceValue: 799,
     savings: 'Save $519 Total',
     highlight: false,
   },
   {
+    id: 'renewal-series',
     number: '03',
     name: 'The Renewal Series',
     tagline: 'A sophisticated rejuvenation journey to refine texture, boost collagen, and restore luminosity.',
@@ -50,10 +56,12 @@ const programs = [
       '10% off Core 4 Home Care',
     ],
     price: '$1,799',
+    priceValue: 1799,
     savings: 'Save $636 Total',
     highlight: true,
   },
   {
+    id: 'collagen-luxe-journey',
     number: '04',
     name: 'The Collagen Luxe Journey',
     tagline: 'For those ready for an elevated transformation — firmer, brighter, more youthful skin with an indulgent touch.',
@@ -65,6 +73,7 @@ const programs = [
       '10% off Core 4 Home Care',
     ],
     price: '$1,999',
+    priceValue: 1999,
     savings: 'Save $849 Total',
     highlight: false,
   },
@@ -104,6 +113,15 @@ export default function MembershipsPage() {
         { name: 'Home', href: '/' },
         { name: 'Programs', href: '/memberships' },
       ]} />
+      {programs.map((program) => (
+        <OfferSchema
+          key={program.id}
+          name={program.name}
+          description={program.tagline}
+          price={program.priceValue}
+          url={`https://thedermstudio.com.au/memberships#${program.id}`}
+        />
+      ))}
 
       {/* ── Hero ── */}
       <section
@@ -139,7 +157,8 @@ export default function MembershipsPage() {
             {programs.map((program) => (
               <div
                 key={program.name}
-                className="rounded-2xl flex flex-col overflow-hidden"
+                id={program.id}
+                className="rounded-2xl flex flex-col overflow-hidden scroll-mt-28"
                 style={{
                   backgroundColor: '#fff',
                   border: program.highlight
