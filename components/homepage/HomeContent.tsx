@@ -931,9 +931,8 @@ export function HomeContent() {
                 <div className="flex gap-3">
                   <span className="shrink-0 mt-0.5">🕐</span>
                   <div style={{ color: 'var(--color-charcoal)' }}>
-                    {/* TODO: Confirm hours with client */}
-                    Mon–Fri: 9:00am – 5:00pm<br />
-                    Sat: 9:00am – 2:00pm
+                    Wed: 8:00am – 2:00pm<br />
+                    Sat: 9:30am – 1:00pm
                   </div>
                 </div>
               </div>

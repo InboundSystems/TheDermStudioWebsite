@@ -413,11 +413,10 @@ export function ContactContent() {
                     className="text-sm leading-relaxed"
                     style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
                   >
-                    {/* TODO: Confirm hours with client */}
                     <p className="font-semibold mb-1" style={{ color: 'var(--color-espresso)' }}>Opening Hours</p>
-                    Mon–Fri: 9:00am – 5:00pm<br />
-                    Sat: 9:00am – 2:00pm<br />
-                    Sun: Closed
+                    Wed: 8:00am – 2:00pm<br />
+                    Sat: 9:30am – 1:00pm<br />
+                    Sun, Mon, Tue, Thu, Fri: Closed
                   </div>
                 </div>
               </div>

@@ -112,10 +112,9 @@ export default function BookPage() {
                   className="text-sm leading-relaxed"
                   style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
                 >
-                  {/* TODO: Confirm hours with client */}
-                  Mon–Fri: 9:00am – 5:00pm<br />
-                  Sat: 9:00am – 2:00pm<br />
-                  Sun: Closed
+                  Wed: 8:00am – 2:00pm<br />
+                  Sat: 9:30am – 1:00pm<br />
+                  Sun, Mon, Tue, Thu, Fri: Closed
                 </div>
               </div>
             </div>

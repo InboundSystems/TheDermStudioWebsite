@@ -186,9 +186,8 @@ export function Footer() {
                   className="text-sm leading-relaxed"
                   style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-blush)' }}
                 >
-                  {/* TODO: Confirm hours with client */}
-                  Mon–Fri: 9:00am – 5:00pm<br />
-                  Sat: 9:00am – 2:00pm
+                  Wed: 8:00am – 2:00pm<br />
+                  Sat: 9:30am – 1:00pm
                 </div>
               </div>
 

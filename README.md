@@ -165,6 +165,7 @@ Note: `/services/chemical-peel-redcliffe`, `/services/led-light-therapy-redcliff
 | Address | 1/93 Marine Parade, Redcliffe QLD 4020 |
 | Phone | +61 414 185 007 |
 | Email | thedermstudio.contact@gmail.com |
+| Hours | Wed 8:00am–2:00pm, Sat 9:30am–1:00pm (closed Sun, Mon, Tue, Thu, Fri) |
 | Booking | https://the-derm-studio.square.site/ |
 | Instagram | @thedermstudio_ |
 | Domain | thedermstudio.com.au |
@@ -173,7 +174,6 @@ Note: `/services/chemical-peel-redcliffe`, `/services/led-light-therapy-redcliff
 
 ## Pending (blocked on client)
 
-- [ ] Business hours confirmed — currently placeholder (Mon–Fri 9–5, Sat 9–2) in LocalBusinessSchema
 - [ ] Rachael's photo — placeholder on About page
 - [ ] Rachael's personal bio / years of experience — TODO in About page
 - [ ] Google Business Profile URL — not yet added to LocalBusinessSchema `sameAs`

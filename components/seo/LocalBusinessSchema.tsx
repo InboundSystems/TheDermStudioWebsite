@@ -23,16 +23,15 @@ export function LocalBusinessSchema() {
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "17:00"
+        "dayOfWeek": ["Wednesday"],
+        "opens": "08:00",
+        "closes": "14:00"
       },
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Saturday"],
-        "opens": "09:00",
-        "closes": "14:00"
-        /* TODO: Confirm hours with client */
+        "opens": "09:30",
+        "closes": "13:00"
       }
     ],
     "priceRange": "$$",
