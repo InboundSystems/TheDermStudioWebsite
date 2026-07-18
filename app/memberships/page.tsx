@@ -119,7 +119,7 @@ export default function MembershipsPage() {
           name={program.name}
           description={program.tagline}
           price={program.priceValue}
-          url={`https://thedermstudio.com.au/memberships#${program.id}`}
+          url={`https://www.thedermstudio.com.au/memberships#${program.id}`}
         />
       ))}
 

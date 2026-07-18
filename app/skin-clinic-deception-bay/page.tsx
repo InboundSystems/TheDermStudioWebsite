@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Skin Clinic Deception Bay | The Derm Studio',
   description:
     'Deception Bay clients are around seventeen minutes from The Derm Studio on Marine Parade, Redcliffe — corrective facials, Lira Clinical peels and skin needling.',
-  alternates: { canonical: 'https://thedermstudio.com.au/skin-clinic-deception-bay' },
+  alternates: { canonical: 'https://www.thedermstudio.com.au/skin-clinic-deception-bay' },
 }
 
 const breadcrumbs = [
@@ -26,7 +26,7 @@ export default function SkinClinicDeceptionBayPage() {
     <SuburbPageTemplate
       suburb="Deception Bay"
       h1="Skin Clinic Deception Bay | The Derm Studio"
-      url="https://thedermstudio.com.au/skin-clinic-deception-bay"
+      url="https://www.thedermstudio.com.au/skin-clinic-deception-bay"
       breadcrumbs={breadcrumbs}
       paragraphs={paragraphs}
     />

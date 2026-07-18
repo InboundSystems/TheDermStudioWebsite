@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Skin Treatments Redcliffe | The Derm Studio',
   description:
     'The full treatment menu at The Derm Studio, Marine Parade, Redcliffe — corrective facials, Lira Clinical peels, skin needling and lash lifting. Book a free skin consultation.',
-  alternates: { canonical: 'https://thedermstudio.com.au/treatments' },
+  alternates: { canonical: 'https://www.thedermstudio.com.au/treatments' },
 }
 
 const breadcrumbs = [
@@ -117,7 +117,7 @@ export default function TreatmentsPage() {
       <ServiceSchema
         serviceName="Skin Treatments"
         description="The full treatment menu at The Derm Studio, Marine Parade, Redcliffe — corrective facials, Lira Clinical peels, skin needling and Korean lash lifting, delivered by qualified dermal therapists."
-        url="https://thedermstudio.com.au/treatments"
+        url="https://www.thedermstudio.com.au/treatments"
       />
       <main>
         {/* Hero */}

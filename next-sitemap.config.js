@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://thedermstudio.com.au',
+  siteUrl: 'https://www.thedermstudio.com.au',
   generateRobotsTxt: false,
   changefreq: 'weekly',
   priority: 0.7,

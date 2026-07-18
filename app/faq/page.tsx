@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'FAQ | The Derm Studio Redcliffe',
   description:
     'Frequently asked questions about treatments, pricing, booking and location at The Derm Studio, 1/93 Marine Parade, Redcliffe.',
-  alternates: { canonical: 'https://thedermstudio.com.au/faq' },
+  alternates: { canonical: 'https://www.thedermstudio.com.au/faq' },
 }
 
 const breadcrumbs = [

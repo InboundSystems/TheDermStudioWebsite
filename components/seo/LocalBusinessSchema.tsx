@@ -3,7 +3,7 @@ export function LocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
     "name": "The Derm Studio",
-    "url": "https://thedermstudio.com.au",
+    "url": "https://www.thedermstudio.com.au",
     "telephone": "+61414185007",
     "email": "thedermstudio.contact@gmail.com",
     "description": "The Derm Studio is Redcliffe's results-focused skin clinic offering corrective facials, Lira Clinical corrective peels, skin needling with NCTF and Exosomes, dermaplaning, and Korean lash lifting.",

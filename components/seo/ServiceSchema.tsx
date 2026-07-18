@@ -14,7 +14,7 @@ export function ServiceSchema({ serviceName, description, url }: ServiceSchemaPr
     provider: {
       '@type': 'BeautySalon',
       name: 'The Derm Studio',
-      url: 'https://thedermstudio.com.au',
+      url: 'https://www.thedermstudio.com.au',
       telephone: '+61414185007',
       address: {
         '@type': 'PostalAddress',

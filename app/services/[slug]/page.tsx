@@ -44,7 +44,7 @@ export default async function ServicePage({ params }: Props) {
       <ServiceSchema
         serviceName={service.name}
         description={service.heroSubtitle}
-        url={`https://thedermstudio.com.au/services/${service.slug}`}
+        url={`https://www.thedermstudio.com.au/services/${service.slug}`}
       />
       <main>
       {/* Hero */}

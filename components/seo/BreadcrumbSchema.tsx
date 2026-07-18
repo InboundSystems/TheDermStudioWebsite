@@ -8,7 +8,7 @@ export function BreadcrumbSchema({ items }: { items: BreadcrumbItem[] }) {
       '@type': 'ListItem',
       position: i + 1,
       name: item.name,
-      item: `https://thedermstudio.com.au${item.href}`,
+      item: `https://www.thedermstudio.com.au${item.href}`,
     })),
   }
   return (

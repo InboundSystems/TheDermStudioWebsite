@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Facials Redcliffe | Corrective, Hybrid & Dermaplaning Facials — The Derm Studio',
   description:
     'Corrective, Hybrid and Luminous Silk Dermaplaning facials in Redcliffe at The Derm Studio, Marine Parade. Expert facials tailored to your skin, from $199.',
-  alternates: { canonical: 'https://thedermstudio.com.au/services/facials-redcliffe' },
+  alternates: { canonical: 'https://www.thedermstudio.com.au/services/facials-redcliffe' },
 }
 
 const breadcrumbs = [
@@ -52,7 +52,7 @@ export default function FacialsPage() {
       <ServiceSchema
         serviceName="Facials"
         description="Corrective, Hybrid and Luminous Silk Dermaplaning facials at The Derm Studio, Marine Parade, Redcliffe — customised to your skin type, concerns and goals, using Lira Clinical professional-grade skincare."
-        url="https://thedermstudio.com.au/services/facials-redcliffe"
+        url="https://www.thedermstudio.com.au/services/facials-redcliffe"
       />
       <main>
         {/* Hero */}

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Skin Clinic Redcliffe Peninsula | The Derm Studio',
   description:
     "The Derm Studio is a specialist skin clinic on the Redcliffe Peninsula, serving Scarborough, Clontarf, Kippa-Ring, Brighton and surrounding suburbs from 1/93 Marine Parade, Redcliffe.",
-  alternates: { canonical: 'https://thedermstudio.com.au/service-areas' },
+  alternates: { canonical: 'https://www.thedermstudio.com.au/service-areas' },
 }
 
 const breadcrumbs = [
@@ -33,7 +33,7 @@ export default function ServiceAreasPage() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
-      <AreaServedSchema areaName="Redcliffe Peninsula, Moreton Bay, QLD" url="https://thedermstudio.com.au/service-areas" />
+      <AreaServedSchema areaName="Redcliffe Peninsula, Moreton Bay, QLD" url="https://www.thedermstudio.com.au/service-areas" />
       <main>
         {/* Hero */}
         <section

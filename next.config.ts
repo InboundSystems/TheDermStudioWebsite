@@ -27,6 +27,11 @@ const nextConfig: NextConfig = {
         destination: '/treatments',
         permanent: true,
       },
+      {
+        source: '/skin-clinic-moreton-bay',
+        destination: '/service-areas',
+        permanent: true,
+      },
     ];
   },
 };

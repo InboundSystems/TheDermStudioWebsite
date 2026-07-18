@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Skin Treatments Redcliffe | Corrective Peels & Skin Needling — The Derm Studio',
   description:
     'Advanced skin treatments in Redcliffe — Level 1-3 corrective peels and skin needling with NCTF or exosomes at The Derm Studio, Marine Parade. From $199.',
-  alternates: { canonical: 'https://thedermstudio.com.au/services/skin-treatments-redcliffe' },
+  alternates: { canonical: 'https://www.thedermstudio.com.au/services/skin-treatments-redcliffe' },
 }
 
 const breadcrumbs = [
@@ -68,7 +68,7 @@ export default function SkinTreatmentsPage() {
       <ServiceSchema
         serviceName="Skin Treatments"
         description="Advanced clinical skin treatments at The Derm Studio, Marine Parade, Redcliffe — Level 1-3 Lira Clinical corrective peels and skin needling with NCTF or exosomes, delivered by qualified dermal therapists."
-        url="https://thedermstudio.com.au/services/skin-treatments-redcliffe"
+        url="https://www.thedermstudio.com.au/services/skin-treatments-redcliffe"
       />
       <main>
         {/* Hero */}

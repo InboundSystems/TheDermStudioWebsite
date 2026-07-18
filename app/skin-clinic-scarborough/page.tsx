@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Skin Clinic Scarborough | The Derm Studio Redcliffe',
   description:
     'Scarborough clients travel just minutes down Marine Parade to The Derm Studio for corrective facials, Lira Clinical peels and advanced skin needling.',
-  alternates: { canonical: 'https://thedermstudio.com.au/skin-clinic-scarborough' },
+  alternates: { canonical: 'https://www.thedermstudio.com.au/skin-clinic-scarborough' },
 }
 
 const breadcrumbs = [
@@ -26,7 +26,7 @@ export default function SkinClinicScarboroughPage() {
     <SuburbPageTemplate
       suburb="Scarborough"
       h1="Skin Clinic Scarborough | The Derm Studio Redcliffe"
-      url="https://thedermstudio.com.au/skin-clinic-scarborough"
+      url="https://www.thedermstudio.com.au/skin-clinic-scarborough"
       breadcrumbs={breadcrumbs}
       paragraphs={paragraphs}
     />
