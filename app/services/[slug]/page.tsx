@@ -9,6 +9,13 @@ import { ServiceSchema } from '@/components/seo/ServiceSchema'
 import { FaqAccordion } from '@/components/ui/FaqAccordion'
 import { getServiceBySlug, getRelatedServices, services } from '@/lib/services'
 
+const CATEGORY_LINKS: Record<string, { label: string; href: string }> = {
+  'Facials': { label: 'Facials Redcliffe', href: '/services/facials-redcliffe' },
+  'Corrective Peels': { label: 'Skin Treatments Redcliffe', href: '/services/skin-treatments-redcliffe' },
+  'Skin Needling': { label: 'Skin Treatments Redcliffe', href: '/services/skin-treatments-redcliffe' },
+  'Lash & Brow': { label: 'All Treatments', href: '/treatments' },
+}
+
 type Props = { params: Promise<{ slug: string }> }
 
 export async function generateStaticParams() {
@@ -32,6 +39,7 @@ export default async function ServicePage({ params }: Props) {
   if (!service) notFound()
 
   const related = getRelatedServices(service.relatedSlugs)
+  const categoryLink = CATEGORY_LINKS[service.category]
 
   return (
     <>
@@ -165,6 +173,17 @@ export default async function ServicePage({ params }: Props) {
                 >
                   1/93 Marine Parade, Redcliffe QLD
                 </p>
+                {categoryLink && (
+                  <p
+                    className="mt-4 text-xs text-center leading-relaxed"
+                    style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
+                  >
+                    Part of{' '}
+                    <Link href={categoryLink.href} className="underline" style={{ color: 'var(--color-rose)' }}>
+                      {categoryLink.label}
+                    </Link>
+                  </p>
+                )}
                 {service.relatedPackage && (
                   <p
                     className="mt-4 text-xs text-center leading-relaxed"

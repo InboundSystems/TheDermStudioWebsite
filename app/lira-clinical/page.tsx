@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
+import { ProductSchema } from '@/components/seo/ProductSchema'
 import { Leaf, Shield, Sparkles, Droplets, Sun, Zap } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -136,6 +137,15 @@ const productRanges = [
   },
 ]
 
+const allProducts = productRanges.flatMap((range) =>
+  range.products.map((product) => ({
+    name: product.name,
+    image: product.img,
+    category: `Lira Clinical ${range.name} — ${range.tag}`,
+    description: range.desc,
+  }))
+)
+
 export default function LiraClinicalPage() {
   return (
     <>
@@ -143,6 +153,7 @@ export default function LiraClinicalPage() {
         { name: 'Home', href: '/' },
         { name: 'Lira Clinical', href: '/lira-clinical' },
       ]} />
+      <ProductSchema products={allProducts} />
       {/* ── Hero Banner ── */}
       <section className="pt-20" style={{ backgroundColor: 'var(--color-espresso)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
