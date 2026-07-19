@@ -10,9 +10,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@fontsource/dm-sans": "^5.2.8",
-    "@fontsource/playfair-display": "^5.2.8",
-    "framer-motion": "^12.38.0",
     "lucide-react": "^1.14.0",
     "next": "16.2.5",
     "next-sitemap": "^4.2.3",

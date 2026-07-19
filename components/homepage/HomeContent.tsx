@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { Reveal } from '@/components/ui/Reveal'
 import {
   Sparkles,
   FlaskConical,
@@ -21,20 +21,6 @@ import {
   CheckCircle,
   TrendingUp,
 } from 'lucide-react'
-
-/* ─── Shared helpers ─── */
-const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.7, ease: 'easeOut' as const, delay },
-})
-
-const scrollFadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 30 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-60px' },
-  transition: { duration: 0.7, ease: 'easeOut' as const, delay },
-})
 
 /* ─── Section 3: Service Cards ─── */
 const services = [
@@ -186,53 +172,50 @@ export function HomeContent() {
 
         {/* Content */}
         <div className="relative z-20 text-center text-white px-4 sm:px-6 max-w-5xl mx-auto py-32">
-          <motion.h1
-            {...fadeUp(0.2)}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
-            Where Clinical Results Meet Refined Luxury
-          </motion.h1>
-
-          <motion.p
-            {...fadeUp(0.4)}
-            className="text-lg sm:text-xl leading-relaxed mb-10 max-w-3xl mx-auto text-white/90"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
-          >
-            At The Derm Studio, every treatment is designed to deliver visible results while offering a moment of calm. Advanced skin treatments, tailored to you — on Marine Parade, Redcliffe.
-          </motion.p>
-
-          <motion.div
-            {...fadeUp(0.6)}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          >
-            <Link
-              href="/book"
-              className="inline-block text-white font-semibold px-8 py-4 rounded-full text-base transition-colors"
-              style={{ backgroundColor: 'var(--color-rose)', fontFamily: "'DM Sans', sans-serif" }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--color-rose-dark)' }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--color-rose)' }}
+          <Reveal immediate delay={0.2}>
+            <h1
+              className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6"
+              style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Book a Consultation
-            </Link>
-            <Link
-              href="/services"
-              className="inline-block font-semibold px-8 py-4 rounded-full text-base text-white transition-colors border-2 border-white hover:bg-white/10"
+              Where Clinical Results Meet Refined Luxury
+            </h1>
+          </Reveal>
+
+          <Reveal immediate delay={0.4}>
+            <p
+              className="text-lg sm:text-xl leading-relaxed mb-10 max-w-3xl mx-auto text-white/90"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
-              View Treatments
-            </Link>
-          </motion.div>
+              At The Derm Studio, every treatment is designed to deliver visible results while offering a moment of calm. Advanced skin treatments, tailored to you — on Marine Parade, Redcliffe.
+            </p>
+          </Reveal>
+
+          <Reveal immediate delay={0.6}>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/book"
+                className="inline-block text-white font-semibold px-8 py-4 rounded-full text-base transition-colors"
+                style={{ backgroundColor: 'var(--color-rose)', fontFamily: "'DM Sans', sans-serif" }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--color-rose-dark)' }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--color-rose)' }}
+              >
+                Book a Consultation
+              </Link>
+              <Link
+                href="/services"
+                className="inline-block font-semibold px-8 py-4 rounded-full text-base text-white transition-colors border-2 border-white hover:bg-white/10"
+                style={{ fontFamily: "'DM Sans', sans-serif" }}
+              >
+                View Treatments
+              </Link>
+            </div>
+          </Reveal>
         </div>
 
         {/* Scroll arrow */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 z-20"
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
-        >
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 z-20 animate-bounce">
           <ChevronDown className="w-7 h-7" />
-        </motion.div>
+        </div>
       </section>
 
       {/* ──────────────────────────────────────
@@ -240,13 +223,7 @@ export function HomeContent() {
       ────────────────────────────────────── */}
       <section className="py-8 px-4" style={{ backgroundColor: 'var(--color-cream)' }}>
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4"
-          >
+          <Reveal duration={0.6} y={20} className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
             {[
               'Qualified Dermal Therapists',
               'Lira Clinical Stockist',
@@ -265,7 +242,7 @@ export function HomeContent() {
                 </span>
               </div>
             ))}
-          </motion.div>
+          </Reveal>
         </div>
       </section>
 
@@ -274,7 +251,7 @@ export function HomeContent() {
       ────────────────────────────────────── */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <motion.div {...scrollFadeUp(0)} className="text-center mb-14">
+          <Reveal className="text-center mb-14">
             <h2
               className="text-3xl sm:text-4xl font-bold mb-4"
               style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
@@ -287,50 +264,50 @@ export function HomeContent() {
             >
               Expert treatments tailored to your skin — corrective facials, clinical peels, skin needling, and more.
             </p>
-          </motion.div>
+          </Reveal>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             {services.map((svc, i) => {
               const Icon = svc.icon
               return (
-                <motion.div
-                  key={svc.name}
-                  {...scrollFadeUp(i * 0.08)}
-                  className="group relative flex flex-col gap-3 p-5 sm:p-6 rounded-2xl shadow-sm cursor-pointer transition-all duration-300 hover:-translate-y-1"
-                  style={{
-                    backgroundColor: 'var(--color-cream)',
-                    borderLeft: '3px solid transparent',
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLElement).style.borderLeftColor = 'var(--color-rose)'
-                    ;(e.currentTarget as HTMLElement).style.boxShadow = '0 4px 24px rgba(196,152,152,0.18)'
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLElement).style.borderLeftColor = 'transparent'
-                    ;(e.currentTarget as HTMLElement).style.boxShadow = ''
-                  }}
-                >
-                  <Icon className="w-7 h-7" style={{ color: 'var(--color-rose)' }} />
-                  <h3
-                    className="text-lg font-bold leading-tight"
-                    style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
+                <Reveal key={svc.name} delay={i * 0.08}>
+                  <div
+                    className="group relative flex flex-col gap-3 p-5 sm:p-6 rounded-2xl shadow-sm cursor-pointer transition-all duration-300 hover:-translate-y-1 h-full"
+                    style={{
+                      backgroundColor: 'var(--color-cream)',
+                      borderLeft: '3px solid transparent',
+                    }}
+                    onMouseEnter={(e) => {
+                      (e.currentTarget as HTMLElement).style.borderLeftColor = 'var(--color-rose)'
+                      ;(e.currentTarget as HTMLElement).style.boxShadow = '0 4px 24px rgba(196,152,152,0.18)'
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.currentTarget as HTMLElement).style.borderLeftColor = 'transparent'
+                      ;(e.currentTarget as HTMLElement).style.boxShadow = ''
+                    }}
                   >
-                    {svc.name}
-                  </h3>
-                  <p
-                    className="text-sm leading-relaxed flex-1"
-                    style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
-                  >
-                    {svc.desc}
-                  </p>
-                  <Link
-                    href={svc.href}
-                    className="text-sm font-semibold mt-auto transition-opacity hover:opacity-70"
-                    style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-rose)' }}
-                  >
-                    Learn More →
-                  </Link>
-                </motion.div>
+                    <Icon className="w-7 h-7" style={{ color: 'var(--color-rose)' }} />
+                    <h3
+                      className="text-lg font-bold leading-tight"
+                      style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
+                    >
+                      {svc.name}
+                    </h3>
+                    <p
+                      className="text-sm leading-relaxed flex-1"
+                      style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
+                    >
+                      {svc.desc}
+                    </p>
+                    <Link
+                      href={svc.href}
+                      className="text-sm font-semibold mt-auto transition-opacity hover:opacity-70"
+                      style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-rose)' }}
+                    >
+                      Learn More →
+                    </Link>
+                  </div>
+                </Reveal>
               )
             })}
           </div>
@@ -353,31 +330,17 @@ export function HomeContent() {
       <section className="overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Left — Rose bg */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.7, ease: 'easeOut' as const }}
-            className="flex items-center justify-center px-8 py-20"
-            style={{ backgroundColor: 'var(--color-rose)' }}
-          >
+          <Reveal x={-40} className="flex items-center justify-center px-8 py-20" style={{ backgroundColor: 'var(--color-rose)' }}>
             <h2
               className="text-3xl sm:text-4xl font-bold text-white leading-tight text-center md:text-left"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               Why Redcliffe Clients Choose The Derm Studio
             </h2>
-          </motion.div>
+          </Reveal>
 
           {/* Right — Cream bg with reasons */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.7, ease: 'easeOut' as const, delay: 0.15 }}
-            className="px-8 sm:px-12 py-16"
-            style={{ backgroundColor: 'var(--color-cream)' }}
-          >
+          <Reveal x={40} delay={0.15} className="px-8 sm:px-12 py-16" style={{ backgroundColor: 'var(--color-cream)' }}>
             <div className="flex flex-col gap-6">
               {reasons.map((reason) => {
                 const Icon = reason.icon
@@ -407,7 +370,7 @@ export function HomeContent() {
                 )
               })}
             </div>
-          </motion.div>
+          </Reveal>
         </div>
       </section>
 
@@ -416,7 +379,7 @@ export function HomeContent() {
       ────────────────────────────────────── */}
       <section className="py-24 px-4" style={{ backgroundColor: 'var(--color-espresso)' }}>
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <motion.div {...scrollFadeUp(0)}>
+          <Reveal>
             <p
               className="text-sm font-semibold tracking-widest uppercase mb-4"
               style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-rose)' }}
@@ -448,12 +411,9 @@ export function HomeContent() {
             >
               Shop Lira Clinical
             </Link>
-          </motion.div>
+          </Reveal>
 
-          <motion.div
-            {...scrollFadeUp(0.2)}
-            className="relative h-72 md:h-96 rounded-2xl overflow-hidden"
-          >
+          <Reveal delay={0.2} className="relative h-72 md:h-96 rounded-2xl overflow-hidden">
             {/* Product image placeholder */}
             <div
               className="absolute inset-0 flex items-center justify-center rounded-2xl"
@@ -470,7 +430,7 @@ export function HomeContent() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </Reveal>
         </div>
       </section>
 
@@ -479,7 +439,7 @@ export function HomeContent() {
       ────────────────────────────────────── */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <motion.div {...scrollFadeUp(0)} className="text-center mb-10">
+          <Reveal className="text-center mb-10">
             <h2
               className="text-3xl sm:text-4xl font-bold mb-5"
               style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
@@ -492,12 +452,9 @@ export function HomeContent() {
             >
               Located on Marine Parade in Redcliffe, The Derm Studio provides expert skin treatments to clients from across the Moreton Bay Peninsula. Our team welcomes clients from Scarborough, Clontarf, Kippa-Ring, Brighton, Newport, Deception Bay, Mango Hill, North Lakes and all surrounding suburbs.
             </p>
-          </motion.div>
+          </Reveal>
 
-          <motion.div
-            {...scrollFadeUp(0.15)}
-            className="flex flex-wrap gap-3 justify-center"
-          >
+          <Reveal delay={0.15} className="flex flex-wrap gap-3 justify-center">
             {suburbs.map((suburb) => (
               <Link
                 key={suburb.name}
@@ -508,7 +465,7 @@ export function HomeContent() {
                 {suburb.name}
               </Link>
             ))}
-          </motion.div>
+          </Reveal>
         </div>
       </section>
 
@@ -517,7 +474,7 @@ export function HomeContent() {
       ────────────────────────────────────── */}
       <section className="py-20 px-4" style={{ backgroundColor: 'var(--color-cream)' }}>
         <div className="max-w-7xl mx-auto">
-          <motion.div {...scrollFadeUp(0)} className="text-center mb-12">
+          <Reveal className="text-center mb-12">
             <h2
               className="text-3xl sm:text-4xl font-bold mb-3"
               style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
@@ -545,60 +502,60 @@ export function HomeContent() {
                 on Google Reviews
               </span>
             </div>
-          </motion.div>
+          </Reveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {reviews.map((r, i) => (
-              <motion.div
-                key={r.author}
-                {...scrollFadeUp(i * 0.1)}
-                className="bg-white rounded-2xl p-7 flex flex-col gap-5"
-                style={{ border: '1px solid var(--color-cream-dark)' }}
-              >
-                {/* Top row: stars + Google badge */}
-                <div className="flex items-center justify-between">
-                  <div className="flex gap-1">
-                    {[...Array(5)].map((_, j) => (
-                      <Star key={j} className="w-4 h-4 fill-current" style={{ color: '#F59E0B' }} />
-                    ))}
-                  </div>
-                  <div className="flex items-center gap-1.5 opacity-60">
-                    <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                      <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                      <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
-                      <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-                    </svg>
-                    <span className="text-xs" style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}>
-                      Google Review
-                    </span>
-                  </div>
-                </div>
-
-                {/* Review text */}
-                <p
-                  className="text-sm sm:text-base leading-relaxed flex-1"
-                  style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
+              <Reveal key={r.author} delay={i * 0.1}>
+                <div
+                  className="bg-white rounded-2xl p-7 flex flex-col gap-5 h-full"
+                  style={{ border: '1px solid var(--color-cream-dark)' }}
                 >
-                  &ldquo;{r.text}&rdquo;
-                </p>
-
-                {/* Reviewer name */}
-                <div className="flex items-center gap-3 pt-1" style={{ borderTop: '1px solid var(--color-cream-dark)' }}>
-                  <div
-                    className="w-9 h-9 rounded-full flex items-center justify-center shrink-0 text-sm font-bold text-white"
-                    style={{ backgroundColor: 'var(--color-rose)', fontFamily: "'DM Sans', sans-serif" }}
-                  >
-                    {r.author.charAt(0)}
+                  {/* Top row: stars + Google badge */}
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, j) => (
+                        <Star key={j} className="w-4 h-4 fill-current" style={{ color: '#F59E0B' }} />
+                      ))}
+                    </div>
+                    <div className="flex items-center gap-1.5 opacity-60">
+                      <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                      </svg>
+                      <span className="text-xs" style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}>
+                        Google Review
+                      </span>
+                    </div>
                   </div>
+
+                  {/* Review text */}
                   <p
-                    className="text-sm font-semibold"
-                    style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-espresso)' }}
+                    className="text-sm sm:text-base leading-relaxed flex-1"
+                    style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-charcoal)' }}
                   >
-                    {r.author}
+                    &ldquo;{r.text}&rdquo;
                   </p>
+
+                  {/* Reviewer name */}
+                  <div className="flex items-center gap-3 pt-1" style={{ borderTop: '1px solid var(--color-cream-dark)' }}>
+                    <div
+                      className="w-9 h-9 rounded-full flex items-center justify-center shrink-0 text-sm font-bold text-white"
+                      style={{ backgroundColor: 'var(--color-rose)', fontFamily: "'DM Sans', sans-serif" }}
+                    >
+                      {r.author.charAt(0)}
+                    </div>
+                    <p
+                      className="text-sm font-semibold"
+                      style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-espresso)' }}
+                    >
+                      {r.author}
+                    </p>
+                  </div>
                 </div>
-              </motion.div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -609,7 +566,7 @@ export function HomeContent() {
       ────────────────────────────────────── */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <motion.div {...scrollFadeUp(0)} className="text-center mb-10">
+          <Reveal className="text-center mb-10">
             <div className="flex items-center justify-center gap-2 mb-3">
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ color: 'var(--color-rose)' }}>
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" strokeWidth="2"/>
@@ -638,12 +595,9 @@ export function HomeContent() {
             >
               Skin tips, real results, and behind-the-scenes from the studio.
             </p>
-          </motion.div>
+          </Reveal>
 
-          <motion.div
-            {...scrollFadeUp(0.1)}
-            className="grid grid-cols-3 md:grid-cols-6 gap-2"
-          >
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-2">
             {[
               { img: '/instagram/ig-1.jpg', caption: 'A little reintroduction — hi, I\'m Rachael, founder of The Derm Studio.' },
               { img: '/instagram/ig-2.jpg', caption: 'Salmon DNA: separating the trend from the evidence.' },
@@ -652,37 +606,37 @@ export function HomeContent() {
               { img: '/instagram/ig-5.jpg', caption: 'Book the treatment babe. Your skin and confidence are worth investing in.' },
               { img: '/instagram/ig-6.jpg', caption: 'The Derm Studio has officially moved to 1/93 Marine Parade, Redcliffe.' },
             ].map((post, i) => (
-              <motion.a
-                key={i}
-                href="https://www.instagram.com/thedermstudio_/"
-                target="_blank"
-                rel="noopener noreferrer"
-                {...scrollFadeUp(i * 0.06)}
-                className="relative block aspect-square overflow-hidden group"
-                style={{ borderRadius: '8px' }}
-              >
-                <Image
-                  src={post.img}
-                  alt={post.caption}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 33vw, 16vw"
-                />
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  style={{ backgroundColor: 'rgba(58,40,40,0.55)' }}>
-                  <svg className="w-7 h-7 text-white mb-2" fill="white" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                  </svg>
-                  <p className="text-white text-xs text-center px-3 leading-snug line-clamp-2"
-                    style={{ fontFamily: "'DM Sans', sans-serif" }}>
-                    {post.caption}
-                  </p>
-                </div>
-              </motion.a>
+              <Reveal key={i} delay={i * 0.06}>
+                <a
+                  href="https://www.instagram.com/thedermstudio_/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative block aspect-square overflow-hidden group"
+                  style={{ borderRadius: '8px' }}
+                >
+                  <Image
+                    src={post.img}
+                    alt={post.caption}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 33vw, 16vw"
+                  />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{ backgroundColor: 'rgba(58,40,40,0.55)' }}>
+                    <svg className="w-7 h-7 text-white mb-2" fill="white" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    <p className="text-white text-xs text-center px-3 leading-snug line-clamp-2"
+                      style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                      {post.caption}
+                    </p>
+                  </div>
+                </a>
+              </Reveal>
             ))}
-          </motion.div>
+          </div>
 
-          <motion.div {...scrollFadeUp(0.2)} className="text-center mt-8">
+          <Reveal delay={0.2} className="text-center mt-8">
             <a
               href="https://www.instagram.com/thedermstudio_/"
               target="_blank"
@@ -697,7 +651,7 @@ export function HomeContent() {
               </svg>
               Follow on Instagram
             </a>
-          </motion.div>
+          </Reveal>
         </div>
       </section>
 
@@ -706,10 +660,7 @@ export function HomeContent() {
       ────────────────────────────────────── */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <motion.div
-            {...scrollFadeUp(0)}
-            className="relative h-[520px] rounded-2xl overflow-hidden shadow-md"
-          >
+          <Reveal className="relative h-[520px] rounded-2xl overflow-hidden shadow-md">
             <Image
               src="/rachael.png"
               alt="Rachael — Owner of The Derm Studio, Redcliffe"
@@ -717,9 +668,9 @@ export function HomeContent() {
               className="object-cover object-top"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
-          </motion.div>
+          </Reveal>
 
-          <motion.div {...scrollFadeUp(0.2)} className="flex flex-col gap-6">
+          <Reveal delay={0.2} className="flex flex-col gap-6">
             <p
               className="text-sm font-semibold tracking-widest uppercase"
               style={{ fontFamily: "'DM Sans', sans-serif", color: 'var(--color-rose)' }}
@@ -753,7 +704,7 @@ export function HomeContent() {
             >
               Book with Rachael
             </Link>
-          </motion.div>
+          </Reveal>
         </div>
       </section>
 
@@ -762,7 +713,7 @@ export function HomeContent() {
       ────────────────────────────────────── */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <motion.div {...scrollFadeUp(0)} className="text-center mb-14">
+          <Reveal className="text-center mb-14">
             <h2
               className="text-3xl sm:text-4xl font-bold mb-4"
               style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
@@ -776,7 +727,7 @@ export function HomeContent() {
               Real skin transformation takes time and consistency. Our packages bundle the treatments
               that work best together — so you see genuine, lasting results at a significant saving.
             </p>
-          </motion.div>
+          </Reveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
             {[
@@ -797,59 +748,59 @@ export function HomeContent() {
                 perks: ['2 treatments / month (full menu)', '20% off additional treatments', 'Quarterly skin review'],
               },
             ].map((tier, i) => (
-              <motion.div
-                key={tier.name}
-                {...scrollFadeUp(i * 0.1)}
-                className="rounded-2xl p-7 flex flex-col gap-4"
-                style={{
-                  backgroundColor: tier.highlight ? 'var(--color-rose)' : 'var(--color-cream)',
-                  border: tier.highlight ? '2px solid var(--color-rose)' : '1px solid var(--color-cream-dark)',
-                }}
-              >
-                <div>
-                  <h3
-                    className="text-xl font-bold mb-1"
-                    style={{
-                      fontFamily: "'Playfair Display', serif",
-                      color: tier.highlight ? '#fff' : 'var(--color-espresso)',
-                    }}
-                  >
-                    {tier.name}
-                  </h3>
-                  <p
-                    className="text-sm"
-                    style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      color: tier.highlight ? 'rgba(255,255,255,0.85)' : 'var(--color-charcoal)',
-                    }}
-                  >
-                    {tier.tagline}
-                  </p>
+              <Reveal key={tier.name} delay={i * 0.1}>
+                <div
+                  className="rounded-2xl p-7 flex flex-col gap-4 h-full"
+                  style={{
+                    backgroundColor: tier.highlight ? 'var(--color-rose)' : 'var(--color-cream)',
+                    border: tier.highlight ? '2px solid var(--color-rose)' : '1px solid var(--color-cream-dark)',
+                  }}
+                >
+                  <div>
+                    <h3
+                      className="text-xl font-bold mb-1"
+                      style={{
+                        fontFamily: "'Playfair Display', serif",
+                        color: tier.highlight ? '#fff' : 'var(--color-espresso)',
+                      }}
+                    >
+                      {tier.name}
+                    </h3>
+                    <p
+                      className="text-sm"
+                      style={{
+                        fontFamily: "'DM Sans', sans-serif",
+                        color: tier.highlight ? 'rgba(255,255,255,0.85)' : 'var(--color-charcoal)',
+                      }}
+                    >
+                      {tier.tagline}
+                    </p>
+                  </div>
+                  <ul className="flex flex-col gap-2">
+                    {tier.perks.map((perk) => (
+                      <li key={perk} className="flex items-start gap-2">
+                        <CheckCircle
+                          className="w-4 h-4 mt-0.5 shrink-0"
+                          style={{ color: tier.highlight ? 'rgba(255,255,255,0.8)' : 'var(--color-rose)' }}
+                        />
+                        <span
+                          className="text-sm"
+                          style={{
+                            fontFamily: "'DM Sans', sans-serif",
+                            color: tier.highlight ? 'rgba(255,255,255,0.9)' : 'var(--color-charcoal)',
+                          }}
+                        >
+                          {perk}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <ul className="flex flex-col gap-2">
-                  {tier.perks.map((perk) => (
-                    <li key={perk} className="flex items-start gap-2">
-                      <CheckCircle
-                        className="w-4 h-4 mt-0.5 shrink-0"
-                        style={{ color: tier.highlight ? 'rgba(255,255,255,0.8)' : 'var(--color-rose)' }}
-                      />
-                      <span
-                        className="text-sm"
-                        style={{
-                          fontFamily: "'DM Sans', sans-serif",
-                          color: tier.highlight ? 'rgba(255,255,255,0.9)' : 'var(--color-charcoal)',
-                        }}
-                      >
-                        {perk}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
+              </Reveal>
             ))}
           </div>
 
-          <motion.div {...scrollFadeUp(0.2)} className="text-center">
+          <Reveal delay={0.2} className="text-center">
             <Link
               href="/memberships"
               className="inline-block text-center text-sm font-semibold text-white px-7 py-3.5 rounded-full transition-colors"
@@ -859,7 +810,7 @@ export function HomeContent() {
             >
               View All Packages
             </Link>
-          </motion.div>
+          </Reveal>
         </div>
       </section>
 
@@ -868,18 +819,18 @@ export function HomeContent() {
       ────────────────────────────────────── */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <motion.h2
-            {...scrollFadeUp(0)}
-            className="text-3xl sm:text-4xl font-bold text-center mb-12"
-            style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
-          >
-            Find Us at The Derm Studio, Redcliffe
-          </motion.h2>
+          <Reveal>
+            <h2
+              className="text-3xl sm:text-4xl font-bold text-center mb-12"
+              style={{ fontFamily: "'Playfair Display', serif", color: 'var(--color-espresso)' }}
+            >
+              Find Us at The Derm Studio, Redcliffe
+            </h2>
+          </Reveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             {/* Map */}
-            <motion.div
-              {...scrollFadeUp(0)}
+            <Reveal
               className="rounded-2xl overflow-hidden shadow-sm"
               style={{ border: '1px solid var(--color-cream-dark)' }}
             >
@@ -893,11 +844,11 @@ export function HomeContent() {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="The Derm Studio location — Marine Parade, Redcliffe"
               />
-            </motion.div>
+            </Reveal>
 
             {/* Contact Card */}
-            <motion.div
-              {...scrollFadeUp(0.15)}
+            <Reveal
+              delay={0.15}
               className="rounded-2xl p-8 flex flex-col gap-5"
               style={{ backgroundColor: 'var(--color-cream)', border: '1px solid var(--color-cream-dark)' }}
             >
@@ -946,7 +897,7 @@ export function HomeContent() {
               >
                 Book a Consultation
               </Link>
-            </motion.div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -955,13 +906,7 @@ export function HomeContent() {
           SECTION 9 — CTA BANNER
       ────────────────────────────────────── */}
       <section className="py-20 px-4" style={{ backgroundColor: 'var(--color-rose)' }}>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.97 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.6, ease: 'easeOut' as const }}
-          className="max-w-4xl mx-auto text-center"
-        >
+        <Reveal scale={0.97} y={0} duration={0.6} className="max-w-4xl mx-auto text-center">
           <h2
             className="text-3xl sm:text-4xl font-bold text-white mb-5 leading-tight"
             style={{ fontFamily: "'Playfair Display', serif" }}
@@ -996,7 +941,7 @@ export function HomeContent() {
               Call Us Now
             </a>
           </div>
-        </motion.div>
+        </Reveal>
       </section>
     </>
   )
