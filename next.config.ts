@@ -32,6 +32,11 @@ const nextConfig: NextConfig = {
         destination: '/service-areas',
         permanent: true,
       },
+      {
+        source: '/2025/07/07/hello-world',
+        destination: '/',
+        permanent: true,
+      },
     ];
   },
 };
